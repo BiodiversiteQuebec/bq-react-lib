@@ -1,7 +1,7 @@
 import React from 'react';
 import { Meta, Story } from '@storybook/react';
 
-import Legend from '../src/Legend';
+import { Legend } from '../src/Legend';
 
 const legendStory: Meta = {
   title: 'Legend',
