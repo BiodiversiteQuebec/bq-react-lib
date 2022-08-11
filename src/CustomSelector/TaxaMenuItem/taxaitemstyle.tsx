@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { Container, colors } from "../../../styles";
+import styled from 'styled-components';
+import { Container, colors } from '../../styles';
 
 export const TaxaItemContainer = styled(Container)`
   width: 100%;
