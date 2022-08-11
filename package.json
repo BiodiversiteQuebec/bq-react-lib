@@ -63,6 +63,7 @@
     "babel-loader": "^8.2.5",
     "cssnano": "^5.1.12",
     "husky": "^8.0.1",
+    "postcss": "^8.4.16",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-is": "^18.2.0",
@@ -73,7 +74,16 @@
     "typescript": "^4.7.4"
   },
   "dependencies": {
+    "@emotion/react": "^11.10.0",
+    "@emotion/styled": "^11.10.0",
+    "@material-ui/core": "^4.12.4",
+    "@mui/base": "^5.0.0-alpha.92",
+    "@mui/icons-material": "^5.8.4",
+    "@mui/material": "^5.10.0",
+    "@mui/styles": "^5.9.3",
+    "@types/mui-image": "^1.0.0",
     "@types/underscore": "^1.11.4",
+    "mui-image": "^1.0.7",
     "styled-components": "^5.3.5",
     "underscore": "^1.13.4",
     "utils": "github:ReseauBiodiversiteQuebec/utils"
