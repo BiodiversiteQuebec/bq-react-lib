@@ -1,6 +1,5 @@
 import React from 'react';
 import { Title, MainContainer } from '../Commons';
-import { TableauProps } from './props';
 
 interface ColeoAnalysisAllProps {
   graphicTitle?: string;
