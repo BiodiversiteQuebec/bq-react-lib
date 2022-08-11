@@ -6,3 +6,5 @@ export * from './CustomSelector';
 export * from './SpeedDialBtn';
 export * from './SlideShow';
 export * from './SlideScreen';
+export * from './Summary';
+export * from './CustomAutocomplete';
