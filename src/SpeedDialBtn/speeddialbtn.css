@@ -1,0 +1,15 @@
+.switch-container {
+  display: flex;
+  justify-content: center;
+
+  z-index: 9999999;
+}
+
+.switch-bt-container {
+  position: relative;
+  background-color: yellow;
+}
+
+.absolute {
+  position: absolute;
+}
