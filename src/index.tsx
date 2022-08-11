@@ -5,3 +5,4 @@ export * from './TableauColeo';
 export * from './CustomSelector';
 export * from './SpeedDialBtn';
 export * from './SlideShow';
+export * from './SlideScreen';
