@@ -6,11 +6,6 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import { defaultTranslationFn } from '../utils';
 
-const DEFAULT_PROPS = {
-  t: (text: string) => text,
-  children: null,
-};
-
 /**
  * Component props
  */
