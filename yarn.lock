@@ -12993,6 +12993,11 @@
   "resolved" "https://registry.npmjs.org/reusify/-/reusify-1.0.4.tgz"
   "version" "1.0.4"
 
+"rgbaster@^2.1.1":
+  "integrity" "sha512-vUQI+ldMMSGXEbWtqb/6aqLY1LHc33OtXg2Q9S0TCxzt2KxGncRJB6dk860KzhWTjms+Fz4wkxrJu8MlCrFpYg=="
+  "resolved" "https://registry.npmjs.org/rgbaster/-/rgbaster-2.1.1.tgz"
+  "version" "2.1.1"
+
 "rimraf@^2.5.4":
   "integrity" "sha512-uWjbaKIK3T1OSVptzX7Nl6PvQ3qAGtKEtVRjRuazjfL3Bx5eI409VZSqgND+4UNnmzLVdPj9FqFJNPqBZFve4w=="
   "resolved" "https://registry.npmjs.org/rimraf/-/rimraf-2.7.1.tgz"
