@@ -8,3 +8,5 @@ export * from './SlideShow';
 export * from './SlideScreen';
 export * from './Summary';
 export * from './CustomAutocomplete';
+export * from './CustomAccordion';
+export * from './BottomNavBar';
