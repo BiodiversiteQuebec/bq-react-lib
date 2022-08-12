@@ -14,7 +14,7 @@ interface SpeedDialBtnProps {
   left?: number;
   right?: number;
   direction: any;
-  onClickSwitch: (text: string) => string;
+  onClickSwitch: (text: string) => void;
   t: (text: string) => string;
   language: any;
   changeLanguage: (value: any) => any;
