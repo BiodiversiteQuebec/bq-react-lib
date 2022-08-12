@@ -1,0 +1,72 @@
+.histogram {
+  width: 100%;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
+  z-index: 1000;
+  height: fit-content;
+  position: relative;
+}
+
+.histogram-bars {
+  background: transparent;
+  width: 200px;
+  min-height: 110px;
+  height: 110px;
+  margin-bottom: -2px;
+}
+
+.histogram-slider {
+  background: transparent;
+
+  min-height: 40px;
+  width: 100%;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.histogram-ul {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 2px;
+  height: 100%;
+  width: 100%;
+  background: transparent;
+  gap: 3px;
+  position: relative;
+}
+
+.histogram-ul div {
+  height: 50%;
+  width: 0.8em;
+  background: transparent;
+  border-radius: 15px;
+}
+
+.histogram-subtitle {
+  width: 100%;
+  height: 20px;
+  margin-top: -20px;
+  display: flex;
+}
+
+.histogram-subtitle-item {
+  height: 100%;
+  flex-grow: 1;
+  color: rgba(128, 128, 128, 0.8);
+}
+
+.MuiSlider-valueLabelOpen {
+  background-color: blue;
+}
+.MuiSlider-valueLabelCircle::before {
+  background-color: blue;
+}
+
+.css-1kz0hui-MuiSlider-valueLabel {
+  background-color: blue;
+}

@@ -10,3 +10,5 @@ export * from './Summary';
 export * from './CustomAutocomplete';
 export * from './CustomAccordion';
 export * from './BottomNavBar';
+export * from './hooks';
+export * from './Histogram';
