@@ -35,16 +35,16 @@
     "singleQuote": true,
     "trailingComma": "es5"
   },
-  "name": "bd-quebec-components-lib",
+  "name": "bq-react-lib",
   "author": "william Cabrera",
-  "module": "dist/bd-quebec-components-lib.esm.js",
+  "module": "dist/bq-react-lib.esm.js",
   "size-limit": [
     {
-      "path": "dist/bd-quebec-components-lib.cjs.production.min.js",
+      "path": "dist/bq-react-lib.cjs.production.min.js",
       "limit": "10 KB"
     },
     {
-      "path": "dist/bd-quebec-components-lib.esm.js",
+      "path": "dist/bq-react-lib.esm.js",
       "limit": "10 KB"
     }
   ],
@@ -91,11 +91,9 @@
   "peerDependencies": {
     "@emotion/react": "^11.10.0",
     "@emotion/styled": "^11.10.0",
-    "@material-ui/core": "^4.12.4",
     "@mui/base": "^5.0.0-alpha.92",
     "@mui/icons-material": "^5.8.4",
     "@mui/material": "^5.10.0",
-    "@mui/styles": "^5.9.3",
     "@types/lodash": "^4.14.182",
     "@types/lodash-es": "^4.17.6",
     "@types/mui-image": "^1.0.0",
