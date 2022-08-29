@@ -8,6 +8,7 @@ interface SelectorProps {
   onValueChange: (value: any | undefined) => void;
   selectorId?: string;
   selectorList?: Array<any>;
+  value: string;
   t: (text: string) => string;
   onFocusout?: boolean;
 }
@@ -22,9 +23,9 @@ export const Selector = (props: SelectorProps) => {
     selectorId,
     selectorList = [],
     t = (text: string) => text,
+    value,
     onFocusout = false,
   } = props;
-  const [value, setValue] = useState('');
   const [lossFocus, setLossFocus] = useState(onFocusout);
 
   /**
@@ -32,7 +33,6 @@ export const Selector = (props: SelectorProps) => {
    * @param event
    */
   const onChange = (event: any) => {
-    setValue(event.target.value);
     selectorList.filter(
       (item: any, index: number) => item.option === event.target.value
     );
@@ -49,10 +49,6 @@ export const Selector = (props: SelectorProps) => {
   useEffect(() => {
     setLossFocus(onFocusout);
   }, [onFocusout]);
-
-  useEffect(() => {
-    setValue(selectorList.length > 0 ? selectorList[0].option : '');
-  }, [selectorList]);
 
   return (
     <div className="selector38px" id={selectorId} style={{ width: '100%' }}>
