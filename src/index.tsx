@@ -12,3 +12,5 @@ export * from './CustomAccordion';
 export * from './BottomNavBar';
 export * from './hooks';
 export * from './Histogram';
+export * from './PortalComponents';
+export * from './context/mode';

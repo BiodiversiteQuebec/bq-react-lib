@@ -22,7 +22,22 @@
     "build-storybook": "build-storybook"
   },
   "peerDependencies": {
-    "react": ">=16"
+    "@emotion/react": "^11.10.0",
+    "@emotion/styled": "^11.10.0",
+    "@mui/base": "^5.0.0-alpha.92",
+    "@mui/icons-material": "^5.8.4",
+    "@mui/material": "^5.10.0",
+    "@types/lodash": "^4.14.182",
+    "@types/lodash-es": "^4.17.6",
+    "@types/mui-image": "^1.0.0",
+    "@types/underscore": "^1.11.4",
+    "lodash": "^4.17.21",
+    "lodash-es": "^4.17.21",
+    "mui-image": "^1.0.7",
+    "rgbaster": "^2.1.1",
+    "styled-components": "^5.3.5",
+    "underscore": "^1.13.4",
+    "utils": "github:ReseauBiodiversiteQuebec/utils"
   },
   "husky": {
     "hooks": {
@@ -88,22 +103,11 @@
     "tslib": "^2.4.0",
     "typescript": "^4.7.4"
   },
-  "peerDependencies": {
-    "@emotion/react": "^11.10.0",
-    "@emotion/styled": "^11.10.0",
-    "@mui/base": "^5.0.0-alpha.92",
-    "@mui/icons-material": "^5.8.4",
-    "@mui/material": "^5.10.0",
-    "@types/lodash": "^4.14.182",
-    "@types/lodash-es": "^4.17.6",
-    "@types/mui-image": "^1.0.0",
-    "@types/underscore": "^1.11.4",
-    "lodash": "^4.17.21",
-    "lodash-es": "^4.17.21",
-    "mui-image": "^1.0.7",
-    "rgbaster": "^2.1.1",
-    "styled-components": "^5.3.5",
-    "underscore": "^1.13.4",
-    "utils": "github:ReseauBiodiversiteQuebec/utils"
+  "dependencies": {
+    "@fortawesome/free-solid-svg-icons": "^6.2.0",
+    "@fortawesome/react-fontawesome": "^0.2.0",
+    "bootstrap": "^5.2.0",
+    "markdown-to-jsx": "^7.1.7",
+    "react-bootstrap": "^2.5.0"
   }
 }
