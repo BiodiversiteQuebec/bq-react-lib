@@ -1,3 +1,6 @@
+//import './globals.css';
+import './css/fontawesome.css';
+import './css/main.css';
 // Use http://chir.ag/projects/name-that-color to name colors
 const colors = {
   white: '#ffffff',

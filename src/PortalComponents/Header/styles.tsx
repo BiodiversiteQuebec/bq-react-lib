@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const HeaderV1Container = styled.div`
   display: flex;
@@ -29,6 +29,16 @@ export const LogoContainer = styled.div`
     position: absolute;
     top: -10px;
     left: 0;
+  }
+
+  & img {
+    position: absolute;
+    top: -28px;
+    left: -15px;
+    width: 155px;
+    max-width: 185px;
+    max-height: 100px;
+    aspect-ratio: 16/9;
   }
 `;
 

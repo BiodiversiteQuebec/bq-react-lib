@@ -13,6 +13,8 @@ import {
   HeaderBtContainer,
 } from './styles';
 
+//import logo from './logo-dark-mode-fr.svg';
+
 import { PaddingContainerwithBg } from '../Common/Layouts';
 
 interface Props {
@@ -40,15 +42,7 @@ export const Header = (props: Props) => {
       <HeaderV1Container ref={ref}>
         <LContainer>
           <CustomPathLink href="/#">
-            <img
-              src={logoUrl}
-              width={'145px'}
-              style={{
-                position: 'absolute',
-                top: '-28px',
-                left: '-15px',
-              }}
-            />
+            <img src={logoUrl} />
           </CustomPathLink>
         </LContainer>
         <HeaderLinkContainer tabIndex={-1}>

@@ -18,6 +18,7 @@ interface Props {
   collapseAll: boolean;
   t?: (text: string) => string;
   tabCardsLists: any;
+  tabsTexts?: any;
 }
 export const TabMenu = (props: Props) => {
   const [settedKey, setSettedKey] = useState('');
@@ -27,6 +28,13 @@ export const TabMenu = (props: Props) => {
     collapseAll = true,
     tabcontentWidth,
     tabCardsLists = [[], [], []],
+    tabsTexts = [
+      'Accueil',
+      'Inventaire Terrain',
+      'Explorateur',
+      'Indicateurs',
+      'Decouvrir',
+    ],
     t = (text: string) => text,
   } = props;
 
@@ -73,7 +81,7 @@ export const TabMenu = (props: Props) => {
       >
         <CustomPathLink href="/#" className="no-decoration">
           <CollapseMenuItem
-            text={t('acceuil')}
+            text={t(tabsTexts[0] ?? 'acceuil')}
             collapse={true || collapseAll}
             opacity={tabClicked !== 'acceuil' ? 0.7 : 1}
             notifyEvent={(param: any) => selectedTab('acceuil')}
@@ -92,7 +100,7 @@ export const TabMenu = (props: Props) => {
             eventKey="inv_terrain"
             title={
               <CollapseMenuItem
-                text={t('inventaire_terrain')}
+                text={t(tabsTexts[1] ?? 'inventaire_terrain')}
                 collapse={
                   (settedKey === 'inv_terrain' ? false : true) || collapseAll
                 }
@@ -121,7 +129,7 @@ export const TabMenu = (props: Props) => {
             eventKey="exp_biodiversite"
             title={
               <CollapseMenuItem
-                text={t('explorateur_boidiversite')}
+                text={t(tabsTexts[2] ?? 'explorateur_boidiversite')}
                 collapse={
                   (settedKey === 'exp_biodiversite' ? false : true) ||
                   collapseAll
@@ -151,7 +159,7 @@ export const TabMenu = (props: Props) => {
             eventKey="indicateur"
             title={
               <CollapseMenuItem
-                text={t('indicateur')}
+                text={t(tabsTexts[3] ?? 'indicateur')}
                 collapse={
                   (settedKey === 'indicateur' ? false : true) || collapseAll
                 }
@@ -191,7 +199,7 @@ export const TabMenu = (props: Props) => {
         <CustomPathLink href="/#" className="no-decoration">
           {' '}
           <CollapseMenuItem
-            text={t('decouverte')}
+            text={t(tabsTexts[4] ?? 'decouverte')}
             collapse={true || collapseAll}
             opacity={tabClicked !== 'decouverte' ? 0.7 : 1}
             notifyEvent={(param: any) => selectedTab('decouverte')}

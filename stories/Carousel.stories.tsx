@@ -1,22 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Meta, Story } from '@storybook/react';
-
-import { Header } from '../src/PortalComponents/Header';
+import { Carousel } from '../src/PortalComponents';
 import { AppModeProvider } from '../src/context';
 
-const headerStory: Meta = {
-  title: 'Header',
-  component: Header,
+const carouselStory: Meta = {
+  title: 'Carousel',
+  component: Carousel,
 };
 
-export default headerStory;
+export default carouselStory;
 
 const Template: Story<any> = (args) => {
-  const { logoUrl, tabCardsLists } = args;
+  const { cards } = args;
   return (
-    <div style={{ width: '100%', height: '100vh' }}>
+    <div
+      style={{ width: '100%', height: '100%', background: 'rgba(0,0,0,.8)' }}
+    >
       <AppModeProvider>
-        <Header logoUrl={logoUrl} tabCardsLists={tabCardsLists} />
+        <Carousel cards={cards} onClick={() => 0} />
       </AppModeProvider>
     </div>
   );
@@ -32,11 +33,10 @@ const arr = [
 ];
 
 const Props = {
-  tabCardsLists: [arr, arr, arr],
-  logoUrl: `/logo-dark-mode-fr.svg`,
   t: (value: string) => value,
+  cards: arr,
 };
 
-export const HeaderTemplate = Template.bind({});
+export const CarouselTemplate = Template.bind({});
 
-HeaderTemplate.args = Props;
+CarouselTemplate.args = Props;

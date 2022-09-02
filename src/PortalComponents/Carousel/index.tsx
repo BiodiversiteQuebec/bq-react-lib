@@ -89,7 +89,7 @@ export const Carousel = (props: GalleryProps) => {
             >
               <img src={item.img} alt={'img'} />
               <div className="card-title">
-                <CardTitleText>Hehje {index + 1}</CardTitleText>
+                <CardTitleText>{item.title}</CardTitleText>
               </div>
             </Card>
           </CardWrapper>
