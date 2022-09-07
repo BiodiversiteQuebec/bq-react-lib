@@ -1,5 +1,4 @@
-import React, { useContext } from 'react';
-import ModeContext from '../../../context/mode';
+import React from 'react';
 import { FooterLeftContentContainer, FooterImg } from './styles';
 
 interface FooterProps {
@@ -7,9 +6,8 @@ interface FooterProps {
 }
 
 export const FooterLeftContent = (props: FooterProps) => {
-  const { mode } = useContext(ModeContext);
   const { theme } = props;
-  const finalMode = theme ? theme.mode : mode;
+  const finalMode = theme ? theme.mode : 'dark';
 
   return (
     <FooterLeftContentContainer theme={theme}>

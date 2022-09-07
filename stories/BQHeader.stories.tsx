@@ -1,12 +1,11 @@
 import React from 'react';
 import { Meta, Story } from '@storybook/react';
-
-import { Header } from '../src/PortalComponents/Header';
+import { CustomHeader } from '../src/PortalComponents/Header';
 import { AppModeProvider } from '../src/context';
 
 const headerStory: Meta = {
   title: 'BQ-Header',
-  component: Header,
+  component: CustomHeader,
 };
 
 export default headerStory;
@@ -16,7 +15,7 @@ const Template: Story<any> = (args) => {
   return (
     <div style={{ width: '100%', height: '100vh' }}>
       <AppModeProvider>
-        <Header logoUrl={logoUrl} tabCardsLists={tabCardsLists} />
+        <CustomHeader logoUrl={logoUrl} tabCardsLists={tabCardsLists} />
       </AppModeProvider>
     </div>
   );
@@ -33,7 +32,7 @@ const arr = [
 
 const Props = {
   tabCardsLists: [arr, arr, arr],
-  logoUrl: `/logo-dark-mode-fr.svg`,
+  logoUrl: `/images/logo-dark-mode-fr.svg`,
   t: (value: string) => value,
 };
 

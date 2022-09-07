@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { Container } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { MenuText } from '../../Text/textstyles';
+import { MenuText } from '../Text/textstyles';
 
 export const CollapseMenuItemContainer: any = styled(Container)`
   display: flex;

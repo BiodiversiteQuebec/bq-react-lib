@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { CustomPathLink } from '../../Common/CustomPathLink';
 import { SubTitleText } from '../../Text/textstyles';
 import { InfoContentContainer } from '../FooterInfoContent/styles';
@@ -9,8 +9,7 @@ interface FooterProps {
 }
 
 export const FooterLinksContent = (props: FooterProps) => {
-  const { t = (text) => text } = props;
-  const { theme } = props;
+  const { theme, t = (text) => text } = props;
 
   return (
     <InfoContentContainer theme={theme}>

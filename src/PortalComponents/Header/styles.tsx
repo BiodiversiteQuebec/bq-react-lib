@@ -1,76 +1,66 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
-export const HeaderV1Container = styled.div`
-  display: flex;
-  position: relative;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  height: 69.06px;
-  padding: 5px 28px;
-  gap: 38px;
-  background: ${({ theme }) => theme.components.header.background};
-  box-shadow: 0px 0.5px 5px rgba(0, 0, 0, 0.25);
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
-  font-family: ${({ theme }) => theme.font};
-  color: ${({ theme }) => theme.components.header.fontColor};
-  z-index: 10;
-`;
-
-export const LogoContainer = styled.div`
-  width: 90px;
-  height: 29.06px;
-  flex: none;
-  flex-grow: 0;
-  order: 0;
-  position: relative;
-
-  & svg {
-    position: absolute;
-    top: -10px;
-    left: 0;
-  }
-
-  & img {
-    position: absolute;
-    top: -28px;
-    left: -15px;
-    width: 155px;
-    max-width: 185px;
-    max-height: 100px;
-    aspect-ratio: 16/9;
-  }
-`;
-
-export const HeaderLinkContainer = styled.div`
+export const HeaderContainerV1 = styled.nav`
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 0px;
-  gap: 38px;
+  position: relative;
+  width: 100%;
+  //box-shadow: 0 2px 2px 2px rgba(9, 9, 9, 0.23);
+  background: ${({ theme }) => theme.components.header.background};
+  color: ${({ theme }) => theme.components.text.menu.color};
+  padding: 0.25rem 1rem;
 
-  height: 27px;
-  /* Inside auto layout */
-  flex: none;
+  & ul {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    gap: 3em;
+    z-index: 10;
 
-  @media ${({ theme }) => theme.devices.tabletM} {
-    display: none;
+    @media ${({ theme }) => theme.devices.tabletM} {
+      display: none;
+    }
   }
-`;
 
-export const HeaderBtContainer = styled.div`
-  width: 27px;
-  height: 29px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /* Inside auto layout */
+  & li.active {
+    border-bottom: 3px solid ${({ theme }) => theme.components.text.menu.color};
+  }
 
-  flex: none;
-  order: 4;
-  flex-grow: 0;
-`;
+  & a {
+    text-decoration: none;
+    color: inherit;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0.25rem;
+  }
 
-export const Logo = styled.img`
-  position: absolute;
+  & .home-icon {
+    width: 150px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+  }
+
+  & .tab_content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    background-color: rgba(9, 9, 9, 0.23);
+  }
+
+  & .right-side {
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+    height: 90%;
+  }
 `;

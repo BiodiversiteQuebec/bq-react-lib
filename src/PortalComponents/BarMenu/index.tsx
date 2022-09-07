@@ -1,8 +1,8 @@
-import React, { useState, useContext } from 'react';
+import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { BarMenuContainer, BarMenuBody } from './styles';
-import { CustomPathLink } from '../../Common/CustomPathLink';
+import { CustomPathLink } from '../Common/CustomPathLink';
 
 export const BarMenu = (props: any) => {
   const [collapse, setCollapse] = useState(true);
@@ -11,7 +11,6 @@ export const BarMenu = (props: any) => {
 
   const focusOut = (e: any) => {
     if (onBlur) onBlur();
-    //setCollapse(true);
   };
 
   const toggleCollapse = () => {

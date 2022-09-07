@@ -6,6 +6,7 @@ import { SocialNetworkBoxContainer } from '../../SocialNetworkBox';
 
 interface FooterProps {
   theme?: any;
+  t?: (key: string) => string;
 }
 
 const SocialNetworkBox = (props: FooterProps) => {
@@ -36,8 +37,7 @@ const SocialNetworkBox = (props: FooterProps) => {
 };
 
 export const InfoContent = (props: FooterProps) => {
-  const t = (text: string) => text;
-  const { theme } = props;
+  const { theme, t = (text: string) => text } = props;
 
   return (
     <InfoContentContainer theme={theme}>

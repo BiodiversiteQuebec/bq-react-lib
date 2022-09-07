@@ -12,10 +12,11 @@ import {
 
 interface FooterProps {
   theme?: any;
+  t?: (key: string) => string;
 }
 
 export const Footer = (props: FooterProps) => {
-  const { theme } = props;
+  const { theme, t } = props;
   return (
     <PaddingContainerwithBg>
       <FooterContainer theme={theme}>
@@ -24,10 +25,10 @@ export const Footer = (props: FooterProps) => {
             <FooterLeftContent theme={theme} />
           </GridItemFooterLeft>
           <GridItemFooterRight>
-            <FooterLinksContent theme={theme} />
+            <FooterLinksContent theme={theme} t={t} />
           </GridItemFooterRight>
           <GridItemFooterRight>
-            <InfoContent theme={theme} />
+            <InfoContent theme={theme} t={t} />
           </GridItemFooterRight>
         </FooterGrid>
       </FooterContainer>
