@@ -1,23 +1,17 @@
-import React, {
-  useLayoutEffect,
-  useCallback,
-  useRef,
-  useEffect,
-  useState,
-} from 'react';
+import React, { useEffect, useState } from 'react';
 
 import {
   FbSlider,
   CardWrapper,
   DotsContainer,
-  Dot,
   FbContainerDots,
   Logo,
   CarouselTitle,
 } from './styles';
 
 import _ from 'underscore';
-import useComponentSize from 'src/hooks/useComponentDimensions';
+
+import { useBbox } from 'src/hooks/useElementDimension';
 
 interface GalleryProps {
   onClick: any;
@@ -28,8 +22,9 @@ export const CarouselDots = (props: GalleryProps) => {
   const onClick = props.onClick;
   const cards = props.cards || [];
   const { title = null } = props;
-  const targetRef = useRef(null);
-  const { width } = useComponentSize(targetRef);
+
+  const [bbox, targetRef] = useBbox();
+  const { width } = bbox;
   const [activeSlide, setActiveSlide] = useState(0);
   const [carouselProps, setCarouselProps] = useState({
     totalSlides: -1,

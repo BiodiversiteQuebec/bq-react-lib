@@ -1,5 +1,6 @@
 import React, { useState, useRef } from 'react';
-import useComponentSize from '../../hooks/useComponentDimensions';
+import { useBbox } from '../../hooks/useElementDimension';
+
 import _, { isArray } from 'underscore';
 import { CollapseMenuItem } from '../CollapseMenuItem';
 import { Carousel } from '../Carousel';
@@ -30,8 +31,8 @@ export const Header = ({
   logo,
   rightSideComponents,
 }: HeaderProps) => {
-  const targetRef = useRef(null);
-  const { height } = useComponentSize(targetRef);
+  const [bbox, targetRef] = useBbox();
+  const { height } = bbox;
 
   let items: any[] = [];
   if (children && !isArray(children)) items = [children];
