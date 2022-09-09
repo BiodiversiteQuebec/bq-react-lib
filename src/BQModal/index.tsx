@@ -23,7 +23,7 @@ export function BQModal(props: any) {
     >
       <SettingsOverscanIcon
         onClick={showModal}
-        sx={{ cursor: 'pointer', color: colors.darkgray }}
+        sx={{ cursor: 'pointer', color: colors.mediumgray }}
       />
       <Modal
         open={open}
