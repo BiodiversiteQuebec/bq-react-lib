@@ -4,6 +4,7 @@ export const colors = {
   green: '#538887',
   darkgreen: '#2e483e',
   white: '#fff',
+  mediumgray: '#9b9b9b',
   darkgray: '#424242',
 };
 
