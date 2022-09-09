@@ -4,7 +4,7 @@ export const colors = {
   green: '#538887',
   darkgreen: '#2e483e',
   white: '#fff',
-  darkgray: '#dcdcdc94',
+  darkgray: '#424242',
 };
 
 export const Container = styled.div`
