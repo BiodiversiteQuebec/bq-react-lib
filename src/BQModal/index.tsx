@@ -4,7 +4,7 @@ import Modal from '@mui/material/Modal';
 import Typography from '@mui/material/Typography';
 import { colors } from '../styles';
 
-export default function BQModal(props: any) {
+export function BQModal(props: any) {
   const { modalContent, modalWidth } = props;
   const [thisModalContent, setThisModalContent] = useState(<></>);
   const [open, setOpen] = React.useState(false);

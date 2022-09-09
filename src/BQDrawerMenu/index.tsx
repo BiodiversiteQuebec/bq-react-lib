@@ -1,12 +1,12 @@
-import * as React from "react";
-import InputLabel from "@mui/material/InputLabel";
-import MenuItem from "@mui/material/MenuItem";
-import FormControl from "@mui/material/FormControl";
-import Select, { SelectChangeEvent } from "@mui/material/Select";
-import InputBase from "@mui/material/InputBase";
-import styled from "styled-components";
+import * as React from 'react';
+import InputLabel from '@mui/material/InputLabel';
+import MenuItem from '@mui/material/MenuItem';
+import FormControl from '@mui/material/FormControl';
+import Select, { SelectChangeEvent } from '@mui/material/Select';
+import InputBase from '@mui/material/InputBase';
+import styled from 'styled-components';
 
-export default function BQDrawerMenu(props: any) {
+export function BQDrawerMenu(props: any) {
   const {
     setBQDrawerMenuSelected,
     BQDrawerMenuSelected,
@@ -29,11 +29,11 @@ export default function BQDrawerMenu(props: any) {
     border-radius: 5px;
     & .MuiInputBase-input {
       border-radius: 4;
-      color: "black";
-      position: "relative";
-      padding: "10px 26px 10px 22px";
+      color: 'black';
+      position: 'relative';
+      padding: '10px 26px 10px 22px';
       font-size: 0.8em;
-      font-family: "Lato";
+      font-family: 'Lato';
     }
   `;
 
