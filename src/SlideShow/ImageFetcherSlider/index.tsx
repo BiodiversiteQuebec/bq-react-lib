@@ -2,18 +2,20 @@ import React from 'react';
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 import NavigateBeforeIcon from '@mui/icons-material/NavigateBefore';
 import { ImageSlideCard } from '../ImageSlideCard';
+import { ImageSlideCardView } from '../ImageSlideCardView';
 import {
   ImageSlideCardControlLeft,
   ImageSlideCardControlRight,
   ImageSliderContainer,
 } from '../slideshowstyles';
+import '../ImageSlideCard/ImageSlideCard.css';
 
 /**
  * Next and Before control
  * @param {*} param0
  * @returns
  */
-const Control = (props: any) => {
+export const Control = (props: any) => {
   const { hide, onClick, icon, sence = '' } = props;
 
   return sence === 'before-arrow' ? (
@@ -32,23 +34,28 @@ const Control = (props: any) => {
  * @returns
  */
 export const ImageFetcherSlider = (props: any) => {
-  const { image, onNext, onBack, length = 1, card, onSearch } = props;
+  const { image, onNext, onBack, hide, card, searchBtn, activeModal } = props;
 
   return (
-    <ImageSliderContainer>
+    <ImageSliderContainer style={{ background: 'green' }}>
       <div style={{ padding: '5px 25px', height: '100%' }}>
-        <ImageSlideCard image={image} card={card} onSearch={onSearch} />
+        <ImageSlideCardView
+          image={image}
+          card={card}
+          searchBtn={searchBtn}
+          activeModal={activeModal}
+        />
       </div>
       <Control
         sence="next-arrow"
-        hide={length === 1}
+        hide={hide}
         onClick={() => onNext()}
         icon={<NavigateNextIcon />}
       />
 
       <Control
         sence="before-arrow"
-        hide={length === 1}
+        hide={hide}
         onClick={() => onBack()}
         icon={<NavigateBeforeIcon />}
       />
