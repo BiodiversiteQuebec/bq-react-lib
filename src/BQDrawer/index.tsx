@@ -59,7 +59,7 @@ export const BQDrawer = (props: BQDrawerProps) => {
     }
   };
 
-  const BQTab = styled((props) => <Tab {...props} />)({
+  const BQTab = styled(Tab)({
     color: colors.bqcyan,
     '&:hover': {
       color: colors.bqdarkgreen,
