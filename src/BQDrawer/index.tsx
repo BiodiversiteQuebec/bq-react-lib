@@ -5,6 +5,8 @@ import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import { defaultTranslationFn } from '../utils';
+import { styled } from '@mui/material/styles';
+import { colors } from '../styles';
 
 /**
  * Component props
@@ -57,6 +59,19 @@ export const BQDrawer = (props: BQDrawerProps) => {
     }
   };
 
+  const BQTab = styled((props) => <Tab disableRipple {...props} />)(
+    ({ theme: any }) => ({
+      color: colors.bqcyan,
+      '&:hover': {
+        color: colors.bqdarkgreen,
+        opacity: 1,
+      },
+      '&.Mui-selected': {
+        color: colors.bqdarkgreen,
+      },
+    })
+  );
+
   /**
    *
    */
@@ -65,7 +80,7 @@ export const BQDrawer = (props: BQDrawerProps) => {
   };
 
   const allTabs = tabs.map((tab: any, index: any) => (
-    <Tab
+    <BQTab
       key={tab.index}
       icon={tab.icon}
       label={tab.title}
