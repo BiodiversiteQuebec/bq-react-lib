@@ -59,18 +59,16 @@ export const BQDrawer = (props: BQDrawerProps) => {
     }
   };
 
-  const BQTab = styled((props) => <Tab disableRipple {...props} />)(
-    ({ theme: any }) => ({
-      color: colors.bqcyan,
-      '&:hover': {
-        color: colors.bqdarkgreen,
-        opacity: 1,
-      },
-      '&.Mui-selected': {
-        color: colors.bqdarkgreen,
-      },
-    })
-  );
+  const BQTab = styled((props) => <Tab {...props} />)({
+    color: colors.bqcyan,
+    '&:hover': {
+      color: colors.bqdarkgreen,
+      opacity: 1,
+    },
+    '&.Mui-selected': {
+      color: colors.bqdarkgreen,
+    },
+  });
 
   /**
    *
