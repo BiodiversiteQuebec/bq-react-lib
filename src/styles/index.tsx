@@ -6,6 +6,11 @@ export const colors = {
   white: '#fff',
   mediumgray: '#9b9b9b',
   darkgray: '#424242',
+  bqdarkgreen: '#2e483e',
+  bqorange: '#e0b658',
+  bqdarkorange: '#a6612d',
+  bqcyan: '#7bb5b1',
+  bqlightbeige: '#cda42b',
 };
 
 export const Container = styled.div`
