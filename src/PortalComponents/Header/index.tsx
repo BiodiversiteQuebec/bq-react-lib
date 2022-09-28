@@ -5,7 +5,7 @@ import _, { isArray } from 'underscore';
 import { CollapseMenuItem } from '../CollapseMenuItem';
 import { Carousel } from '../Carousel';
 
-import { HeaderContainerV1 } from './styles';
+import { HeaderContainerV1, Logo } from './styles';
 import { CustomPathLink } from '../Common/CustomPathLink';
 import { BarMenu } from '../BarMenu';
 import { PaddingContainerwithBg } from '../Common/Layouts';
@@ -79,14 +79,12 @@ export const Header = ({
 export const CustomHeader = ({
   t = (text: string) => text,
   tabCardsLists = [[], [], []],
+  items = [],
   logoUrl,
+  rightSideComponents,
 }: any) => {
   const [settedKey, setSettedKey] = useState('');
   const [tabClicked, setTabClicked] = useState('acceuil');
-
-  const tab1Cards = tabCardsLists.length > 0 ? tabCardsLists[0] : [];
-  const tab2Cards = tabCardsLists.length > 1 ? tabCardsLists[1] : [];
-  const tab3Cards = tabCardsLists.length > 2 ? tabCardsLists[2] : [];
 
   const selectedTab = (tabKey: string) => {
     setSettedKey(tabKey === settedKey ? '' : tabKey);
@@ -95,15 +93,9 @@ export const CustomHeader = ({
 
   const logo = (
     <CustomPathLink href="/#">
-      <img
-        src={logoUrl}
-        width={'185px'}
-        style={{ maxHeight: '75px', objectFit: 'cover' }}
-      />
+      <Logo src={logoUrl} alt="logo" />
     </CustomPathLink>
   );
-
-  const rightSideComponents = <BarMenu onBlur={() => setSettedKey('')} />;
 
   return (
     <PaddingContainerwithBg>
@@ -115,93 +107,114 @@ export const CustomHeader = ({
         logo={logo}
         rightSideComponents={rightSideComponents}
       >
-        <HeaderNavItem
-          key={'accueil'}
-          title={
-            <CustomPathLink href="/#" className="no-decoration">
-              <CollapseMenuItem
-                text={t('accueil')}
-                collapse={settedKey === 'accueil' ? false : true}
-                opacity={tabClicked !== 'accueil' ? 0.7 : 1}
-                notifyEvent={(param: any) => selectedTab('accueil')}
-                hidearrow={true}
-              />
-            </CustomPathLink>
-          }
-        />
-        <HeaderNavItem
-          key={'inv_terrain'}
-          title={
-            <CollapseMenuItem
-              text={t('inventaire_terrain')}
-              collapse={settedKey === 'inv_terrain' ? false : true}
-              opacity={tabClicked !== 'inv_terrain' ? 0.7 : 1}
-              notifyEvent={(param: any) => selectedTab('inv_terrain')}
+        {items.map((item: any) => {
+          const { key, text, href } = item;
+          return (
+            <HeaderNavItem
+              key={key}
+              disbaleCollapse={true}
+              title={
+                <a href={href} className="no-decoration">
+                  <CollapseMenuItem
+                    text={text}
+                    collapse={settedKey === key ? false : true}
+                    opacity={tabClicked !== key ? 0.7 : 1}
+                    notifyEvent={(param: any) => selectedTab(key)}
+                    hidearrow={true}
+                  />
+                </a>
+              }
             />
-          }
-        >
-          <Carousel
-            onClick={(e: any) => {
-              //to close the tab
-              setSettedKey('');
-            }}
-            cards={tab1Cards}
-          />
-        </HeaderNavItem>
-        <HeaderNavItem
-          key={'indicateur'}
-          title={
-            <CollapseMenuItem
-              text={t('indicateur')}
-              collapse={settedKey === 'indicateur' ? false : true}
-              opacity={tabClicked !== 'indicateur' ? 0.7 : 1}
-              notifyEvent={(param: any) => selectedTab('indicateur')}
-            />
-          }
-        >
-          <Carousel
-            onClick={() => {
-              //to close the tab
-              setSettedKey('');
-            }}
-            cards={tab2Cards}
-          />
-        </HeaderNavItem>
-        <HeaderNavItem
-          key={'exp_biodiversite'}
-          title={
-            <CollapseMenuItem
-              text={t('explorateur_boidiversite')}
-              collapse={settedKey === 'exp_biodiversite' ? false : true}
-              opacity={tabClicked !== 'exp_biodiversite' ? 0.7 : 1}
-              notifyEvent={(param: any) => selectedTab('exp_biodiversite')}
-            />
-          }
-        >
-          <Carousel
-            onClick={() => {
-              //to close the tab
-              setSettedKey('');
-            }}
-            cards={tab3Cards}
-          />
-        </HeaderNavItem>
-        <HeaderNavItem
-          key={'decouverte'}
-          title={
-            <CustomPathLink href="/#" className="no-decoration">
-              {' '}
-              <CollapseMenuItem
-                text={t('decouverte')}
-                collapse={settedKey === 'decouverte' ? false : true}
-                opacity={tabClicked !== 'decouverte' ? 0.7 : 1}
-                notifyEvent={(param: any) => selectedTab('decouverte')}
-                hidearrow={true}
-              />
-            </CustomPathLink>
-          }
-        />
+          );
+        })}
       </Header>
     </PaddingContainerwithBg>
+  );
+};
+
+export const BQHeader = (props: any) => {
+  const { locale = 'fr', t = (text: string) => text, switchFn } = props;
+  const logoUrl = `/images/logo-dark-mode-fr.svg`;
+  const [settedKey, setSettedKey] = useState('');
+
+  const barMenuItems = [
+    {
+      href: 'https://biodiversite-quebec.ca/biobalados',
+      text: t('Bio-balado'),
+    },
+    {
+      href: 'https://biodiversite-quebec.ca/team',
+      text: t('Équipe'),
+    },
+    {
+      href: 'https://biodiversite-quebec.ca/partners',
+      text: t('Partenaires'),
+    },
+    {
+      href: 'https://biodiversite-quebec.ca/about',
+      text: t('À propos'),
+    },
+    {
+      href: 'https://biodiversite-quebec.ca/contactus',
+      text: t('Contactez nous'),
+    } /* ,
+    {
+      text: locale === 'fr' ? 'en-US' : 'fr',
+      type: 'lang',
+    }, */,
+  ];
+
+  const rightSideComponents = (
+    <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
+      <BarMenu
+        items={barMenuItems}
+        onBlur={() => setSettedKey('')}
+        switchLocale={switchFn}
+        defaultLocale={locale === 'fr' ? 'en-US' : 'fr'}
+      />
+    </div>
+  );
+
+  const items = [
+    {
+      href: 'https://biodiversite-quebec.ca/',
+      text: 'Accueil',
+      key: 'accueil',
+      default: true,
+    },
+    {
+      href: 'https://biodiversite-quebec.ca/tableau-coleo-react/',
+      text: 'Inventaire Terrain',
+      key: 'inventaire_terrain',
+      default: false,
+    },
+    {
+      href: 'https://biodiversite-quebec.ca/tableau-coleo-react/',
+      text: 'Indicateur',
+      key: 'indicateur',
+      default: false,
+    },
+    {
+      href: 'https://coleo.biodiversite-quebec.ca/apps/tableau-atlas-react/',
+      text: 'Explorer',
+      key: 'explorateur_boidiversite',
+      default: false,
+    },
+    {
+      href: 'https://biodiversite-quebec.ca/',
+      text: 'Decouverte',
+      key: 'decouverte',
+      default: false,
+    },
+  ];
+
+  return (
+    <CustomHeader
+      logoUrl={logoUrl}
+      items={items}
+      t={t}
+      settedKey={settedKey}
+      rightSideComponents={rightSideComponents}
+    />
   );
 };

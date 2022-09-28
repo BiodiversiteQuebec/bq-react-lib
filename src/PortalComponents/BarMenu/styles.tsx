@@ -1,4 +1,5 @@
-import styled from "styled-components";
+import styled from 'styled-components';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export const BarMenuContainer = styled.div`
   position: relative;
@@ -32,5 +33,13 @@ export const BarMenuBody = styled.div`
 
     opacity: 0.7;
     margin: 20px 10px;
+  }
+`;
+
+export const HamberguerFontAwesomeIcon: any = styled(FontAwesomeIcon)`
+  /*  */
+  @media ${({ theme }) => theme.devices.gttv} {
+    line-height: ${({ theme }) => `${theme.lineHeight.ml}rem`};
+    font-size: ${({ theme }) => `${theme.fontSize.ml}rem`};
   }
 `;
