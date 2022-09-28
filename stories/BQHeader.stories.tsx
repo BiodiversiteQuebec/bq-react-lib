@@ -13,9 +13,7 @@ export default headerStory;
 const Template: Story<any> = (args) => {
   return (
     <div style={{ width: '100%', height: '100vh' }}>
-      <AppModeProvider>
-        <BQHeader />
-      </AppModeProvider>
+      <BQHeader />
     </div>
   );
 };
