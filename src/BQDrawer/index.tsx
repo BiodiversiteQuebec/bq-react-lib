@@ -132,8 +132,9 @@ export const BQDrawer = (props: BQDrawerProps) => {
             overflow: 'show',
             '& .MuiDrawer-paper': {
               width: drawerWidth,
+              top: '45px',
+              zIndex: 800,
             },
-            top: '45px',
           }}
         >
           {drawerContent !== null} {drawerContent}

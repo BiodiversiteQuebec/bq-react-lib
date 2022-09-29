@@ -166,7 +166,14 @@ export const BQHeaderWithoutProvider = (props: any) => {
   ];
 
   const rightSideComponents = (
-    <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
+    <div
+      style={{
+        display: 'flex',
+        alignItems: 'center',
+        gap: '20px',
+        cursor: 'pointer',
+      }}
+    >
       <BarMenu
         items={barMenuItems}
         onBlur={() => setSettedKey('')}
