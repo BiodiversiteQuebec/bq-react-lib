@@ -98,7 +98,7 @@ export const BQDrawer = (props: BQDrawerProps) => {
           sx={{
             position: 'fixed',
             zIndex: 999,
-            top: '30vh',
+            top: '35vh',
             backgroundColor: 'white',
             ...(drawerOpen && { right: '30vw' }),
             ...(!drawerOpen && { right: '0vw' }),
@@ -133,6 +133,7 @@ export const BQDrawer = (props: BQDrawerProps) => {
             '& .MuiDrawer-paper': {
               width: drawerWidth,
             },
+            top: '45px',
           }}
         >
           {drawerContent !== null} {drawerContent}

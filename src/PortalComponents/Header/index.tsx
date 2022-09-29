@@ -156,7 +156,7 @@ export const BQHeader = (props: any) => {
     },
     {
       href: 'https://biodiversite-quebec.ca/contactus',
-      text: t('Contactez nous'),
+      text: t('Contactez-nous'),
     } /* ,
     {
       text: locale === 'fr' ? 'en-US' : 'fr',
@@ -202,7 +202,7 @@ export const BQHeader = (props: any) => {
     },
     {
       href: 'https://biodiversite-quebec.ca/',
-      text: 'Decouverte',
+      text: 'Découverte',
       key: 'decouverte',
       default: false,
     },
