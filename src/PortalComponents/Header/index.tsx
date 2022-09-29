@@ -191,13 +191,13 @@ export const BQHeaderWithoutProvider = (props: any) => {
       default: true,
     },
     {
-      href: 'https://biodiversite-quebec.ca/tableau-coleo-react/',
-      text: 'Inventaire Terrain',
+      href: 'https://biodiversite-quebec.ca/inventaires/',
+      text: 'Inventaires Terrain',
       key: 'inventaire_terrain',
       default: false,
     },
     {
-      href: 'https://biodiversite-quebec.ca/tableau-coleo-react/',
+      href: 'https://biodiversite-quebec.ca/inventaires/',
       text: 'Indicateur',
       key: 'indicateur',
       default: false,
