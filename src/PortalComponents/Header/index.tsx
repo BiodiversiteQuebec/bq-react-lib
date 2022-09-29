@@ -9,6 +9,7 @@ import { HeaderContainerV1, Logo } from './styles';
 import { CustomPathLink } from '../Common/CustomPathLink';
 import { BarMenu } from '../BarMenu';
 import { PaddingContainerwithBg } from '../Common/Layouts';
+import { AppModeProvider } from '../../context';
 
 export const HeaderNavItem = (props: any) => {
   return props.children;
@@ -132,7 +133,7 @@ export const CustomHeader = ({
   );
 };
 
-export const BQHeader = (props: any) => {
+export const BQHeaderWithoutProvider = (props: any) => {
   const { locale = 'fr', t = (text: string) => text, switchFn } = props;
   const logoUrl = `/images/logo-dark-mode-fr.svg`;
   const [settedKey, setSettedKey] = useState('');
@@ -218,3 +219,9 @@ export const BQHeader = (props: any) => {
     />
   );
 };
+
+export const BQHeader = () => (
+  <AppModeProvider>
+    <BQHeaderWithoutProvider />
+  </AppModeProvider>
+);
