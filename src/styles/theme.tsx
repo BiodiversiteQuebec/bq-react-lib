@@ -24,6 +24,7 @@ const size = {
   laptopL: '1440px',
   desktopM: '1700px',
   desktop: '2560px',
+  tv: '4000px',
 };
 
 export const devices = {
@@ -37,6 +38,8 @@ export const devices = {
   desktop: `(max-width: ${size.desktop})`,
   desktopL: `(max-width: ${size.desktop})`,
   gtlaptopL: `(min-width: ${size.laptopL})`,
+  gttv: `(min-width: ${size.tv})`,
+  ltlaptopL: `(min-width: ${size.laptopL})`,
 };
 
 //styles

@@ -19,7 +19,7 @@ export const ContentHeroLayout = styled.div`
   align-items: center;
   width: 100%;
   min-height: 355px;
-  //background: ${({ theme }) => theme.components.header.background};
+  padding: 30px 0;
 
   @media ${({ theme }) => theme.devices.tablet} {
     flex-direction: column;
@@ -27,6 +27,11 @@ export const ContentHeroLayout = styled.div`
     align-items: center;
     height: fit-content;
     gap: 15px;
+  }
+
+  @media ${({ theme }) => theme.devices.gttv} {
+    padding-top: 50px;
+    padding-bottom: 50px;
   }
 `;
 
@@ -55,6 +60,11 @@ export const DescriptionHeroText = styled(Text)`
     font-size: 1.2rem;
     letter-spacing: 0.35px;
   }
+
+  @media ${({ theme }) => theme.devices.gttv} {
+    line-height: ${({ theme }) => `${theme.lineHeight.large}rem`};
+    font-size: ${({ theme }) => `${theme.fontSize.large}rem`};
+  }
 `;
 
 interface Props {
@@ -69,7 +79,7 @@ export const Grid = styled.div`
   gap: 10px;
   align-items: center;
   grid-auto-rows: auto;
-  padding: 40px 0px;
+  padding: 0px 0px;
 
   @media (min-width: 913px) {
     grid-template-columns: repeat(2, 1fr);
@@ -128,6 +138,10 @@ export const ItemWrapper = styled.div`
     justify-content: center;
     align-items: center;
   }
+
+  @media ${({ theme }) => theme.devices.gttv} {
+    width: 800px;
+  }
 `;
 
 export const ItemWrapperV1 = styled(ItemWrapper)`
@@ -159,12 +173,15 @@ export const WhiteStaticPageBody = styled(StaticPageBody)`
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
+  align-self: center;
 
   grid-gap: 3rem;
-  padding: 8rem 15rem;
+  padding: 8rem 1rem;
+  max-width: 1160px;
 
   & > .page-description {
-    max-width: 70%;
+    width: 70%;
+
     span {
       color: ${({ theme }) => theme.colors.darkv2};
     }
@@ -178,6 +195,11 @@ export const WhiteStaticPageBody = styled(StaticPageBody)`
     color: rgba(0, 0, 0, 0.5);
     font-weight: 400;
     padding-bottom: 0.5rem;
+
+    @media ${({ theme }) => theme.devices.gttv} {
+      line-height: ${({ theme }) => `${theme.lineHeight.large}rem`};
+      font-size: ${({ theme }) => `${theme.fontSize.large}rem`};
+    }
   }
 
   & .divider {
@@ -210,7 +232,7 @@ export const WhiteStaticPageBody = styled(StaticPageBody)`
     --columns: 3;
 
     & > .page-description {
-      max-width: 70%;
+      max-width: 90%;
     }
   }
 
@@ -225,9 +247,14 @@ export const WhiteStaticPageBody = styled(StaticPageBody)`
   @media ${({ theme }) => theme.devices.tablet} {
     --columns: 1;
     padding: 6rem 2rem;
+
     & > .page-description {
       max-width: 100%;
     }
+  }
+
+  @media ${({ theme }) => theme.devices.gttv} {
+    max-width: 1850px;
   }
 `;
 
@@ -239,26 +266,27 @@ export const ContentHero = (props: Props) => {
 export const PaddingContainer = styled.div`
   position: relative;
   background: transparent;
-  @media ${({ theme }) => theme.devices.gtlaptopL} {
-    padding: 0 10%;
-  } ;
+  display: flex;
+  justify-content: center;
 `;
 
 export const PaddingContainerwithBg = styled.div`
   position: relative;
   background: ${({ theme }) => theme.components.header.background};
-  @media ${({ theme }) => theme.devices.gtlaptopL} {
-    padding: 0 10%;
-  } ;
+  box-shadow: 0px 2px 2px 2px rgba(9, 9, 9, 0.23);
+  z-index: 5;
+  display: flex;
+  justify-content: center;
 `;
 
-export const BoddyPaddingContainer = styled(PaddingContainer)`
+export const HomeBodyPaddingContainer = styled.div`
   background: ${({ theme }) => theme.components.body.background};
   padding: 0 10%;
   position: relative;
+  background: transparent;
 
   @media ${({ theme }) => theme.devices.gtlaptopL} {
-    padding: 0 15%;
+    padding: 0 5%;
   }
 
   @media ${({ theme }) => theme.devices.laptopL} {

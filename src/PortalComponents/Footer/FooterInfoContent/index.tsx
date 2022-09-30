@@ -41,20 +41,26 @@ export const InfoContent = (props: FooterProps) => {
 
   return (
     <InfoContentContainer theme={theme}>
-      <SubTitleText>{t('organisations')}</SubTitleText>
+      <SubTitleText>{t('Organisations')}</SubTitleText>
       <ul>
         <li>
-          <CustomPathLink href="/team">{t('equipe')}</CustomPathLink>
+          <CustomPathLink href="https://biodiversite-quebec.ca/team">
+            {t('Équipe')}
+          </CustomPathLink>
         </li>
         <li>
-          <CustomPathLink href="/partners">{t('partenaires')}</CustomPathLink>
+          <CustomPathLink href="https://biodiversite-quebec.ca/partners">
+            {t('Partenaires')}
+          </CustomPathLink>
         </li>
         <li>
-          <CustomPathLink href="/about">{t('propos')}</CustomPathLink>
+          <CustomPathLink href="https://biodiversite-quebec.ca/about">
+            {t('À propos')}
+          </CustomPathLink>
         </li>
         <li>
-          <CustomPathLink href="/contactus">
-            {t('contacteznous')}
+          <CustomPathLink href="https://biodiversite-quebec.ca/contactus">
+            {t('Contactez nous')}
           </CustomPathLink>
         </li>
       </ul>
