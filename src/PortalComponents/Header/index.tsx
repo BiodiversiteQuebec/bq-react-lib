@@ -157,7 +157,7 @@ export const BQHeaderWithoutProvider = (props: any) => {
     },
     {
       href: 'https://biodiversite-quebec.ca/contactus',
-      text: t('Contactez nous'),
+      text: t('Contactez-nous'),
     } /* ,
     {
       text: locale === 'fr' ? 'en-US' : 'fr',
@@ -166,7 +166,14 @@ export const BQHeaderWithoutProvider = (props: any) => {
   ];
 
   const rightSideComponents = (
-    <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
+    <div
+      style={{
+        display: 'flex',
+        alignItems: 'center',
+        gap: '20px',
+        cursor: 'pointer',
+      }}
+    >
       <BarMenu
         items={barMenuItems}
         onBlur={() => setSettedKey('')}
@@ -184,13 +191,13 @@ export const BQHeaderWithoutProvider = (props: any) => {
       default: true,
     },
     {
-      href: 'https://biodiversite-quebec.ca/tableau-coleo-react/',
-      text: 'Inventaire Terrain',
+      href: 'https://biodiversite-quebec.ca/inventaires/',
+      text: 'Inventaires Terrain',
       key: 'inventaire_terrain',
       default: false,
     },
     {
-      href: 'https://biodiversite-quebec.ca/tableau-coleo-react/',
+      href: 'https://biodiversite-quebec.ca/inventaires/',
       text: 'Indicateur',
       key: 'indicateur',
       default: false,
@@ -203,7 +210,7 @@ export const BQHeaderWithoutProvider = (props: any) => {
     },
     {
       href: 'https://biodiversite-quebec.ca/',
-      text: 'Decouverte',
+      text: 'Découverte',
       key: 'decouverte',
       default: false,
     },
