@@ -204,7 +204,7 @@ export const BQHeaderWithoutProvider = (props: any) => {
     },
     {
       href: 'https://coleo.biodiversite-quebec.ca/apps/tableau-atlas-react/',
-      text: 'Explorer',
+      text: 'Explorateur',
       key: 'explorateur_boidiversite',
       default: false,
     },
