@@ -9,6 +9,7 @@ import {
   GridItemFooterLeft,
   GridItemFooterRight,
 } from './styles';
+import { AppModeProvider, TranslateWrapper } from '../../context';
 
 interface FooterProps {
   theme?: any;
@@ -33,5 +34,27 @@ export const Footer = (props: FooterProps) => {
         </FooterGrid>
       </FooterContainer>
     </PaddingContainerwithBg>
+  );
+};
+
+/**
+ * component that wraps the theme and translation context and makes it available to all children elements
+ * @param props
+ * @returns
+ */
+const FooterWrapper = (props: any) => {
+  return (
+    <AppModeProvider>
+      <TranslateWrapper>{props.children}</TranslateWrapper>
+    </AppModeProvider>
+  );
+};
+
+export const BQFooter = (props: any) => {
+  const { themes } = props;
+  return (
+    <FooterWrapper>
+      <Footer theme={themes?.darkMode} />
+    </FooterWrapper>
   );
 };

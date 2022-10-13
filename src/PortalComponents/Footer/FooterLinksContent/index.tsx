@@ -13,27 +13,33 @@ export const FooterLinksContent = (props: FooterProps) => {
 
   return (
     <InfoContentContainer theme={theme}>
-      <SubTitleText>{t('contenu')}</SubTitleText>
+      <SubTitleText>{t('Contenu')}</SubTitleText>
       <ul>
         <li>
-          <CustomPathLink href="/#">{t('inventaire_terrain')}</CustomPathLink>
+          <a href="https://biodiversite-quebec.ca/inventaires/">
+            {t('Inventaire Terrain')}
+          </a>
         </li>
         <li>
-          <CustomPathLink href="/#">
-            {t('explorateur_boidiversite')}
-          </CustomPathLink>
+          <a href="https://coleo.biodiversite-quebec.ca/apps/tableau-atlas-react/">
+            {t('Explorateur')}
+          </a>
         </li>
-        <li>
+        {/*  <li>
           <CustomPathLink href="/#">{t('biosave')}</CustomPathLink>
-        </li>
+        </li> */}
         <li>
-          <CustomPathLink href="/#">{t('indicateur')}</CustomPathLink>
+          <a href="https://coleo.biodiversite-quebec.ca/apps/tableaulpi/">
+            {t('Indicateur')}
+          </a>
         </li>
-        <li>
+        {/* <li>
           <CustomPathLink href="/biobalados">{t('biobalado')}</CustomPathLink>
-        </li>
+        </li> */}
         <li>
-          <CustomPathLink href="/#">{t('articles')}</CustomPathLink>
+          <CustomPathLink href="https://biodiversite-quebec.ca/histories">
+            {t('Articles')}
+          </CustomPathLink>
         </li>
       </ul>
     </InfoContentContainer>

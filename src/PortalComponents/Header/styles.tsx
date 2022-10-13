@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const HeaderContainerV1 = styled.nav`
   display: flex;
@@ -10,6 +10,7 @@ export const HeaderContainerV1 = styled.nav`
   background: ${({ theme }) => theme.components.header.background};
   color: ${({ theme }) => theme.components.text.menu.color};
   padding: 0.25rem 1rem;
+  height: 45px;
 
   & ul {
     margin: 0;
@@ -63,4 +64,11 @@ export const HeaderContainerV1 = styled.nav`
     justify-content: flex-end;
     height: 90%;
   }
+`;
+
+export const Logo = styled.img`
+  width: 185px;
+  object-fit: cover;
+  height: 50px;
+  padding-top: 0.3rem;
 `;
