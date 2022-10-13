@@ -10,7 +10,7 @@ export const colors = {
   bqorange: '#e0b658',
   bqdarkorange: '#a6612d',
   bqcyan: '#7bb5b1',
-  bqlightbeige: '#cda42b',
+  bqlightbeige: '#f1dca9',
 };
 
 export const Container = styled.div`
