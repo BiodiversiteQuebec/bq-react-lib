@@ -8,6 +8,7 @@ export const colors = {
   darkgray: '#424242',
   bqdarkgreen: '#2e483e',
   bqorange: '#e0b658',
+  bqpalegray: '#afafaf',
   bqdarkorange: '#a6612d',
   bqcyan: '#7bb5b1',
   bqlightgray: '#afafaf',
