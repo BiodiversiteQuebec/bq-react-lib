@@ -35,6 +35,7 @@ export const CollapseMenuItem = (props: any) => {
         style={{
           fontWeight: { fontWeight },
         }}
+        className="bq-menu-text"
         active={active}
       >
         {text}
