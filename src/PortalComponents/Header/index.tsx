@@ -10,6 +10,8 @@ import { CustomPathLink } from '../Common/CustomPathLink';
 import { BarMenu } from '../BarMenu';
 import { PaddingContainerwithBg } from '../Common/Layouts';
 import { AppModeProvider } from '../../context';
+import logodark from '../../assets/images/logo-dark-mode-fr.svg';
+import logocolor from '../../assets/images/LogoBiodiversiteQuebec2.png';
 
 export const HeaderNavItem = (props: any) => {
   return props.children;
@@ -136,8 +138,16 @@ export const CustomHeader = ({
 };
 
 export const BQHeaderWithoutProvider = (props: any) => {
-  const { locale = 'fr', t = (text: string) => text, switchFn } = props;
-  const logoUrl = `/images/logo-dark-mode-fr.svg`;
+  const {
+    locale = 'fr',
+    t = (text: string) => text,
+    switchFn,
+    theme = 'dark',
+  } = props;
+  let logoUrl = logodark;
+  if (theme === 'color') {
+    logoUrl = logocolor;
+  }
   const [settedKey, setSettedKey] = useState('');
 
   const barMenuItems = [
