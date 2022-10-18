@@ -10,8 +10,10 @@ import { CustomPathLink } from '../Common/CustomPathLink';
 import { BarMenu } from '../BarMenu';
 import { PaddingContainerwithBg } from '../Common/Layouts';
 import { AppModeProvider } from '../../context';
-import logodark from '../../assets/images/logo-dark-mode-fr.svg';
-import logocolor from '../../assets/images/LogoBiodiversiteQuebec2.png';
+
+const logodark = require('../../assets/images/logo-dark-mode-fr.svg') as string;
+const logocolor =
+  require('../../assets/images/LogoBiodiversiteQuebec2.csv') as string;
 
 export const HeaderNavItem = (props: any) => {
   return props.children;
