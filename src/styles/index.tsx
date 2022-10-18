@@ -18,10 +18,7 @@ export const colors = {
   bqtopaz: '#3e8986',
   bqlightorange: '#efb850',
   bqlightblue: '#81c8c5',
-<<<<<<< HEAD
-=======
   bqlightgreen: '#58776e',
->>>>>>> 14a0ad64d6f334141a5f7d9a840e4869cc644444
 };
 
 export const Container = styled.div`
