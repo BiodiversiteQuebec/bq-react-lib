@@ -134,7 +134,7 @@ export const BQDrawer = (props: BQDrawerProps) => {
               width: drawerWidth,
               top: '50px',
               zIndex: 800,
-              boxShadow: '-3px 3px 3px #aaa',
+              boxShadow: '-2px 3px 4px #dbdbdb',
             },
           }}
         >
