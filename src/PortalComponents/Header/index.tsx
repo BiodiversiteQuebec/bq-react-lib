@@ -10,11 +10,6 @@ import { CustomPathLink } from '../Common/CustomPathLink';
 import { BarMenu } from '../BarMenu';
 import { PaddingContainerwithBg } from '../Common/Layouts';
 import { AppModeProvider } from '../../context';
-
-const logodark = require('../../assets/images/logo-dark-mode-fr.svg') as string;
-const logocolor =
-  require('../../assets/images/LogoBiodiversiteQuebec2.csv') as string;
-
 export const HeaderNavItem = (props: any) => {
   return props.children;
 };
@@ -140,16 +135,8 @@ export const CustomHeader = ({
 };
 
 export const BQHeaderWithoutProvider = (props: any) => {
-  const {
-    locale = 'fr',
-    t = (text: string) => text,
-    switchFn,
-    theme = 'dark',
-  } = props;
-  let logoUrl = logodark;
-  if (theme === 'color') {
-    logoUrl = logocolor;
-  }
+  const { locale = 'fr', t = (text: string) => text, switchFn } = props;
+  const logoUrl = `/images/logo-dark-mode-fr.svg`;
   const [settedKey, setSettedKey] = useState('');
 
   const barMenuItems = [
