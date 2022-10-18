@@ -144,7 +144,7 @@ export const BQHeaderWithoutProvider = (props: any) => {
 
   let logoUrl = `/images/logo-dark-mode-fr.svg`;
   if (theme === 'color') {
-    logoUrl = '/inventaires/images/LogoBiodiversiteQuebec2.svg';
+    logoUrl = '/inventaires/images/LogoBiodiversiteQuebec2.png';
   }
 
   const [settedKey, setSettedKey] = useState('');
