@@ -60,7 +60,7 @@ export const BQDrawer = (props: BQDrawerProps) => {
   };
 
   const BQTab = styled(Tab)({
-    color: colors.bqcyan,
+    color: colors.bqlightgray,
     '&:hover': {
       color: colors.darkgray,
       opacity: 1,
@@ -105,13 +105,13 @@ export const BQDrawer = (props: BQDrawerProps) => {
           }}
         >
           {drawerOpen ? (
-            <Tab
+            <BQTab
               icon={<ChevronRightIcon />}
               onClick={handleDrawerOpenClose}
               sx={{ boxShadow: '0px 3px 5px #aaa6' }}
             />
           ) : (
-            <Tab
+            <BQTab
               icon={<ChevronLeftIcon />}
               onClick={handleDrawerOpenClose}
               sx={{ boxShadow: '0px 3px 5px #aaa6' }}

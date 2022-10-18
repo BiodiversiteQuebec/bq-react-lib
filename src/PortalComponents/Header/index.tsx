@@ -203,7 +203,7 @@ export const BQHeaderWithoutProvider = (props: any) => {
       default: false,
     },
     {
-      href: 'https://coleo.biodiversite-quebec.ca/apps/tableau-atlas-react/',
+      href: 'https://biodiversite-quebec.ca/explorateurs/',
       text: 'Explorateur',
       key: 'explorateur_boidiversite',
       default: false,
