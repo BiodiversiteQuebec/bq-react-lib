@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Text: any = styled.span`
   color: ${({ theme }) => theme.components.text.basic.menu.color};
@@ -46,7 +46,7 @@ export const SubTitleText = styled(Text)`
 `;
 
 export const TextGray: any = styled(Text)`
-  opacity: 0.7;
+  color: #c3c3c3;
 `;
 
 export const MenuText = styled(TextGray)`
