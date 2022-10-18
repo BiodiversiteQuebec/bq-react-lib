@@ -10,7 +10,7 @@ export const CollapseMenuItem = (props: any) => {
   const {
     text = '',
     collapse = true,
-    opacity = 0.7,
+    highlight = false,
     notifyEvent = (obj: any) => obj,
     hidearrow = false,
   } = props;
@@ -21,7 +21,10 @@ export const CollapseMenuItem = (props: any) => {
     notifyEvent(text);
     setActive(true);
   };
-
+  let fontWeight = 600;
+  if (highlight) {
+    fontWeight = 800;
+  }
   return (
     <CollapseMenuItemContainer
       onClick={toggle}
@@ -30,7 +33,7 @@ export const CollapseMenuItem = (props: any) => {
     >
       <CollapseMenuText
         style={{
-          opacity: opacity,
+          fontWeight: { fontWeight },
         }}
         active={active}
       >
@@ -41,13 +44,13 @@ export const CollapseMenuItem = (props: any) => {
           <CollapseMenuItemFontAwesomeIcon
             icon={faChevronDown}
             className="fa-regular fa-1x"
-            style={{ opacity: opacity }}
+            style={{ fontWeight: { fontWeight } }}
           />
         ) : (
           <CollapseMenuItemFontAwesomeIcon
             icon={faChevronUp}
             className="fa-regular fa-1x"
-            style={{ opacity: opacity }}
+            style={{ fontWeight: { fontWeight } }}
           />
         ))}
     </CollapseMenuItemContainer>

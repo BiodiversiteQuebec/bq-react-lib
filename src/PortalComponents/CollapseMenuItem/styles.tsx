@@ -18,7 +18,7 @@ export const CollapseMenuItemFontAwesomeIcon: any = styled(FontAwesomeIcon)`
   font-weight: ${({ theme }) => theme.components.text.basic.fontWeight};
   font-size: ${({ theme }) => `${theme.fontSize.small}rem`};
   font-style: ${({ theme }) => theme.components.text.basic.fontStyle};
-  opacity: 0.7;
+  font-weight: 600;
 
   &:hover {
     cursor: pointer;
@@ -29,5 +29,5 @@ export const CollapseMenuText = styled(MenuText)`
   border-bottom: 1px solid
     ${({ theme, active }) =>
       active === true ? theme.components.text.menu.color : 'transparent'};
-  opacity: 0.7;
+  font-weight: 600;
 `;

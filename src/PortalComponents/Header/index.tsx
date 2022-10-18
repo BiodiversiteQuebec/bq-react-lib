@@ -44,6 +44,7 @@ export const Header = ({
     <HeaderContainerV1
       ref={targetRef}
       tabIndex={-1}
+      className="bq-nav"
       onBlur={() => {
         if (onBlur) onBlur();
       }}
@@ -114,12 +115,13 @@ export const CustomHeader = ({
             <HeaderNavItem
               key={key}
               disbaleCollapse={true}
+              class="bq-nav-item"
               title={
                 <a href={href} className="no-decoration">
                   <CollapseMenuItem
                     text={text}
                     collapse={settedKey === key ? false : true}
-                    opacity={tabClicked !== key ? 0.7 : 1}
+                    highlight={tabClicked === key}
                     notifyEvent={(param: any) => selectedTab(key)}
                     hidearrow={true}
                   />
@@ -227,8 +229,8 @@ export const BQHeaderWithoutProvider = (props: any) => {
   );
 };
 
-export const BQHeader = () => (
+export const BQHeader = (props: any) => (
   <AppModeProvider>
-    <BQHeaderWithoutProvider />
+    <BQHeaderWithoutProvider {...props} />
   </AppModeProvider>
 );
