@@ -1,6 +1,8 @@
 //import './globals.css';
 import './css/fontawesome.css';
 import './css/main.css';
+import { colors as colors2 } from '../styles';
+
 // Use http://chir.ag/projects/name-that-color to name colors
 const colors = {
   white: '#ffffff',
@@ -177,6 +179,46 @@ export const appTheme = {
       },
       body: {
         background: colors.darkv2,
+      },
+      hero: {
+        background: colors.darkv2,
+        fontColor: colors.white,
+        title: colors.darkv2,
+      },
+      text: {
+        basic: {
+          ...textStyle,
+        },
+        title: {
+          ...textStyle,
+          fontSize: fontSize.large,
+          fontWeight: fontWeight.extrabold,
+          lineHeight: lineHeight.large,
+        },
+        subtitle: {
+          ...textStyle,
+          font: fonts.roboto,
+          fontSize: fontSize.medium,
+          fontWeight: fontWeight.medium,
+        },
+        ...textStyle,
+      },
+      errorMessage: {
+        errorRed: 'red',
+      },
+    },
+  },
+  orangeMode: {
+    ...basicMode,
+    mode: 'orange',
+    components: {
+      header: {
+        background: colors2.bqlightorange,
+        fontColor: colors.white,
+        tabContentBackground: colors2.bqlightorange,
+      },
+      body: {
+        background: colors.white,
       },
       hero: {
         background: colors.darkv2,

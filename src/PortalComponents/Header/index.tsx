@@ -192,7 +192,7 @@ export const BQHeaderWithoutProvider = (props: any) => {
     },
     {
       href: 'https://biodiversite-quebec.ca/inventaires/',
-      text: 'Inventaires Terrain',
+      text: 'Inventaires terrain',
       key: 'inventaire_terrain',
       default: false,
     },

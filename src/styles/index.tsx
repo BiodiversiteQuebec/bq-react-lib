@@ -10,7 +10,13 @@ export const colors = {
   bqorange: '#e0b658',
   bqdarkorange: '#a6612d',
   bqcyan: '#7bb5b1',
+  bqlightgray: '#afafaf',
   bqlightbeige: '#f1dca9',
+  bqturquoise: '#7bb5b1',
+  bqcream: '#f1dca9',
+  bqtopaz: '#3e8986',
+  bqlightorange: '#efb850',
+  bqlightblue: '#81c8c5',
 };
 
 export const Container = styled.div`
