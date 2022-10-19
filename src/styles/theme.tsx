@@ -13,6 +13,7 @@ const colors = {
   greenv1: '#7AB5B0',
   yellowv1: '#E0B658',
   orangev1: '#E08558',
+  gray: '#C3C3C3',
 };
 
 //devices
@@ -88,7 +89,7 @@ const letterSpacing = {
 };
 
 const textStyle = {
-  menu: { color: colors.white },
+  menu: { color: colors.white, fontColor: colors.gray },
   color: colors.white,
   lineHeight: lineHeight.basic,
   letterSpacing: letterSpacing.basic,
