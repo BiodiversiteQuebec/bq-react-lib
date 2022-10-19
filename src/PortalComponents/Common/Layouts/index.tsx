@@ -274,7 +274,7 @@ export const PaddingContainerwithBg = styled.div`
   position: relative;
   background: ${({ theme }) => theme.components.header.background};
   box-shadow: 0px 2px 2px 2px rgba(9, 9, 9, 0.23);
-  z-index: 5;
+  z-index: 1000;
   display: flex;
   justify-content: center;
 `;

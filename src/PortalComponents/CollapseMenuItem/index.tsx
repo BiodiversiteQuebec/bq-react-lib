@@ -23,7 +23,7 @@ export const CollapseMenuItem = (props: any) => {
   };
   let fontColor = '#c3c3c3';
   if (highlight) {
-    fontColor: '#fff';
+    fontColor = '#fff';
   }
   return (
     <CollapseMenuItemContainer
