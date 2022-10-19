@@ -124,6 +124,7 @@ export const CustomHeader = ({
                     highlight={tabClicked === key || activePage === key}
                     notifyEvent={(param: any) => selectedTab(key)}
                     hidearrow={true}
+                    className={activePage === key ? 'active' : ''}
                   />
                 </a>
               }
