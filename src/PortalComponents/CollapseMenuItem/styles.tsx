@@ -10,7 +10,6 @@ export const CollapseMenuItemContainer: any = styled(Container)`
 
 export const CollapseMenuItemFontAwesomeIcon: any = styled(FontAwesomeIcon)`
   padding-top: 1.3px;
-  color: ${({ theme }) => theme.components.text.menu.color};
   line-height: ${({ theme }) => `${theme.components.text.basic.lineHeight}rem`};
   letter-spacing: ${({ theme }) =>
     `${theme.components.text.basic.letterSpacing}px`};
