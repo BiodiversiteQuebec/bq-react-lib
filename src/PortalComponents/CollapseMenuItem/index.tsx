@@ -13,6 +13,7 @@ export const CollapseMenuItem = (props: any) => {
     highlight = false,
     notifyEvent = (obj: any) => obj,
     hidearrow = false,
+    className = '',
   } = props;
 
   const [active, setActive] = useState(false);
@@ -35,7 +36,7 @@ export const CollapseMenuItem = (props: any) => {
         style={{
           color: { fontColor },
         }}
-        className="bq-menu-text"
+        className={`bq-menu-text ${className}`}
         active={active}
       >
         {text}
