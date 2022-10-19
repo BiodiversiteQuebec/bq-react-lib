@@ -135,17 +135,9 @@ export const CustomHeader = ({
 };
 
 export const BQHeaderWithoutProvider = (props: any) => {
-  const {
-    locale = 'fr',
-    t = (text: string) => text,
-    switchFn,
-    theme = 'dark',
-  } = props;
+  const { locale = 'fr', t = (text: string) => text, switchFn } = props;
 
-  let logoUrl = `/images/logo-dark-mode-fr.svg`;
-  if (theme === 'color') {
-    logoUrl = '/inventaires/images/LogoBiodiversiteQuebec2.png';
-  }
+  const logoUrl = `/images/logo-dark-mode-fr.svg`;
 
   const [settedKey, setSettedKey] = useState('');
 

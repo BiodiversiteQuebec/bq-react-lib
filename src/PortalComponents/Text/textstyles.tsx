@@ -46,7 +46,7 @@ export const SubTitleText = styled(Text)`
 `;
 
 export const TextGray: any = styled(Text)`
-  color: #c3c3c3;
+  color: ${({ theme }) => theme.components.text.title.menu.color};
 `;
 
 export const MenuText = styled(TextGray)`

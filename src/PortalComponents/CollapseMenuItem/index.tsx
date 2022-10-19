@@ -21,9 +21,9 @@ export const CollapseMenuItem = (props: any) => {
     notifyEvent(text);
     setActive(true);
   };
-  let fontWeight = 600;
+  let fontColor = '#c3c3c3';
   if (highlight) {
-    fontWeight = 800;
+    fontColor: '#fff';
   }
   return (
     <CollapseMenuItemContainer
@@ -33,7 +33,7 @@ export const CollapseMenuItem = (props: any) => {
     >
       <CollapseMenuText
         style={{
-          fontWeight: { fontWeight },
+          color: { fontColor },
         }}
         className="bq-menu-text"
         active={active}
@@ -45,13 +45,13 @@ export const CollapseMenuItem = (props: any) => {
           <CollapseMenuItemFontAwesomeIcon
             icon={faChevronDown}
             className="fa-regular fa-1x"
-            style={{ fontWeight: { fontWeight } }}
+            style={{ color: { fontColor } }}
           />
         ) : (
           <CollapseMenuItemFontAwesomeIcon
             icon={faChevronUp}
             className="fa-regular fa-1x"
-            style={{ fontWeight: { fontWeight } }}
+            style={{ color: { fontColor } }}
           />
         ))}
     </CollapseMenuItemContainer>
