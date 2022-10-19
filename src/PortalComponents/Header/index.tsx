@@ -83,6 +83,7 @@ export const CustomHeader = ({
   items = [],
   logoUrl,
   rightSideComponents,
+  activePage,
 }: any) => {
   const [settedKey, setSettedKey] = useState('');
   const [tabClicked, setTabClicked] = useState('acceuil');
@@ -120,7 +121,7 @@ export const CustomHeader = ({
                   <CollapseMenuItem
                     text={text}
                     collapse={settedKey === key ? false : true}
-                    highlight={tabClicked === key}
+                    highlight={tabClicked === key || activePage === key}
                     notifyEvent={(param: any) => selectedTab(key)}
                     hidearrow={true}
                   />
@@ -135,7 +136,12 @@ export const CustomHeader = ({
 };
 
 export const BQHeaderWithoutProvider = (props: any) => {
-  const { locale = 'fr', t = (text: string) => text, switchFn } = props;
+  const {
+    locale = 'fr',
+    t = (text: string) => text,
+    switchFn,
+    activePage,
+  } = props;
 
   const logoUrl = `/images/logo-dark-mode-fr.svg`;
 
@@ -226,6 +232,7 @@ export const BQHeaderWithoutProvider = (props: any) => {
       t={t}
       settedKey={settedKey}
       rightSideComponents={rightSideComponents}
+      activePage={activePage}
     />
   );
 };
