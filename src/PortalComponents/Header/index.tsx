@@ -142,9 +142,13 @@ export const BQHeaderWithoutProvider = (props: any) => {
     t = (text: string) => text,
     switchFn,
     activePage,
+    logoMode = 'dark',
   } = props;
 
-  const logoUrl = `/images/logo-dark-mode-fr.svg`;
+  let logoUrl = `/images/logo-dark-mode-fr.svg`;
+  if (logoMode == 'darkColor') {
+    logoUrl = `/images/logofooter-dark-mode-fr.svg`;
+  }
 
   const [settedKey, setSettedKey] = useState('');
 
