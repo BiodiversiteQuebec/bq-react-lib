@@ -147,7 +147,7 @@ export const BQHeaderWithoutProvider = (props: any) => {
 
   let logoUrl = `/images/logo-dark-mode-fr.svg`;
   if (logoMode == 'darkColor') {
-    logoUrl = `/images/logofooter-dark-mode-fr.svg`;
+    logoUrl = `/images/logofooter-dark-mode-fr.png`;
   }
 
   const [settedKey, setSettedKey] = useState('');
