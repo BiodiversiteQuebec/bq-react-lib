@@ -153,24 +153,24 @@ export const BQHeaderWithoutProvider = (props: any) => {
   const [settedKey, setSettedKey] = useState('');
 
   const barMenuItems = [
-    {
+    /*{
       href: 'https://biodiversite-quebec.ca/biobalados',
-      text: t('Bio-balado'),
-    },
+      text: t('Bio-balados'),
+    },*/
     {
-      href: 'https://biodiversite-quebec.ca/team',
-      text: t('Équipe'),
-    },
-    {
-      href: 'https://biodiversite-quebec.ca/partners',
-      text: t('Partenaires'),
-    },
-    {
-      href: 'https://biodiversite-quebec.ca/about',
+      href: 'https://biodiversite-quebec.ca/a_propos',
       text: t('À propos'),
     },
     {
-      href: 'https://biodiversite-quebec.ca/contactus',
+      href: 'https://biodiversite-quebec.ca/equipe',
+      text: t('Équipe'),
+    },
+    {
+      href: 'https://biodiversite-quebec.ca/partenaires',
+      text: t('Partenaires'),
+    },
+    {
+      href: 'https://biodiversite-quebec.ca/contact',
       text: t('Contactez-nous'),
     } /* ,
     {
@@ -211,15 +211,15 @@ export const BQHeaderWithoutProvider = (props: any) => {
       default: false,
     },
     {
-      href: 'https://biodiversite-quebec.ca/inventaires/',
-      text: 'Indicateur',
-      key: 'indicateur',
+      href: 'https://biodiversite-quebec.ca/indicateurs/',
+      text: 'Indicateurs',
+      key: 'indicateurs',
       default: false,
     },
     {
       href: 'https://biodiversite-quebec.ca/explorateurs/',
-      text: 'Explorateur',
-      key: 'explorateur_boidiversite',
+      text: 'Atlas',
+      key: 'atlas',
       default: false,
     },
     {
