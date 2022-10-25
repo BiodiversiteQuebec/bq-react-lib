@@ -217,7 +217,7 @@ export const BQHeaderWithoutProvider = (props: any) => {
       default: false,
     },
     {
-      href: 'https://biodiversite-quebec.ca/explorateurs/',
+      href: 'https://biodiversite-quebec.ca/atlas/',
       text: 'Atlas',
       key: 'atlas',
       default: false,
