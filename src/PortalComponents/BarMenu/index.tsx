@@ -11,6 +11,7 @@ import { CustomPathLink } from '../Common/CustomPathLink';
 interface BarMenuItem {
   href?: string;
   text: string;
+  canHide?: boolean;
   type?: string;
   submenuitems: BarMenuItem[];
 }
@@ -76,7 +77,11 @@ export const BarMenu = (props: any) => {
                 <a>{`${locale.substring(0, 2).toUpperCase()}`}</a>
               </div>
             ) : (
-              <div key={item.href} onClick={toggleCollapse}>
+              <div
+                key={item.href}
+                className={item.canHide ? 'bar-menu-hide' : ''}
+                onClick={toggleCollapse}
+              >
                 <CustomPathLink href={item.href ?? '/#'}>
                   {item.text}
                 </CustomPathLink>

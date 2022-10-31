@@ -153,24 +153,37 @@ export const BQHeaderWithoutProvider = (props: any) => {
   const [settedKey, setSettedKey] = useState('');
 
   const barMenuItems = [
-    /*{
-      href: 'https://biodiversite-quebec.ca/biobalados',
-      text: t('Bio-balados'),
-    },*/
     {
-      href: 'https://biodiversite-quebec.ca/a_propos',
-      text: t('À propos'),
+      href: 'https://biodiversite-quebec.ca/inventaires/',
+      text: t('inventaire_terrain'),
+      canHide: true,
     },
     {
-      href: 'https://biodiversite-quebec.ca/equipe',
+      href: 'https://biodiversite-quebec.ca/indicateurs/',
+      text: t('indicateur'),
+      canHide: true,
+    },
+    {
+      href: 'https://biodiversite-quebec.ca/atlas/',
+      text: t('atlas'),
+      canHide: true,
+    },
+    {
+      href: 'https://biodiversite-quebec.ca/decouverte',
+      text: t('decouverte'),
+      canHide: true,
+    },
+    ,
+    {
+      href: 'https://biodiversite-quebec.ca/equipe/',
       text: t('Équipe'),
     },
     {
-      href: 'https://biodiversite-quebec.ca/partenaires',
-      text: t('Partenaires'),
+      href: 'https://biodiversite-quebec.ca/a_propos/',
+      text: t('À propos'),
     },
     {
-      href: 'https://biodiversite-quebec.ca/contact',
+      href: 'https://biodiversite-quebec.ca/contactez_nous/',
       text: t('Contactez-nous'),
     } /* ,
     {

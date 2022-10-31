@@ -3,6 +3,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export const BarMenuContainer = styled.div`
   position: relative;
+
+  & .bar-menu-hide {
+    @media ${({ theme }) => theme.devices.tabletgtM} {
+      display: none;
+    }
+  }
 `;
 
 export const BarMenuBody = styled.div`
