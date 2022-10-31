@@ -223,7 +223,7 @@ export const BQHeaderWithoutProvider = (props: any) => {
       default: false,
     },
     {
-      href: 'https://biodiversite-quebec.ca/',
+      href: 'https://biodiversite-quebec.ca/decouverte',
       text: 'Découverte',
       key: 'decouverte',
       default: false,
