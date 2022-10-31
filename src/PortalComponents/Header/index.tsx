@@ -170,7 +170,7 @@ export const BQHeaderWithoutProvider = (props: any) => {
       text: t('Partenaires'),
     },
     {
-      href: 'https://biodiversite-quebec.ca/contact',
+      href: 'https://biodiversite-quebec.ca/contactez_nous',
       text: t('Contactez-nous'),
     } /* ,
     {
