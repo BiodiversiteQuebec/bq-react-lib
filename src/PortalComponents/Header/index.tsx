@@ -86,7 +86,7 @@ export const CustomHeader = ({
   activePage,
 }: any) => {
   const [settedKey, setSettedKey] = useState('');
-  const [tabClicked, setTabClicked] = useState('acceuil');
+  const [tabClicked, setTabClicked] = useState('accueil');
 
   const selectedTab = (tabKey: string) => {
     setSettedKey(tabKey === settedKey ? '' : tabKey);
@@ -149,6 +149,8 @@ export const BQHeaderWithoutProvider = (props: any) => {
   if (logoMode == 'darkColor') {
     logoUrl = `/images/logofooter-dark-mode-fr.png`;
   }
+
+  logoUrl = `/images/logofooter-dark-mode-${logoMode}-fr.png`;
 
   const [settedKey, setSettedKey] = useState('');
 
@@ -255,7 +257,7 @@ export const BQHeaderWithoutProvider = (props: any) => {
   );
 };
 
-export const BQHeader = (props: any) => (
+const BQHeader = (props: any) => (
   <AppModeProvider>
     <BQHeaderWithoutProvider {...props} />
   </AppModeProvider>
