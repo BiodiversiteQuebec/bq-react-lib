@@ -25,8 +25,19 @@ export const CollapseMenuItemFontAwesomeIcon: any = styled(FontAwesomeIcon)`
 `;
 
 export const CollapseMenuText = styled(MenuText)`
-  border-bottom: 1px solid
-    ${({ theme, active }) =>
-      active === true ? theme.components.text.menu.color : 'transparent'};
   font-weight: 600;
+
+  /*  border-bottom: 1px solid
+    ${({ theme, opacity }) =>
+    opacity === 1 ? theme.components.text.menu.color : 'transparent'}; */
+  color: ${({ theme, active }) =>
+    active ? '#efb850' : theme.components.text.menu.color};
+  opacity: ${({ opacity }) => opacity};
+
+  cursor: pointer;
+
+  :hover {
+    color: #efb850;
+    opacity: 1;
+  }
 `;

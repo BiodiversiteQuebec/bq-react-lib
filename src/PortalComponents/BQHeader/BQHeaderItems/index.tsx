@@ -30,6 +30,7 @@ export const BQHeaderItems = (props: BQHeaderItemsProps) => {
   } = props;
   const [bbox, targetRef] = useBbox();
   const { height } = bbox;
+
   return (
     <BQHeaderUl ref={targetRef}>
       {items.map((item: Item, index: number) => {

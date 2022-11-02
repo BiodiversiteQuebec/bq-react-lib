@@ -14,31 +14,23 @@ export const CollapseMenuItem = (props: any) => {
     notifyEvent = (obj: any) => obj,
     hidearrow = false,
     className = '',
+    opacity = 0.7,
+    active,
   } = props;
 
-  const [active, setActive] = useState(false);
+  //const [active, setActive] = useState(false);
 
   const toggle = (e: any) => {
     notifyEvent(text);
-    setActive(true);
+    //setActive(true);
   };
   let fontColor = '#c3c3c3';
   if (highlight) {
     fontColor = '#EFB850';
   }
   return (
-    <CollapseMenuItemContainer
-      onClick={toggle}
-      tabIndex={-1}
-      onBlur={() => setActive(false)}
-    >
-      <CollapseMenuText
-        style={{
-          color: { fontColor },
-        }}
-        className={`bq-menu-text ${className}`}
-        active={active}
-      >
+    <CollapseMenuItemContainer onClick={toggle}>
+      <CollapseMenuText opacity={opacity} active={active}>
         {text}
       </CollapseMenuText>
       {!hidearrow &&

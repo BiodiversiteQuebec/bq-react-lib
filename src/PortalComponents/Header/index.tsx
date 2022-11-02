@@ -157,7 +157,7 @@ export const BQHeaderWithoutProvider = (props: any) => {
   const barMenuItems = [
     {
       href: 'https://biodiversite-quebec.ca/inventaires/',
-      text: t('inventaire_terrain'),
+      text: t('inventaire terrain'),
       canHide: true,
     },
     {

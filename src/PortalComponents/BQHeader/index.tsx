@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { AppModeProvider, TranslateWrapper } from '../../context';
 import { BQBarMenu } from './BQBarMenu';
 import { BQHeaderItems } from './BQHeaderItems';
 import { BQLogo } from './BQLogo';
@@ -7,7 +8,7 @@ import { BQHeaderContainer } from './styles';
 export const BQHeader = (props: any) => {
   //const logoUrl = props.logoUrl ?? `/images/logo-dark-mode-fr.png`;
   const {
-    t,
+    t = (text: string) => text,
     locale = 'fr',
     switchFn,
     activePage,
@@ -20,70 +21,73 @@ export const BQHeader = (props: any) => {
 
   const items = [
     {
-      href: '/#',
-      text: t('accueil'),
+      href: 'https://biodiversite-quebec.ca/',
+      text: 'Accueil',
       key: 'accueil',
     },
     {
       href: 'https://biodiversite-quebec.ca/inventaires/',
-      text: t('inventaire_terrain'),
+      text: 'Inventaire terrain',
       key: 'inventaire_terrain',
     },
     {
       href: '/indicateurs',
-      text: t('indicateur'),
+      text: 'Indicateurs',
       key: 'indicateur',
+      default: true,
     },
     {
       href: 'https://biodiversite-quebec.ca/atlas/',
-      text: t('atlas'),
+      text: 'Atlas',
       key: 'atlas',
+      default: true,
     },
     {
-      href: '/decouverte',
-      text: t('decouverte'),
+      href: 'https://biodiversite-quebec.ca/decouverte',
+      text: 'Découverte',
       key: 'decouverte',
+      default: true,
     },
   ];
 
   const barMenuItems = [
     {
-      href: '/#',
-      text: t('accueil'),
+      href: 'https://biodiversite-quebec.ca/',
+      text: 'Accueil',
       canHide: true,
     },
     {
       href: 'https://biodiversite-quebec.ca/inventaires/',
-      text: t('inventaire_terrain'),
+      text: t('Inventaire terrain'),
       canHide: true,
     },
     {
-      href: '/indicateurs',
-      text: t('indicateur'),
+      href: 'https://biodiversite-quebec.ca/indicateurs/',
+      text: t('Indicateurs'),
       canHide: true,
     },
     {
       href: 'https://biodiversite-quebec.ca/atlas/',
-      text: t('atlas'),
+      text: t('Atlas'),
       canHide: true,
     },
     {
-      href: '/decouverte',
-      text: t('decouverte'),
+      href: 'https://biodiversite-quebec.ca/decouverte/',
+      text: t('Découverte'),
       canHide: true,
     },
     {
-      href: '/a_propos',
-      text: t('propos'),
+      href: 'https://biodiversite-quebec.ca/a_propos/',
+      text: t('À propos'),
     },
     {
-      href: '/equipe',
-      text: t('equipe'),
+      href: 'https://biodiversite-quebec.ca/equipe/',
+      text: t('Équipe'),
     },
 
     {
-      href: '/contactez_nous',
-      text: t('contacteznous'),
+      href: 'https://biodiversite-quebec.ca/contactez_nous/',
+      text: t('Contactez-nous'),
     } /* ,
     {
       text: locale === 'fr' ? t('en') : t('fr'),
@@ -146,8 +150,10 @@ export const BQHeader = (props: any) => {
 const Header = (props: any) => {
   const { children } = props;
   return (
-    <BQHeaderContainer className="bq-header" tabIndex={-1}>
-      {children}
-    </BQHeaderContainer>
+    <AppModeProvider>
+      <BQHeaderContainer className="bq-header" tabIndex={-1}>
+        {children}
+      </BQHeaderContainer>
+    </AppModeProvider>
   );
 };

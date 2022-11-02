@@ -2,11 +2,13 @@ import React from 'react';
 import { Meta, Story } from '@storybook/react';
 import { CustomHeader } from '../src/PortalComponents/Header';
 import { BQHeader } from '../src/PortalComponents/BQHeader';
-import { AppModeProvider } from '../src/context';
 
+const MyComponent = (props: any) => {
+  return <div></div>;
+};
 const headerStory: Meta = {
   title: 'BQ-Header',
-  component: CustomHeader,
+  component: MyComponent,
 };
 
 export default headerStory;
@@ -14,11 +16,7 @@ export default headerStory;
 const Template: Story<any> = (args) => {
   return (
     <div style={{ width: '100%', height: '100vh' }}>
-      <BQHeader
-        t={(text: string) => text}
-        locale={'fr'}
-        activePage={'accueil'}
-      />
+      <BQHeader locale={'fr'} activePage={'accueil'} />
     </div>
   );
 };
