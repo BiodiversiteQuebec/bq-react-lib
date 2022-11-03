@@ -1,6 +1,7 @@
 const postcss = require('rollup-plugin-postcss');
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
+const images = require('rollup-plugin-image-files');
 module.exports = {
   rollup(config, options) {
     config.plugins.push(
@@ -16,6 +17,12 @@ module.exports = {
         extract: !!options.writeMeta,
       })
     );
+
+    config.plugins = [
+      images({ incude: ['**/*.png', '**/*.jpg'] }),
+      ...config.plugins,
+    ];
+
     return config;
   },
 };

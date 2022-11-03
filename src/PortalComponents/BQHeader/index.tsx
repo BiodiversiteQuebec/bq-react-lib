@@ -125,7 +125,7 @@ export const BQHeader = (props: any) => {
         setCollapse((oldValue: boolean) => true);
       }}
     >
-      <BQLogo logoUrl={logoUrl} />
+      <BQLogo logoMode={logoMode} />
       <BQHeaderItems
         items={items}
         settedKey={activePage}

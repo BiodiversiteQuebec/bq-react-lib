@@ -19,7 +19,8 @@
     "size": "size-limit",
     "analyze": "size-limit --why",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "copies": "copyfiles -f src/PortalComponents/BQHeader/logos/*  dist/PortalComponents/BQHeader/logos"
   },
   "peerDependencies": {
     "@emotion/react": "^11.10.0",
@@ -107,8 +108,10 @@
     "@fortawesome/free-solid-svg-icons": "^6.2.0",
     "@fortawesome/react-fontawesome": "^0.2.0",
     "bootstrap": "^5.2.0",
+    "copyfiles": "^2.4.1",
     "markdown-to-jsx": "^7.1.7",
     "react-bootstrap": "^2.5.0",
-    "react-router-dom": "^6.3.0"
+    "react-router-dom": "^6.3.0",
+    "rollup-plugin-image-files": "^1.4.2"
   }
 }
