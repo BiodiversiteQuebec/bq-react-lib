@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const BQHeaderContainer = styled.nav`
   display: flex;
@@ -10,7 +10,7 @@ export const BQHeaderContainer = styled.nav`
   background: ${({ theme }) => theme.components.header.background};
   color: ${({ theme }) => theme.components.text.menu.color};
   padding: 0 1rem;
-  height: 45px;
+  height: 50px;
 
   & a {
     text-decoration: none;
