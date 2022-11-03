@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { AppModeProvider, TranslateWrapper } from '../../context';
+import { PaddingContainerwithBg } from '../Common';
 import { BQBarMenu } from './BQBarMenu';
 import { BQHeaderItems } from './BQHeaderItems';
 import { BQLogo } from './BQLogo';
@@ -151,9 +152,11 @@ const Header = (props: any) => {
   const { children } = props;
   return (
     <AppModeProvider>
-      <BQHeaderContainer className="bq-header" tabIndex={-1}>
-        {children}
-      </BQHeaderContainer>
+      <PaddingContainerwithBg>
+        <BQHeaderContainer className="bq-header" tabIndex={-1}>
+          {children}
+        </BQHeaderContainer>
+      </PaddingContainerwithBg>
     </AppModeProvider>
   );
 };
