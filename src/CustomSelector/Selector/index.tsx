@@ -61,7 +61,7 @@ export const Selector = (props: SelectorProps) => {
         >
           {selectorList.map((element: any) => (
             <MenuItem
-              key={_.uniqueId(JSON.stringify(element))}
+              key={_.uniqueId(JSON.stringify(element.key))}
               value={element.value}
             >
               {t(element.option)}
