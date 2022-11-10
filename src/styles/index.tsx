@@ -13,7 +13,7 @@ export const colors = {
   bqcyan: '#7bb5b1',
   bqlightgray: '#afafaf',
   bqlightbeige: '#f1dca9',
-  bqturquoise: '#7bb5b1',
+  bqturquoise: '#7bb58e',
   bqcream: '#f1dca9',
   bqtopaz: '#3e8986',
   bqlightorange: '#efb850',
