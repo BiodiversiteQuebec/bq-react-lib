@@ -32,7 +32,7 @@ export const BQHeader = (props: any) => {
       key: 'inventaire_terrain',
     },
     {
-      href: '/indicateurs',
+      href: 'https://biodiversite-quebec.ca/indicateurs',
       text: 'Indicateurs',
       key: 'indicateur',
       default: true,
