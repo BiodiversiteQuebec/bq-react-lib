@@ -25,29 +25,34 @@ export const BQHeader = (props: any) => {
       href: 'https://biodiversite-quebec.ca/',
       text: 'Accueil',
       key: 'accueil',
+      color: '#efb850',
     },
     {
       href: 'https://biodiversite-quebec.ca/inventaires/',
       text: 'Inventaire terrain',
       key: 'inventaire_terrain',
+      color: '#57776e',
     },
     {
       href: 'https://biodiversite-quebec.ca/indicateurs',
       text: 'Indicateurs',
       key: 'indicateur',
       default: true,
+      color: '#a75822',
     },
     {
       href: 'https://biodiversite-quebec.ca/atlas/',
       text: 'Atlas',
       key: 'atlas',
       default: true,
+      color: '#d88219',
     },
     {
       href: 'https://biodiversite-quebec.ca/decouverte',
       text: 'Découverte',
       key: 'decouverte',
       default: true,
+      color: '#7ab5b0',
     },
   ];
 
@@ -133,7 +138,15 @@ export const BQHeader = (props: any) => {
         tabClicked={activePage}
       />
       <div style={{ display: 'flex', flex: 1 }} />
-      <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
+      <div
+        style={{
+          display: 'flex',
+          alignItems: 'center',
+          gap: '20px',
+          right: '10px',
+          position: 'absolute',
+        }}
+      >
         <BQBarMenu
           items={barMenuItems}
           switchLocale={switchFn}

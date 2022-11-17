@@ -16,7 +16,11 @@ export default headerStory;
 const Template: Story<any> = (args) => {
   return (
     <div style={{ width: '100%', height: '100vh' }}>
-      <BQHeader locale={'fr'} activePage={'accueil'} />
+      <BQHeader
+        locale={'fr'}
+        activePage={'inventaire_terrain'}
+        logoMode={'color-dark'}
+      />
     </div>
   );
 };

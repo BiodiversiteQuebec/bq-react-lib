@@ -11,6 +11,7 @@ interface Item {
   href?: string;
   disbaleCollapse?: boolean;
   subitem?: any;
+  color?: string;
 }
 
 interface BQHeaderItemsProps {
@@ -51,6 +52,7 @@ export const BQHeaderItems = (props: BQHeaderItemsProps) => {
                   collapse={settedKey === item.key ? false : true}
                   opacity={tabClicked !== item.key ? 0.7 : 1}
                   active={settedKey === item.key}
+                  color={item.color}
                   notifyEvent={(param: any) => selectedTab(item.key ?? '')}
                   hidearrow={true}
                 />

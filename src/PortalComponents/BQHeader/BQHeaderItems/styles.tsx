@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const BQHeaderUl = styled.ul`
   margin: 0;
@@ -17,7 +17,7 @@ export const BQHeaderUl = styled.ul`
 
   & li.active {
     //console border-bottom: 3px solid
-    color: #efb850 !important;
+    border-bottom: 4px solid #efb850;
     :hover {
     }
   }

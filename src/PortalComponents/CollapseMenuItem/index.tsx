@@ -16,6 +16,7 @@ export const CollapseMenuItem = (props: any) => {
     className = '',
     opacity = 0.7,
     active,
+    color,
   } = props;
 
   //const [active, setActive] = useState(false);
@@ -24,13 +25,9 @@ export const CollapseMenuItem = (props: any) => {
     notifyEvent(text);
     //setActive(true);
   };
-  let fontColor = '#c3c3c3';
-  if (highlight) {
-    fontColor = '#EFB850';
-  }
   return (
     <CollapseMenuItemContainer onClick={toggle}>
-      <CollapseMenuText opacity={opacity} active={active}>
+      <CollapseMenuText opacity={opacity} active={active} color={color}>
         {text}
       </CollapseMenuText>
       {!hidearrow &&
@@ -38,13 +35,11 @@ export const CollapseMenuItem = (props: any) => {
           <CollapseMenuItemFontAwesomeIcon
             icon={faChevronDown}
             className="fa-regular fa-1x"
-            style={{ color: { fontColor } }}
           />
         ) : (
           <CollapseMenuItemFontAwesomeIcon
             icon={faChevronUp}
             className="fa-regular fa-1x"
-            style={{ color: { fontColor } }}
           />
         ))}
     </CollapseMenuItemContainer>

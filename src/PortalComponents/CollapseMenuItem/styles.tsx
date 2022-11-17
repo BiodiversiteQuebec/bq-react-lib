@@ -30,14 +30,21 @@ export const CollapseMenuText = styled(MenuText)`
   /*  border-bottom: 1px solid
     ${({ theme, opacity }) =>
     opacity === 1 ? theme.components.text.menu.color : 'transparent'}; */
-  color: ${({ theme, active }) =>
-    active ? '#efb850' : theme.components.text.menu.color};
+  color: ${({ theme, active }) => theme.components.text.menu.color};
   opacity: ${({ opacity }) => opacity};
-
-  cursor: pointer;
-
+  border-bottom: ${({ theme, active, color }) =>
+    active
+      ? '7px solid ' + color
+      : '0px solid ' + theme.components.text.menu.color};
+  margin-top: ${({ active }) => (active ? '6px' : '0px')};
+  margin-bottom: ${({ active }) => (active ? '-12px' : '0px')};
+  padding-bottom: ${({ active }) => (active ? '10px' : '0px')};
+  cursor: 'pointer';
   :hover {
-    color: #efb850;
+    border-bottom: ${({ color }) => ' 7px solid ' + color};
+    margin-top: 6px;
+    margin-bottom: -12px;
+    padding-bottom: 10px;
     opacity: 1;
   }
 `;
