@@ -82,6 +82,7 @@ export const BQDrawer = (props: BQDrawerProps) => {
       key={tab.index}
       icon={tab.icon}
       label={tab.title}
+      className={tab.title}
       onClick={forceDrawerOpen}
       sx={{ boxShadow: '0px 3px 5px #aaa6' }}
     />
