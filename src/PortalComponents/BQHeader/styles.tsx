@@ -6,11 +6,14 @@ export const BQHeaderContainer = styled.nav`
   align-items: center;
   position: relative;
   width: 100%;
-  max-width: 1500px;
   background: ${({ theme }) => theme.components.header.background};
   color: ${({ theme }) => theme.components.text.menu.color};
   padding: 0 5%;
   height: 50px;
+  margin-left: calc((100vw - 1500px) / 2);
+  @media (max-width: 1500px) {
+    margin-left: 10px;
+  }
 
   & a {
     text-decoration: none;
