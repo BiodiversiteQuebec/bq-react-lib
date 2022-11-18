@@ -5,6 +5,7 @@ export const LogoImage = styled.img`
   object-fit: cover;
   max-height: 75px;
   margin-right: 40px;
+  margin-top: 5px;
 
   @media ${({ theme }) => theme.devices.gttv} {
     width: 300px;
