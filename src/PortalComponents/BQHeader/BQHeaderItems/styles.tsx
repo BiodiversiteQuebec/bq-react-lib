@@ -6,7 +6,7 @@ export const BQHeaderUl = styled.ul`
   justify-content: center;
   align-items: center;
   list-style: none;
-  gap: 3em;
+  gap: 3.5em;
   z-index: 10;
   padding: 0;
   height: 100%;
@@ -21,4 +21,10 @@ export const BQHeaderUl = styled.ul`
     :hover {
     }
   }
+`;
+
+export const BQHeaderUlDiv = styled.div`
+  display: flex;
+  justify-content: center;
+  width: 100%;
 `;

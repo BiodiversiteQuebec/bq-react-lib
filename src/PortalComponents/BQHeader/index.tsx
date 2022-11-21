@@ -15,6 +15,7 @@ export const BQHeader = (props: any) => {
     activePage,
     setActivePage,
     logoMode = 'non-color-dark',
+    headerWidth = '1400px',
   } = props;
   const logoUrl = `/images/logo-${logoMode}-mode-fr.png`;
 
@@ -129,6 +130,7 @@ export const BQHeader = (props: any) => {
       onFocus={() => {
         setCollapse((oldValue: boolean) => true);
       }}
+      headerWidth={headerWidth}
     >
       <BQLogo logoMode={logoMode} />
       <BQHeaderItems
@@ -137,14 +139,13 @@ export const BQHeader = (props: any) => {
         selectedTab={selectedTab}
         tabClicked={activePage}
       />
-      <div style={{ display: 'flex', flex: 1 }} />
       <div
         style={{
           display: 'flex',
-          alignItems: 'center',
+          justifyContent: 'right',
           gap: '20px',
-          right: '10px',
-          position: 'absolute',
+          width: '200px',
+          marginRight: '30px',
         }}
       >
         <BQBarMenu
@@ -162,11 +163,15 @@ export const BQHeader = (props: any) => {
 };
 
 const Header = (props: any) => {
-  const { children } = props;
+  const { children, headerWidth } = props;
   return (
     <AppModeProvider>
       <PaddingContainerwithBg>
-        <BQHeaderContainer className="bq-header" tabIndex={-1}>
+        <BQHeaderContainer
+          className="bq-header"
+          tabIndex={-1}
+          style={{ width: headerWidth }}
+        >
           {children}
         </BQHeaderContainer>
       </PaddingContainerwithBg>

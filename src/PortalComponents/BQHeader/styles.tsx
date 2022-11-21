@@ -8,9 +8,7 @@ export const BQHeaderContainer = styled.nav`
   width: 100%;
   background: ${({ theme }) => theme.components.header.background};
   color: ${({ theme }) => theme.components.text.menu.color};
-  padding: 0 5%;
   height: 50px;
-  margin-left: calc((100vw - 1500px) / 2);
   @media (max-width: 1500px) {
     margin-left: 10px;
   }

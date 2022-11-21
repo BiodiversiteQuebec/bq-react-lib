@@ -3,8 +3,6 @@ import styled from 'styled-components';
 export const LogoImage = styled.img`
   width: 185px;
   object-fit: cover;
-  max-height: 75px;
-  margin-right: 40px;
   margin-top: 5px;
 
   @media ${({ theme }) => theme.devices.gttv} {
@@ -12,4 +10,10 @@ export const LogoImage = styled.img`
     object-fit: cover;
     max-height: 95px;
   }
+`;
+
+export const LogoDiv = styled.div`
+  width: 200px;
+  display: flex;
+  justify-content: center;
 `;

@@ -1,6 +1,6 @@
 import React from 'react';
 import { CustomPathLink } from '../../Common/CustomPathLink';
-import { LogoImage } from './styles';
+import { LogoImage, LogoDiv } from './styles';
 import logo_color from './logo-color-dark-mode-fr.png';
 import non_logo_color from './logo-non-color-dark-mode-fr.png';
 
@@ -23,7 +23,9 @@ export const BQLogo = (props: any) => {
   const logo = get_Logo(logoMode);
   return logoMode ? (
     <CustomPathLink href="/#">
-      <LogoImage className="logo" src={logo} alt="logo" />
+      <LogoDiv>
+        <LogoImage className="logo" src={logo} alt="logo" />
+      </LogoDiv>
     </CustomPathLink>
   ) : null;
 };
