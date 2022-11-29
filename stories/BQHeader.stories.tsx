@@ -20,6 +20,7 @@ const Template: Story<any> = (args) => {
         locale={'fr'}
         activePage={'inventaire_terrain'}
         logoMode={'color-dark'}
+        headerWidth="100%"
       />
     </div>
   );

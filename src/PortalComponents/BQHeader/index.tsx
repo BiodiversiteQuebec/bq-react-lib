@@ -23,34 +23,34 @@ export const BQHeader = (props: any) => {
 
   const items = [
     {
-      href: 'https://biodiversite-quebec.ca/',
-      text: 'Accueil',
+      href: `https://biodiversite-quebec.ca/${locale}/`,
+      text: t('Accueil'),
       key: 'accueil',
       color: '#efb850',
     },
     {
-      href: 'https://biodiversite-quebec.ca/inventaires/',
-      text: 'Inventaire terrain',
+      href: `https://biodiversite-quebec.ca/${locale}/inventaires/`,
+      text: t('Inventaire terrain'),
       key: 'inventaire_terrain',
       color: '#57776e',
     },
     {
-      href: 'https://biodiversite-quebec.ca/indicateurs',
-      text: 'Indicateurs',
+      href: `https://biodiversite-quebec.ca/${locale}/indicateurs/`,
+      text: t('Indicateurs'),
       key: 'indicateur',
       default: true,
       color: '#a75822',
     },
     {
-      href: 'https://biodiversite-quebec.ca/atlas/',
-      text: 'Atlas',
+      href: `https://biodiversite-quebec.ca/${locale}/atlas/`,
+      text: t('Atlas'),
       key: 'atlas',
       default: true,
       color: '#d88219',
     },
     {
-      href: 'https://biodiversite-quebec.ca/decouverte',
-      text: 'Découverte',
+      href: `https://biodiversite-quebec.ca/${locale}/decouverte/`,
+      text: t('Découverte'),
       key: 'decouverte',
       default: true,
       color: '#7ab5b0',
@@ -59,41 +59,41 @@ export const BQHeader = (props: any) => {
 
   const barMenuItems = [
     {
-      href: 'https://biodiversite-quebec.ca/',
-      text: 'Accueil',
+      href: `https://biodiversite-quebec.ca/${locale}/`,
+      text: t('Accueil'),
       canHide: true,
     },
     {
-      href: 'https://biodiversite-quebec.ca/inventaires/',
+      href: `https://biodiversite-quebec.ca/${locale}/inventaires/`,
       text: t('Inventaire terrain'),
       canHide: true,
     },
     {
-      href: 'https://biodiversite-quebec.ca/indicateurs/',
+      href: `https://biodiversite-quebec.ca/${locale}/indicateurs/`,
       text: t('Indicateurs'),
       canHide: true,
     },
     {
-      href: 'https://biodiversite-quebec.ca/atlas/',
+      href: `https://biodiversite-quebec.ca/${locale}/atlas/`,
       text: t('Atlas'),
       canHide: true,
     },
     {
-      href: 'https://biodiversite-quebec.ca/decouverte/',
+      href: `https://biodiversite-quebec.ca/${locale}/decouverte/`,
       text: t('Découverte'),
       canHide: true,
     },
     {
-      href: 'https://biodiversite-quebec.ca/a_propos/',
+      href: `https://biodiversite-quebec.ca/${locale}/a_propos/`,
       text: t('À propos'),
     },
     {
-      href: 'https://biodiversite-quebec.ca/equipe/',
+      href: `https://biodiversite-quebec.ca/${locale}/equipe/`,
       text: t('Équipe'),
     },
 
     {
-      href: 'https://biodiversite-quebec.ca/contactez_nous/',
+      href: `https://biodiversite-quebec.ca/${locale}/contactez_nous/`,
       text: t('Contactez-nous'),
     } /* ,
     {
