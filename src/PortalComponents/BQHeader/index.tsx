@@ -11,7 +11,7 @@ export const BQHeader = (props: any) => {
   const {
     t = (text: string) => text,
     locale = 'fr',
-    switchLanguageFn,
+    switchLocaleFn,
     activePage,
     setActivePage,
     logoMode = 'non-color-dark',
@@ -150,7 +150,7 @@ export const BQHeader = (props: any) => {
       >
         <BQBarMenu
           items={barMenuItems}
-          switchLocale={switchFn}
+          switchLocale={switchLocaleFn}
           defaultLocale={locale === 'fr' ? 'en-US' : 'fr'}
           forceCollapse={collapse}
           notifyChange={() => {
