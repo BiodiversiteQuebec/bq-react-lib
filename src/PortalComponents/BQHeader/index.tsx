@@ -6,11 +6,33 @@ import { BQHeaderItems } from './BQHeaderItems';
 import { BQLogo } from './BQLogo';
 import { BQHeaderContainer } from './styles';
 
+const locales: any = {
+  'en-US': {
+    Atlas: 'Atlas',
+    Indicateurs: 'Indicators',
+    Découverte: 'Discovery',
+    'Inventaire terrain': 'Field surveys',
+    Accueil: 'Home',
+    'À propos': 'About us',
+    Équipe: 'Team',
+    'Contactez-nous': 'Contact us',
+  },
+  fr: {
+    Indicateurs: 'Indicateurs',
+    Découverte: 'Découverte',
+    'Inventaire terrain': 'Inventaire terrain',
+    Accueil: 'Accueil',
+    'À propos': 'À propos',
+    Équipe: 'Équipe',
+    'Contactez-nous': 'Contactez-nous',
+    Atlas: 'Atlas',
+  },
+};
 export const BQHeader = (props: any) => {
   //const logoUrl = props.logoUrl ?? `/images/logo-dark-mode-fr.png`;
   const {
     t = (text: string) => text,
-    locale = 'fr',
+    locale = 'fr' as string,
     switchLocaleFn,
     activePage,
     setActivePage,
@@ -24,33 +46,33 @@ export const BQHeader = (props: any) => {
   const items = [
     {
       href: `https://biodiversite-quebec.ca/${locale}/`,
-      text: t('Accueil'),
+      text: locales[locale]['Accueil'],
       key: 'accueil',
       color: '#efb850',
     },
     {
       href: `https://biodiversite-quebec.ca/${locale}/inventaires/`,
-      text: t('Inventaire terrain'),
+      text: locales[locale]['Inventaire terrain'],
       key: 'inventaire_terrain',
       color: '#57776e',
     },
     {
       href: `https://biodiversite-quebec.ca/${locale}/indicateurs/`,
-      text: t('Indicateurs'),
+      text: locales[locale]['Indicateurs'],
       key: 'indicateur',
       default: true,
       color: '#a75822',
     },
     {
       href: `https://biodiversite-quebec.ca/${locale}/atlas/`,
-      text: t('Atlas'),
+      text: locales[locale]['Atlas'],
       key: 'atlas',
       default: true,
       color: '#d88219',
     },
     {
       href: `https://biodiversite-quebec.ca/${locale}/decouverte/`,
-      text: t('Découverte'),
+      text: locales[locale]['Découverte'],
       key: 'decouverte',
       default: true,
       color: '#7ab5b0',
@@ -60,44 +82,44 @@ export const BQHeader = (props: any) => {
   const barMenuItems = [
     {
       href: `https://biodiversite-quebec.ca/${locale}/`,
-      text: t('Accueil'),
+      text: locales[locale]['Accueil'],
       canHide: true,
     },
     {
       href: `https://biodiversite-quebec.ca/${locale}/inventaires/`,
-      text: t('Inventaire terrain'),
+      text: locales[locale]['Inventaire terrain'],
       canHide: true,
     },
     {
       href: `https://biodiversite-quebec.ca/${locale}/indicateurs/`,
-      text: t('Indicateurs'),
+      text: locales[locale]['Indicateurs'],
       canHide: true,
     },
     {
       href: `https://biodiversite-quebec.ca/${locale}/atlas/`,
-      text: t('Atlas'),
+      text: locales[locale]['Atlas'],
       canHide: true,
     },
     {
       href: `https://biodiversite-quebec.ca/${locale}/decouverte/`,
-      text: t('Découverte'),
+      text: locales[locale]['Découverte'],
       canHide: true,
     },
     {
       href: `https://biodiversite-quebec.ca/${locale}/a_propos/`,
-      text: t('À propos'),
+      text: locales[locale]['À propos'],
     },
     {
       href: `https://biodiversite-quebec.ca/${locale}/equipe/`,
-      text: t('Équipe'),
+      text: locales[locale]['Équipe'],
     },
 
     {
       href: `https://biodiversite-quebec.ca/${locale}/contactez_nous/`,
-      text: t('Contactez-nous'),
+      text: locales[locale]['Contactez-nous'],
     },
     {
-      text: locale === 'fr' ? t('en') : t('fr'),
+      text: locale === 'fr' ? 'en-US' : 'fr',
       type: 'lang',
     },
   ];

@@ -98,7 +98,7 @@ export const BQBarMenu = (props: any) => {
             return item.type && item.type === 'lang' ? (
               <div
                 className="language-item"
-                key={item.text}
+                key={item.text === 'fr' ? 'English' : 'Français'}
                 onClick={() => changeLanguage(locale)}
               >
                 <a>{item.text.toUpperCase()}</a>

@@ -17,7 +17,7 @@ const Template: Story<any> = (args) => {
   return (
     <div style={{ width: '100%', height: '100vh' }}>
       <BQHeader
-        locale={'fr'}
+        locale={'en-US'}
         activePage={'inventaire_terrain'}
         logoMode={'color-dark'}
         headerWidth="100%"
