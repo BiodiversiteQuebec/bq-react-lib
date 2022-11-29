@@ -95,11 +95,11 @@ export const BQHeader = (props: any) => {
     {
       href: `https://biodiversite-quebec.ca/${locale}/contactez_nous/`,
       text: t('Contactez-nous'),
-    } /* ,
+    },
     {
       text: locale === 'fr' ? t('en') : t('fr'),
       type: 'lang',
-    }, */,
+    },
   ];
 
   const selectedTab = (tabKey: string) => {
