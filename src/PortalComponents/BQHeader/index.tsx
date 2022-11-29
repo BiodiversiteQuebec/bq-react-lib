@@ -11,7 +11,7 @@ export const BQHeader = (props: any) => {
   const {
     t = (text: string) => text,
     locale = 'fr',
-    switchFn,
+    switchLanguageFn,
     activePage,
     setActivePage,
     logoMode = 'non-color-dark',
