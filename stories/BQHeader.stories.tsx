@@ -29,6 +29,8 @@ const Template: Story<any> = (args) => {
         headerWidth="100%"
         switchLocaleFn={switchLocaleFn}
       />
+
+      <div>{locale}</div>
     </div>
   );
 };

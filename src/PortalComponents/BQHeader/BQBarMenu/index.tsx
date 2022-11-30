@@ -85,8 +85,11 @@ export const BQBarMenu = (props: any) => {
   }, [items]);
 
   useEffect(() => {
+    console.log('BQMenu useEffect locale :', locale);
     setLocale(defaultLocale);
   }, [defaultLocale]);
+
+  console.log('BQMenu locale :', locale);
 
   return (
     <BarMenuContainer className="bar-menu-container" tabIndex={0}>
