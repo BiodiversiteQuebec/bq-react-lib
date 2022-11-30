@@ -174,7 +174,7 @@ export const BQHeader = (props: any) => {
         <BQBarMenu
           items={barMenuItems}
           switchLocale={switchLocaleFn}
-          defaultLocale={locale === 'fr' ? 'en-US' : 'fr'}
+          defaultLocale={locale}
           forceCollapse={collapse}
           notifyChange={() => {
             setCollapse(!collapse);

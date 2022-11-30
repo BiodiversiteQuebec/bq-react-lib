@@ -51,8 +51,8 @@ export const BQBarMenu = (props: any) => {
 
   const changeLanguage = (lang: string) => {
     console.log('BQMenu chaning locale :', lang);
-    const oldValue = switchLocale(lang);
-    setLocale(oldValue);
+    switchLocale(lang === 'fr' ? 'en-US' : 'fr');
+    setLocale(lang === 'fr' ? 'en-US' : 'fr');
     toggleCollapse();
   };
 
@@ -93,6 +93,8 @@ export const BQBarMenu = (props: any) => {
 
   console.log('BQMenu locale :', locale);
 
+  const localeLabel = locale === 'fr' ? 'English' : 'Français';
+
   return (
     <BarMenuContainer className="bar-menu-container" tabIndex={0}>
       <HamberguerFontAwesomeIcon
@@ -110,7 +112,7 @@ export const BQBarMenu = (props: any) => {
                 key={item.text === 'fr' ? 'English' : 'Français'}
                 onClick={() => changeLanguage(locale)}
               >
-                <a>{item.text.toUpperCase()}</a>
+                <a>{localeLabel.toUpperCase()}</a>
               </div>
             ) : (
               <div
