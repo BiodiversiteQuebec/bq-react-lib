@@ -87,6 +87,7 @@ export const BQBarMenu = (props: any) => {
 
   useEffect(() => {
     console.log('BQMenu useEffect locale :', locale);
+    console.log('BQMenu useEffect defaultLocale :', defaultLocale);
     setLocale(defaultLocale);
   }, [defaultLocale]);
 
