@@ -189,7 +189,7 @@ export const BQHeaderWithoutProvider = (props: any) => {
       text: t('Contactez-nous'),
     } /* ,
     {
-      text: locale === 'fr' ? 'en-US' : 'fr',
+      text: locale === 'fr' ? 'en' : 'fr',
       type: 'lang',
     }, */,
   ];
@@ -207,7 +207,7 @@ export const BQHeaderWithoutProvider = (props: any) => {
         items={barMenuItems}
         onBlur={() => setSettedKey('')}
         switchLocale={switchFn}
-        defaultLocale={locale === 'fr' ? 'en-US' : 'fr'}
+        defaultLocale={locale === 'fr' ? 'en' : 'fr'}
       />
     </div>
   );

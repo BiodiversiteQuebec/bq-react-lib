@@ -7,7 +7,7 @@ import { BQLogo } from './BQLogo';
 import { BQHeaderContainer } from './styles';
 
 const locales: any = {
-  'en-US': {
+  en: {
     Atlas: 'Atlas',
     Indicateurs: 'Indicators',
     Découverte: 'Discovery',
@@ -119,7 +119,7 @@ export const BQHeader = (props: any) => {
       text: locales[locale]['Contactez-nous'],
     },
     {
-      text: locale === 'fr' ? 'en-US' : 'fr',
+      text: locale === 'fr' ? 'en' : 'fr',
       type: 'lang',
     },
   ];
