@@ -147,7 +147,6 @@ export const BQHeader = (props: any) => {
     };
   }, []);
 
-  console.log('BQHeader locale :', locale);
   return (
     <Header
       onFocus={() => {
