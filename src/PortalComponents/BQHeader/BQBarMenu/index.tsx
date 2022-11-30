@@ -43,7 +43,7 @@ export const BQBarMenu = (props: any) => {
     forceCollapse = true,
     notifyChange = () => 0,
   } = props;
-  const [locale, setLocale] = useState(defaultLocale);
+  const [locale, setLocale] = useState('fr');
 
   const toggleCollapse = () => {
     notifyChange();
@@ -83,6 +83,10 @@ export const BQBarMenu = (props: any) => {
       }
     };
   }, [items]);
+
+  useEffect(() => {
+    setLocale(defaultLocale);
+  }, [defaultLocale]);
 
   return (
     <BarMenuContainer className="bar-menu-container" tabIndex={0}>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Meta, Story } from '@storybook/react';
 import { CustomHeader } from '../src/PortalComponents/Header';
 import { BQHeader } from '../src/PortalComponents/BQHeader';
@@ -14,13 +14,20 @@ const headerStory: Meta = {
 export default headerStory;
 
 const Template: Story<any> = (args) => {
+  const [locale, setLocale] = useState('fr');
+
+  const switchLocaleFn = (locale: string) => {
+    console.log('locale', locale);
+    setLocale(locale);
+  };
   return (
     <div style={{ width: '100%', height: '100vh' }}>
       <BQHeader
-        locale={'en-US'}
+        locale={locale}
         activePage={'inventaire_terrain'}
         logoMode={'color-dark'}
         headerWidth="100%"
+        switchLocaleFn={switchLocaleFn}
       />
     </div>
   );
