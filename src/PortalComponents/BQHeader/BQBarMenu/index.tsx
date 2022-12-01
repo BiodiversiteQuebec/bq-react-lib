@@ -52,6 +52,7 @@ export const BQBarMenu = (props: any) => {
   const changeLanguage = (lang: string) => {
     console.log('changeLanguage 1', lang);
     console.log('changeLanguage 2', lang === 'fr' ? 'en' : 'fr');
+    console.log('changeLanguage fn');
     switchLocale(lang === 'fr' ? 'en' : 'fr');
     setLocale(lang === 'fr' ? 'en' : 'fr');
     toggleCollapse();
