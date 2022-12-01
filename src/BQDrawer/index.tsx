@@ -63,6 +63,7 @@ export const BQDrawer = (props: BQDrawerProps) => {
     color: colors.bqlightgray,
     fontSize: '1em',
     textTransform: 'none',
+    fontFamily: 'Lato',
     '&:hover': {
       color: colors.darkgray,
       opacity: 1,
