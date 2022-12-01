@@ -61,6 +61,8 @@ export const BQDrawer = (props: BQDrawerProps) => {
 
   const BQTab = styled(Tab)({
     color: colors.bqlightgray,
+    fontSize: '1em',
+    textTransform: 'none',
     '&:hover': {
       color: colors.darkgray,
       opacity: 1,
@@ -133,14 +135,14 @@ export const BQDrawer = (props: BQDrawerProps) => {
           sx={{
             width: {
               sm: drawerWidth,
-              xs: 'calc(100vw - 120px)',
+              xs: 'calc(100vw - 100px)',
             },
             flexShrink: 200,
             overflow: 'show',
             '& .MuiDrawer-paper': {
               width: {
                 sm: drawerWidth,
-                xs: 'calc(100vw - 120px)',
+                xs: 'calc(100vw - 100px)',
               },
               top: '50px',
               zIndex: 800,
