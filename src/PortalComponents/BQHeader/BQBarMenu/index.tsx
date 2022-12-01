@@ -50,9 +50,6 @@ export const BQBarMenu = (props: any) => {
   };
 
   const changeLanguage = (lang: string) => {
-    console.log('changeLanguage 1', lang);
-    console.log('changeLanguage 2', lang === 'fr' ? 'en' : 'fr');
-    console.log('changeLanguage fn');
     switchLocale(lang === 'fr' ? 'en' : 'fr');
     setLocale(lang === 'fr' ? 'en' : 'fr');
     toggleCollapse();
@@ -92,9 +89,6 @@ export const BQBarMenu = (props: any) => {
   }, [defaultLocale]);
 
   const localeLabel = locale === 'fr' ? 'English' : 'Français';
-
-  console.log('BQBarMenu locale', locale);
-  console.log('BQBarMenu defaultLocale', defaultLocale);
 
   return (
     <BarMenuContainer className="bar-menu-container" tabIndex={0}>
