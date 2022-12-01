@@ -101,7 +101,8 @@ export const BQDrawer = (props: BQDrawerProps) => {
             zIndex: 999,
             top: '35vh',
             backgroundColor: 'white',
-            ...(drawerOpen && { right: '30vw' }),
+            width: '100px',
+            ...(drawerOpen && { right: {sm:'30vw', xs: 'calc(100vw-120px)' }),
             ...(!drawerOpen && { right: '0vw' }),
           }}
         >
@@ -128,7 +129,10 @@ export const BQDrawer = (props: BQDrawerProps) => {
             keepMounted: true,
           }}
           sx={{
-            width: drawerWidth,
+            width: {
+              sm: drawerWidth,
+              xs: 'calc(100vw - 120px)',
+            },
             flexShrink: 200,
             overflow: 'show',
             '& .MuiDrawer-paper': {
