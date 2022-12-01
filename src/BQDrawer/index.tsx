@@ -103,7 +103,7 @@ export const BQDrawer = (props: BQDrawerProps) => {
           sx={{
             position: 'fixed',
             zIndex: 999,
-            top: { sm: '35vh', xs: '0' },
+            top: { sm: '35vh', xs: '50px' },
             backgroundColor: 'white',
             height: 'auto',
             width: '100px',
