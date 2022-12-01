@@ -102,7 +102,9 @@ export const BQDrawer = (props: BQDrawerProps) => {
             top: '35vh',
             backgroundColor: 'white',
             width: '100px',
-            ...(drawerOpen && { right: {sm:'30vw', xs: 'calc(100vw-120px)' }),
+            ...(drawerOpen && {
+              right: { sm: '30vw', xs: 'calc(100vw-120px)' },
+            }),
             ...(!drawerOpen && { right: '0vw' }),
           }}
         >
