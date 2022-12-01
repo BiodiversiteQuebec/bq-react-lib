@@ -138,7 +138,10 @@ export const BQDrawer = (props: BQDrawerProps) => {
             flexShrink: 200,
             overflow: 'show',
             '& .MuiDrawer-paper': {
-              width: drawerWidth,
+              width: {
+                sm: drawerWidth,
+                xs: 'calc(100vw - 120px)',
+              },
               top: '50px',
               zIndex: 800,
               boxShadow: '-2px 3px 4px #dbdbdb',
