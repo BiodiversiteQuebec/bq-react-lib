@@ -14,6 +14,7 @@ export const LogoImage = styled.img`
 
 export const LogoDiv = styled.div`
   width: 200px;
+  height: 50px;
   display: flex;
   justify-content: center;
 `;

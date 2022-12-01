@@ -61,6 +61,10 @@ export const BQDrawer = (props: BQDrawerProps) => {
 
   const BQTab = styled(Tab)({
     color: colors.bqlightgray,
+    fontSize: '1em',
+    textTransform: 'none',
+    fontFamily: 'Lato',
+    backgroundColor: 'white',
     '&:hover': {
       color: colors.darkgray,
       opacity: 1,
@@ -99,10 +103,18 @@ export const BQDrawer = (props: BQDrawerProps) => {
           sx={{
             position: 'fixed',
             zIndex: 999,
-            top: '35vh',
+            top: { sm: '35vh', xs: '50px' },
             backgroundColor: 'white',
-            ...(drawerOpen && { right: '30vw' }),
-            ...(!drawerOpen && { right: '0vw' }),
+            height: 'auto',
+            width: '100px',
+            ...(drawerOpen && {
+              right: { sm: '30vw', xs: 'calc(100vw-120px)' },
+              height: { sm: 'auto', xs: '100%' },
+              backgroundColor: { sm: 'white', xs: 'rgba(0,0,0,0.7)' },
+            }),
+            ...(!drawerOpen && {
+              right: '0vw',
+            }),
           }}
         >
           {drawerOpen ? (
@@ -128,11 +140,17 @@ export const BQDrawer = (props: BQDrawerProps) => {
             keepMounted: true,
           }}
           sx={{
-            width: drawerWidth,
+            width: {
+              sm: drawerWidth,
+              xs: 'calc(100vw - 100px)',
+            },
             flexShrink: 200,
             overflow: 'show',
             '& .MuiDrawer-paper': {
-              width: drawerWidth,
+              width: {
+                sm: drawerWidth,
+                xs: 'calc(100vw - 100px)',
+              },
               top: '50px',
               zIndex: 800,
               boxShadow: '-2px 3px 4px #dbdbdb',
