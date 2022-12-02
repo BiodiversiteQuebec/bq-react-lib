@@ -39,7 +39,9 @@ export const BQBarMenu = (props: any) => {
   const {
     switchLocale = (text: string) => text,
     items,
+    mainMenuItems,
     defaultLocale,
+    activePage,
     forceCollapse = true,
     notifyChange = () => 0,
   } = props;
@@ -50,12 +52,20 @@ export const BQBarMenu = (props: any) => {
   };
 
   const changeLanguage = (lang: string) => {
-    console.log('changeLanguage 1', lang);
-    console.log('changeLanguage 2', lang === 'fr' ? 'en' : 'fr');
-    console.log('changeLanguage fn');
-    switchLocale(lang === 'fr' ? 'en' : 'fr');
-    setLocale(lang === 'fr' ? 'en' : 'fr');
-    toggleCollapse();
+    const newLang = lang === 'fr' ? 'en' : 'fr';
+    //switchLocale(lang === 'fr' ? 'en' : 'fr');
+    //setLocale(lang === 'fr' ? 'en' : 'fr');
+    //toggleCollapse();
+    let redirect = false;
+    mainMenuItems.forEach((i: any) => {
+      if (i.key === activePage) {
+        redirect = true;
+        window.location.href = `/${newLang}${i.href}`;
+      }
+    });
+    if (!redirect) {
+      window.location.href = `/${newLang}/`;
+    }
   };
 
   useEffect(() => {

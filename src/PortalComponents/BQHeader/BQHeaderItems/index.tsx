@@ -4,6 +4,7 @@ import { CustomPathLink } from '../../Common/CustomPathLink';
 import { useBbox } from '../../../hooks/useElementDimension';
 import _ from 'underscore';
 import { BQHeaderUl, BQHeaderUlDiv } from './styles';
+import { StringNullableChain } from 'lodash';
 
 interface Item {
   text?: string;
@@ -19,6 +20,7 @@ interface BQHeaderItemsProps {
   activeItem?: string;
   settedKey?: string;
   tabClicked?: string;
+  locale?: string;
   selectedTab?: (key: string) => any;
 }
 export const BQHeaderItems = (props: BQHeaderItemsProps) => {
@@ -27,6 +29,7 @@ export const BQHeaderItems = (props: BQHeaderItemsProps) => {
     activeItem,
     settedKey,
     tabClicked,
+    locale,
     selectedTab = (key: string) => key,
   } = props;
   const [bbox, targetRef] = useBbox();
@@ -45,7 +48,7 @@ export const BQHeaderItems = (props: BQHeaderItemsProps) => {
             >
               <div style={{ zIndex: 50 }}>
                 <CustomPathLink
-                  href={item.href ?? '/#'}
+                  href={`/${locale}${item.href}` ?? `/${locale}/#`}
                   className="no-decoration"
                 >
                   <CollapseMenuItem

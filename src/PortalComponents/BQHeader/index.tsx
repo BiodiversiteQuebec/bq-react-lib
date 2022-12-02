@@ -45,33 +45,33 @@ export const BQHeader = (props: any) => {
 
   const items = [
     {
-      href: `https://biodiversite-quebec.ca/${locale}/`,
+      href: `/`,
       text: locales[locale]['Accueil'],
       key: 'accueil',
       color: '#efb850',
     },
     {
-      href: `https://biodiversite-quebec.ca/${locale}/inventaires/`,
+      href: `/inventaires/`,
       text: locales[locale]['Inventaire terrain'],
       key: 'inventaire_terrain',
       color: '#57776e',
     },
     {
-      href: `https://biodiversite-quebec.ca/${locale}/indicateurs/`,
+      href: `/indicateurs/`,
       text: locales[locale]['Indicateurs'],
       key: 'indicateur',
       default: true,
       color: '#a75822',
     },
     {
-      href: `https://biodiversite-quebec.ca/${locale}/atlas/`,
+      href: `/atlas/`,
       text: locales[locale]['Atlas'],
       key: 'atlas',
       default: true,
       color: '#d88219',
     },
     {
-      href: `https://biodiversite-quebec.ca/${locale}/decouverte/`,
+      href: `/decouverte/`,
       text: locales[locale]['Découverte'],
       key: 'decouverte',
       default: true,
@@ -161,6 +161,7 @@ export const BQHeader = (props: any) => {
         items={items}
         settedKey={activePage}
         selectedTab={selectedTab}
+        locale={locale}
         tabClicked={activePage}
       />
       <div
@@ -174,6 +175,8 @@ export const BQHeader = (props: any) => {
       >
         <BQBarMenu
           items={barMenuItems}
+          mainMenuItems={items}
+          activePage={activePage}
           switchLocale={switchLocaleFn}
           defaultLocale={locale}
           forceCollapse={collapse}
