@@ -147,7 +147,7 @@ export const BQHeader = (props: any) => {
     };
   }, []);
 
-  console.log('*** fn', switchLocaleFn);
+  console.log('switchLocaleFn', switchLocaleFn);
 
   return (
     <Header
