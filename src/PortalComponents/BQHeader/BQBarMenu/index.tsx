@@ -103,8 +103,6 @@ export const BQBarMenu = (props: any) => {
 
   const localeLabel = locale === 'fr' ? 'English' : 'Français';
 
-  console.log('***switchLocale***', switchLocale);
-
   return (
     <BarMenuContainer className="bar-menu-container" tabIndex={0}>
       <HamberguerFontAwesomeIcon
