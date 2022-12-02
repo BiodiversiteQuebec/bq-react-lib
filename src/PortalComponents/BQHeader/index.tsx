@@ -147,6 +147,8 @@ export const BQHeader = (props: any) => {
     };
   }, []);
 
+  console.log('switchLocaleFn', switchLocaleFn);
+
   return (
     <Header
       onFocus={() => {
