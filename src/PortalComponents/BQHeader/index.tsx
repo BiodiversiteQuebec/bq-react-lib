@@ -20,7 +20,7 @@ const locales: any = {
   fr: {
     Indicateurs: 'Indicateurs',
     Découverte: 'Découverte',
-    'Inventaire terrain': 'Inventaire terrain',
+    'Inventaire terrain': 'Inventaires terrain',
     Accueil: 'Accueil',
     'À propos': 'À propos',
     Équipe: 'Équipe',
@@ -52,7 +52,7 @@ export const BQHeader = (props: any) => {
     },
     {
       href: `/inventaires/`,
-      text: locales[locale]['Inventaires terrain'],
+      text: locales[locale]['Inventaire terrain'],
       key: 'inventaire_terrain',
       color: '#57776e',
     },
@@ -87,7 +87,7 @@ export const BQHeader = (props: any) => {
     },
     {
       href: `https://biodiversite-quebec.ca/${locale}/inventaires/`,
-      text: locales[locale]['Inventaires terrain'],
+      text: locales[locale]['Inventaire terrain'],
       canHide: true,
     },
     {
