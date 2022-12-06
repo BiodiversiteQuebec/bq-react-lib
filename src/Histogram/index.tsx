@@ -3,7 +3,7 @@ import React, { useEffect, useState, useRef } from 'react';
 import { useBbox } from '../hooks';
 import Box from '@mui/material/Box';
 import Slider from '@mui/material/Slider';
-import { buildLocation } from 'utils';
+import { buildLocation } from '../utils';
 import './histogram.css';
 import _ from 'underscore';
 
@@ -144,7 +144,7 @@ export const Histogram = (props: any) => {
 
         const maximum = Math.max(...histogram);
         histogram = histogram.map(
-          element => element / (maximum !== 0 ? maximum : 1)
+          (element) => element / (maximum !== 0 ? maximum : 1)
         );
       } else {
         histogram.fill(0);
