@@ -87,7 +87,7 @@ export const BQHeader = (props: any) => {
     },
     {
       href: `https://biodiversite-quebec.ca/${locale}/inventaires/`,
-      text: locales[locale]['Inventaire terrain'],
+      text: locales[locale]['Inventaires terrain'],
       canHide: true,
     },
     {
