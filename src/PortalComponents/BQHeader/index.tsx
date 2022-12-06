@@ -52,7 +52,7 @@ export const BQHeader = (props: any) => {
     },
     {
       href: `/inventaires/`,
-      text: locales[locale]['Inventaire terrain'],
+      text: locales[locale]['Inventaires terrain'],
       key: 'inventaire_terrain',
       color: '#57776e',
     },
