@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import _ from 'underscore';
-import { buildLocation } from 'utils';
+import { buildLocation } from '../utils';
 import {
   LegendItemContainer,
   LegendItemColorBox,

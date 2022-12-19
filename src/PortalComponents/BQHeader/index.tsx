@@ -20,7 +20,7 @@ const locales: any = {
   fr: {
     Indicateurs: 'Indicateurs',
     Découverte: 'Découverte',
-    'Inventaire terrain': 'Inventaire terrain',
+    'Inventaire terrain': 'Inventaires terrain',
     Accueil: 'Accueil',
     'À propos': 'À propos',
     Équipe: 'Équipe',
