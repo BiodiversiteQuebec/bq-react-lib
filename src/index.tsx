@@ -21,4 +21,5 @@ export * from './Histogram';
 export * from './ImageFetcher';
 export * from './PortalComponents';
 export * from './context/mode';
+export * from './ImgTester';
 export * from './styles';
