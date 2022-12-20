@@ -24,7 +24,7 @@ module.exports = {
     );
 
     config.plugins = [
-      images({ incude: ['**/*.png', '**/*.jpg'] }),
+      //images({ incude: ['**/*.png', '**/*.jpg'] }),
       image(),
       ...config.plugins,
     ];
