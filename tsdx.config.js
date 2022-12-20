@@ -2,8 +2,13 @@ const postcss = require('rollup-plugin-postcss');
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
 const images = require('rollup-plugin-image-files');
+const image = require('@rollup/plugin-image');
+
 module.exports = {
   rollup(config, options) {
+    console.log('config', config);
+    console.log('options', options);
+
     config.plugins.push(
       postcss({
         plugins: [
@@ -20,6 +25,7 @@ module.exports = {
 
     config.plugins = [
       images({ incude: ['**/*.png', '**/*.jpg'] }),
+      image(),
       ...config.plugins,
     ];
 
