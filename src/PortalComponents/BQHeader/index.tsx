@@ -51,6 +51,13 @@ export const BQHeader = (props: any) => {
       color: '#efb850',
     },
     {
+      href: `/atlas/`,
+      text: locales[locale]['Atlas'],
+      key: 'atlas',
+      default: true,
+      color: '#d88219',
+    },
+    {
       href: `/inventaires/`,
       text: locales[locale]['Inventaire terrain'],
       key: 'inventaire_terrain',
@@ -62,13 +69,6 @@ export const BQHeader = (props: any) => {
       key: 'indicateur',
       default: true,
       color: '#a75822',
-    },
-    {
-      href: `/atlas/`,
-      text: locales[locale]['Atlas'],
-      key: 'atlas',
-      default: true,
-      color: '#d88219',
     },
     {
       href: `/decouverte/`,
@@ -86,6 +86,11 @@ export const BQHeader = (props: any) => {
       canHide: true,
     },
     {
+      href: `https://biodiversite-quebec.ca/${locale}/atlas/`,
+      text: locales[locale]['Atlas'],
+      canHide: true,
+    },
+    {
       href: `https://biodiversite-quebec.ca/${locale}/inventaires/`,
       text: locales[locale]['Inventaire terrain'],
       canHide: true,
@@ -93,11 +98,6 @@ export const BQHeader = (props: any) => {
     {
       href: `https://biodiversite-quebec.ca/${locale}/indicateurs/`,
       text: locales[locale]['Indicateurs'],
-      canHide: true,
-    },
-    {
-      href: `https://biodiversite-quebec.ca/${locale}/atlas/`,
-      text: locales[locale]['Atlas'],
       canHide: true,
     },
     {
