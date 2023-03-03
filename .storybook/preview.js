@@ -1,3 +1,5 @@
+import '../src/styles/tailwind.css';
+
 const customViewports = {
   xs: {
     name: 'XS',

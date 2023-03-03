@@ -23,3 +23,5 @@ export * from './PortalComponents';
 export * from './context/mode';
 export * from './ImgTester';
 export * from './styles';
+export * from './BQSvgs';
+export * from './BQButtonMenu';
