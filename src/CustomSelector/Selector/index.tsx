@@ -28,6 +28,8 @@ export const Selector = (props: SelectorProps) => {
   } = props;
   const [lossFocus, setLossFocus] = useState(onFocusout);
 
+  const [itemList, setItemList] = useState([]);
+
   /**
    *
    * @param event
@@ -47,6 +49,22 @@ export const Selector = (props: SelectorProps) => {
   };
 
   useEffect(() => {
+    if (selectorList.length > 0) {
+      const iL: any = selectorList.map((element: any) => (
+        <MenuItem
+          key={_.uniqueId(JSON.stringify(element.key))}
+          value={element.value}
+        >
+          {t(element.option)}
+        </MenuItem>
+      ));
+      setItemList(iL);
+    } else {
+      setItemList([]);
+    }
+  }, [selectorList]);
+
+  useEffect(() => {
     setLossFocus(onFocusout);
   }, [onFocusout]);
 
@@ -59,14 +77,7 @@ export const Selector = (props: SelectorProps) => {
           onChange={onChange}
           onClose={onClose}
         >
-          {selectorList.map((element: any) => (
-            <MenuItem
-              key={_.uniqueId(JSON.stringify(element.key))}
-              value={element.value}
-            >
-              {t(element.option)}
-            </MenuItem>
-          ))}
+          {itemList}
         </CSelect>
       </FormControl>
     </div>
