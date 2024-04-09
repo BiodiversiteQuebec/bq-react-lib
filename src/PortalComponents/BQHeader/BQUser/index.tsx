@@ -19,29 +19,29 @@ export const BQUser = (props: any) => {
     if (user) {
       let bqheader: any = document.querySelector('.bq-user');
       const mouseleave = (event: any) => {
-        //console.log('***** mouseleave ****');
+        console.log('***** mouseleave ****');
         setCollapse((oldValue: boolean) => true);
       };
       const mouseenter = (event: any) => {
-        //console.log('***** mouseenter ****');
+        console.log('***** mouseenter ****');
         setCollapse((oldValue: boolean) => false);
       };
 
       const click = (event: any) => {
-        console.log('***** mouseenter ****');
+        console.log('***** click ****');
         setCollapse((oldValue: boolean) => oldValue);
       };
       if (bqheader) {
         bqheader.addEventListener('mouseleave', mouseleave);
         bqheader.addEventListener('mouseenter', mouseenter);
-        //bqheader.addEventListener('click', click);
+        bqheader.addEventListener('click', click);
       }
 
       return () => {
         if (bqheader) {
           bqheader.removeEventListener('mouseleave', mouseleave);
           bqheader.removeEventListener('mouseenter', mouseenter);
-          //bqheader.removeEventListener('click', click);
+          bqheader.removeEventListener('click', click);
         }
       };
     }
