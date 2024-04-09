@@ -15,7 +15,7 @@ export const BQUser = (props: any) => {
 
   const [collapse, setCollapse] = useState(true);
 
-  useEffect(() => {
+  /*  useEffect(() => {
     if (user) {
       let bqheader: any = document.querySelector('.bq-user');
       const mouseleave = (event: any) => {
@@ -29,7 +29,7 @@ export const BQUser = (props: any) => {
 
       const click = (event: any) => {
         console.log('***** click ****');
-        setCollapse((oldValue: boolean) => oldValue);
+        setCollapse((oldValue: boolean) => !oldValue);
       };
       if (bqheader) {
         bqheader.addEventListener('mouseleave', mouseleave);
@@ -46,14 +46,18 @@ export const BQUser = (props: any) => {
       };
     }
     return () => {};
-  }, [user]);
+  }, [user]); */
   if (!user) return null;
   const { name, lastname, role } = user as any;
 
   return (
     <div
-      className="bq-user relative bar-menu-container w-fit z-[99999] flex flex-col overflow-visible has-tooltip"
+      className="border p-2 bq-user relative bar-menu-container w-fit flex flex-col overflow-visible has-tooltip"
       tabIndex={0}
+      onClick={() => {
+        console.log(' **** on Click *****');
+        setCollapse((oldValue: boolean) => !oldValue);
+      }}
     >
       <FontAwesomeIcon
         icon={faUser}
