@@ -4,6 +4,7 @@ import { PaddingContainerwithBg } from '../Common';
 import { BQBarMenu } from './BQBarMenu';
 import { BQHeaderItems } from './BQHeaderItems';
 import { BQLogo } from './BQLogo';
+import { BQUser } from './BQUser';
 import { BQHeaderContainer } from './styles';
 
 const locales: any = {
@@ -16,6 +17,8 @@ const locales: any = {
     'À propos': 'About us',
     Équipe: 'Team',
     'Contactez-nous': 'Contact us',
+    submit: 'Connect',
+    signout: 'Signout',
   },
   fr: {
     Indicateurs: 'Indicateurs',
@@ -26,6 +29,8 @@ const locales: any = {
     Équipe: 'Équipe',
     'Contactez-nous': 'Contactez-nous',
     Atlas: 'Atlas',
+    submit: 'Se connecter',
+    signout: 'Se deconnecter',
   },
 };
 export const BQHeader = (props: any) => {
@@ -38,6 +43,7 @@ export const BQHeader = (props: any) => {
     setActivePage,
     logoMode = 'non-color-dark',
     headerWidth = '1400px',
+    user,
   } = props;
   const logoUrl = `/images/logo-${logoMode}-mode-fr.png`;
 
@@ -122,6 +128,10 @@ export const BQHeader = (props: any) => {
       text: locale === 'fr' ? 'en' : 'fr',
       type: 'lang',
     },
+    {
+      href: user ? `/logout` : `/login`,
+      text: user ? locales[locale]['signout'] : locales[locale]['submit'],
+    },
   ];
 
   const selectedTab = (tabKey: string) => {
@@ -163,6 +173,7 @@ export const BQHeader = (props: any) => {
         tabClicked={activePage}
       />
       <div
+        className="flex justify-center items-center"
         style={{
           display: 'flex',
           justifyContent: 'right',
@@ -171,6 +182,8 @@ export const BQHeader = (props: any) => {
           marginRight: '30px',
         }}
       >
+        <BQUser user={user} />
+
         <BQBarMenu
           items={barMenuItems}
           mainMenuItems={items}

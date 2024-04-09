@@ -6,9 +6,6 @@ const image = require('@rollup/plugin-image');
 
 module.exports = {
   rollup(config, options) {
-    console.log('config', config);
-    console.log('options', options);
-
     config.plugins.push(
       postcss({
         plugins: [

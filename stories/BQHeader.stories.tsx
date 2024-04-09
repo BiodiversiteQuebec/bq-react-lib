@@ -17,7 +17,7 @@ const Template: Story<any> = (args) => {
   const [locale, setLocale] = useState('fr');
 
   const switchLocaleFn = (locale: string) => {
-    console.log('locale', locale);
+    //console.log('locale', locale);
     setLocale(locale);
   };
   return (
@@ -28,6 +28,7 @@ const Template: Story<any> = (args) => {
         logoMode={'color-dark'}
         headerWidth="100%"
         switchLocaleFn={switchLocaleFn}
+        user={{ name: 'Jonny', lastname: 'Deep', role: 'admin' }}
       />
 
       <div>{locale}</div>
