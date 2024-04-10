@@ -62,13 +62,23 @@ export const BQUser = (props: any) => {
       />
       {!collapse && (
         <div
-          style={{ background: '#353535' }}
-          className="absolute w-fit z-[999999] top-[20px] right-[-10px] bg-[#353535] flex flex-col rounded-md p-2 shadow-md  whitespace-nowrap"
+          style={{
+            background: '#353535',
+            whiteSpace: 'nowrap',
+            position: 'absolute',
+            top: '40px',
+            right: '-10px',
+            width: 'fit-content',
+            zIndex: 999999,
+          }}
+          className="flex flex-col rounded-md p-2 shadow-md hover:cursor-pointer"
         >
           <span className="font-bold">
             {name} {lastname}
           </span>
-          <span className="text-sm italic">{role}</span>
+          <span className="text-sm" style={{ fontStyle: 'italic' }}>
+            {role}
+          </span>
         </div>
       )}
     </div>
