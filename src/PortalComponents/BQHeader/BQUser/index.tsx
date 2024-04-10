@@ -23,25 +23,25 @@ export const BQUser = (props: any) => {
         setCollapse((oldValue: boolean) => true);
       };
       const mouseenter = (event: any) => {
-        console.log('***** mouseenter ****');
+        //console.log('***** mouseenter ****');
         setCollapse((oldValue: boolean) => false);
       };
 
       const click = (event: any) => {
-        console.log('***** click ****');
+        //console.log('***** click ****');
         setCollapse((oldValue: boolean) => !oldValue);
       };
       if (bqheader) {
         bqheader.addEventListener('mouseleave', mouseleave);
         bqheader.addEventListener('mouseenter', mouseenter);
-        bqheader.addEventListener('click', click);
+        //bqheader.addEventListener('click', click);
       }
 
       return () => {
         if (bqheader) {
           bqheader.removeEventListener('mouseleave', mouseleave);
           bqheader.removeEventListener('mouseenter', mouseenter);
-          bqheader.removeEventListener('click', click);
+          //bqheader.removeEventListener('click', click);
         }
       };
     }
@@ -52,12 +52,8 @@ export const BQUser = (props: any) => {
 
   return (
     <div
-      className="border p-2 bq-user relative bar-menu-container w-fit flex flex-col overflow-visible"
+      className="p-2 bq-user relative bar-menu-container w-fit flex flex-col overflow-visible"
       tabIndex={0}
-      onClick={() => {
-        console.log(' **** on Click *****');
-        setCollapse((oldValue: boolean) => !oldValue);
-      }}
     >
       <FontAwesomeIcon
         icon={faUser}
