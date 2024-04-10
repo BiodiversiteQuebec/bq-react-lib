@@ -44,6 +44,7 @@ export const BQHeader = (props: any) => {
     logoMode = 'non-color-dark',
     headerWidth = '1400px',
     user,
+    loggedUserBtn,
   } = props;
   const logoUrl = `/images/logo-${logoMode}-mode-fr.png`;
 
@@ -182,7 +183,8 @@ export const BQHeader = (props: any) => {
           marginRight: '30px',
         }}
       >
-        <BQUser user={user} />
+        {/*  <BQUser user={user} /> */}
+        {loggedUserBtn}
 
         <BQBarMenu
           items={barMenuItems}
