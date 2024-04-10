@@ -183,8 +183,8 @@ export const BQHeader = (props: any) => {
           marginRight: '30px',
         }}
       >
-        {/*  <BQUser user={user} /> */}
-        {loggedUserBtn}
+        <BQUser user={user} />
+        {/* {loggedUserBtn} */}
 
         <BQBarMenu
           items={barMenuItems}

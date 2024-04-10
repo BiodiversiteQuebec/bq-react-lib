@@ -1,6 +1,5 @@
 import React, { useState, useContext, useEffect } from 'react';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export const BQUser = (props: any) => {
@@ -52,12 +51,20 @@ export const BQUser = (props: any) => {
 
   return (
     <div
-      className="p-2 bq-user relative bar-menu-container w-fit flex flex-col overflow-visible"
+      style={{
+        padding: '8px',
+        width: 'fit-content',
+        display: 'flex',
+        flexDirection: 'column',
+        position: 'relative',
+        overflow: 'visible',
+      }}
+      className="bq-user bar-menu-container"
       tabIndex={0}
     >
       <FontAwesomeIcon
         icon={faUser}
-        className="fa-regular fa-1x hamberguer-button "
+        className="fa-regular fa-1x hamberguer-button"
         style={{ opacity: 0.7 }}
       />
       {!collapse && (
@@ -70,13 +77,23 @@ export const BQUser = (props: any) => {
             right: '-10px',
             width: 'fit-content',
             zIndex: 999999,
+            borderRadius: '6px',
+            padding: '8px',
+            display: 'flex',
+            flexDirection: 'column',
           }}
-          className="flex flex-col rounded-md p-2 shadow-md hover:cursor-pointer"
+          className="hover:cursor-pointer"
         >
-          <span className="font-bold">
+          <span style={{ fontWeight: 700 }}>
             {name} {lastname}
           </span>
-          <span className="text-sm" style={{ fontStyle: 'italic' }}>
+          <span
+            style={{
+              fontStyle: 'italic',
+              fontSize: '14px',
+              lineHeight: '20px',
+            }}
+          >
             {role}
           </span>
         </div>
