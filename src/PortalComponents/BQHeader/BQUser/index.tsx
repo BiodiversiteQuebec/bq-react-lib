@@ -15,7 +15,7 @@ export const BQUser = (props: any) => {
 
   const [collapse, setCollapse] = useState(true);
 
-  /*  useEffect(() => {
+  useEffect(() => {
     if (user) {
       let bqheader: any = document.querySelector('.bq-user');
       const mouseleave = (event: any) => {
@@ -46,13 +46,13 @@ export const BQUser = (props: any) => {
       };
     }
     return () => {};
-  }, [user]); */
+  }, [user]);
   if (!user) return null;
   const { name, lastname, role } = user as any;
 
   return (
     <div
-      className="border p-2 bq-user relative bar-menu-container w-fit flex flex-col overflow-visible has-tooltip"
+      className="border p-2 bq-user relative bar-menu-container w-fit flex flex-col overflow-visible"
       tabIndex={0}
       onClick={() => {
         console.log(' **** on Click *****');
@@ -65,7 +65,10 @@ export const BQUser = (props: any) => {
         style={{ opacity: 0.7 }}
       />
       {!collapse && (
-        <div className="absolute w-fit z-[999999] top-[20px] right-[-10px] bg-[#353535] flex flex-col rounded-md p-2 shadow-md  whitespace-nowrap">
+        <div
+          style={{ background: '#353535' }}
+          className="absolute w-fit z-[999999] top-[20px] right-[-10px] bg-[#353535] flex flex-col rounded-md p-2 shadow-md  whitespace-nowrap"
+        >
           <span className="font-bold">
             {name} {lastname}
           </span>
