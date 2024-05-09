@@ -16,6 +16,7 @@ const locales: any = {
     Accueil: 'Home',
     'À propos': 'About us',
     Équipe: 'Team',
+    Documentation: 'Documentation',
     'Contactez-nous': 'Contact us',
     submit: 'Connect',
     signout: 'Signout',
@@ -27,6 +28,7 @@ const locales: any = {
     Accueil: 'Accueil',
     'À propos': 'À propos',
     Équipe: 'Équipe',
+    Documentation: 'Documentation',
     'Contactez-nous': 'Contactez-nous',
     Atlas: 'Atlas',
     submit: 'Se connecter',
@@ -119,6 +121,10 @@ export const BQHeader = (props: any) => {
     {
       href: `https://biodiversite-quebec.ca/${locale}/equipe/`,
       text: locales[locale]['Équipe'],
+    },
+    {
+      href: `https://biodiversite-quebec.ca/${locale}/documentation/`,
+      text: locales[locale]['Documentation'],
     },
 
     {
