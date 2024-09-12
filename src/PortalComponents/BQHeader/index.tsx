@@ -42,7 +42,7 @@ const locales: any = {
     biobalado: 'Bio-Balados',
     documentation: 'Documentation',
     nouvelles: 'Nouvelles',
-    opportunites: 'Opportunites',
+    opportunites: 'Opportunités',
   },
 };
 export const BQHeader = (props: any) => {
