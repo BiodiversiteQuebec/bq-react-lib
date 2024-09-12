@@ -4062,7 +4062,7 @@ var locales = {
     biobalado: 'Bio-Balados',
     documentation: 'Documentation',
     nouvelles: 'Nouvelles',
-    opportunites: 'Opportunites'
+    opportunites: 'Opportunités'
   }
 };
 var BQHeader = function BQHeader(props) {
