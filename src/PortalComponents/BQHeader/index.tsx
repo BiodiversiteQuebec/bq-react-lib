@@ -18,8 +18,13 @@ const locales: any = {
     Équipe: 'Team',
     Documentation: 'Documentation',
     'Contactez-nous': 'Contact us',
-    submit: 'Connect',
-    signout: 'Signout',
+    submit: 'Login',
+    signout: 'Logout',
+    biodiveristy_stories: 'Biodiveristy Stories',
+    biobalado: 'Bio-Balados',
+    documentation: 'Documentation',
+    nouvelles: 'News',
+    opportunites: 'Opportunities',
   },
   fr: {
     Indicateurs: 'Indicateurs',
@@ -33,6 +38,11 @@ const locales: any = {
     Atlas: 'Atlas',
     submit: 'Se connecter',
     signout: 'Se deconnecter',
+    biodiveristy_stories: 'Histoires de biodiversité',
+    biobalado: 'Bio-Balados',
+    documentation: 'Documentation',
+    nouvelles: 'Nouvelles',
+    opportunites: 'Opportunites',
   },
 };
 export const BQHeader = (props: any) => {
@@ -109,10 +119,33 @@ export const BQHeader = (props: any) => {
       text: locales[locale]['Indicateurs'],
       canHide: true,
     },
+
     {
       href: `https://biodiversite-quebec.ca/${locale}/decouverte/`,
       text: locales[locale]['Découverte'],
       canHide: true,
+    },
+    {
+      href: `https://biodiversite-quebec.ca/${locale}/histoires/`,
+      text: locales[locale]['biodiveristy_stories'],
+      canHide: true,
+    },
+    {
+      href: `https://biodiversite-quebec.ca/${locale}/balados/`,
+      text: locales[locale]['biobalado'],
+      canHide: true,
+    },
+    {
+      href: `https://biodiversite-quebec.ca/${locale}/nouvelles/`,
+      text: locales[locale]['nouvelles'],
+    },
+    {
+      href: `https://biodiversite-quebec.ca/${locale}/opportunites/`,
+      text: locales[locale]['opportunites'],
+    },
+    {
+      href: `https://biodiversite-quebec.ca/${locale}/documentation/`,
+      text: locales[locale]['documentation'],
     },
     {
       href: `https://biodiversite-quebec.ca/${locale}/a_propos/`,
@@ -132,11 +165,11 @@ export const BQHeader = (props: any) => {
       text: locales[locale]['Contactez-nous'],
     },
     {
-      text: locale === 'fr' ? 'en' : 'fr',
+      text: locale === 'fr' ? 'EN-English' : 'FR-Français',
       type: 'lang',
     },
     {
-      href: user ? `/logout` : `/login`,
+      href: user ? `/${locale}/logout` : `/${locale}/login`,
       text: user ? locales[locale]['signout'] : locales[locale]['submit'],
     },
   ];

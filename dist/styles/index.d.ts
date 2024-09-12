@@ -1,0 +1,25 @@
+export declare const colors: {
+    green: string;
+    darkgreen: string;
+    white: string;
+    mediumgray: string;
+    darkgray: string;
+    bqdarkgreen: string;
+    bqorange: string;
+    bqpalegray: string;
+    bqdarkorange: string;
+    bqcyan: string;
+    bqlightgray: string;
+    bqlightbeige: string;
+    bqturquoise: string;
+    bqcream: string;
+    bqtopaz: string;
+    bqlightorange: string;
+    bqlightblue: string;
+    bqlightgreen: string;
+};
+export declare const Container: import("styled-components").StyledComponent<"div", any, {}, never>;
+export declare const AppContainer: import("styled-components").StyledComponent<"div", any, {}, never>;
+export declare const LeftContent: import("styled-components").StyledComponent<"div", any, {}, never>;
+export declare const RightContent: import("styled-components").StyledComponent<"div", any, {}, never>;
+export declare const BottomNavBarContainer: import("styled-components").StyledComponent<"div", any, {}, never>;
