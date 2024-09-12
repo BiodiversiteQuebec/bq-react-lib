@@ -4051,7 +4051,6 @@ var locales = {
     signout: 'Logout',
     biodiveristy_stories: 'Biodiveristy Stories',
     biobalado: 'Bio-Balados',
-    documentation: 'Documentation',
     nouvelles: 'News',
     opportunites: 'Opportunities'
   },
@@ -4066,10 +4065,9 @@ var locales = {
     'Contactez-nous': 'Contactez-nous',
     Atlas: 'Atlas',
     submit: 'Se connecter',
-    signout: 'Se deconnecter',
+    signout: 'Se déconnecter',
     biodiveristy_stories: 'Histoires de biodiversité',
     biobalado: 'Bio-Balados',
-    documentation: 'Documentation',
     nouvelles: 'Nouvelles',
     opportunites: 'Opportunités'
   }
@@ -4148,24 +4146,23 @@ var BQHeader = function BQHeader(props) {
     href: "https://biodiversite-quebec.ca/" + locale + "/balados/",
     text: locales[locale]['biobalado'],
     canHide: true
-  }, {
-    href: "https://biodiversite-quebec.ca/" + locale + "/nouvelles/",
-    text: locales[locale]['nouvelles']
-  }, {
-    href: "https://biodiversite-quebec.ca/" + locale + "/opportunites/",
-    text: locales[locale]['opportunites']
-  }, {
+  }, // {
+  //   href: `https://biodiversite-quebec.ca/${locale}/nouvelles/`,
+  //   text: locales[locale]['nouvelles'],
+  // },
+  // {
+  //   href: `https://biodiversite-quebec.ca/${locale}/opportunites/`,
+  //   text: locales[locale]['opportunites'],
+  // },
+  {
     href: "https://biodiversite-quebec.ca/" + locale + "/documentation/",
-    text: locales[locale]['documentation']
+    text: locales[locale]['Documentation']
   }, {
     href: "https://biodiversite-quebec.ca/" + locale + "/a_propos/",
     text: locales[locale]['À propos']
   }, {
     href: "https://biodiversite-quebec.ca/" + locale + "/equipe/",
     text: locales[locale]['Équipe']
-  }, {
-    href: "https://biodiversite-quebec.ca/" + locale + "/documentation/",
-    text: locales[locale]['Documentation']
   }, {
     href: "https://biodiversite-quebec.ca/" + locale + "/contactez_nous/",
     text: locales[locale]['Contactez-nous']

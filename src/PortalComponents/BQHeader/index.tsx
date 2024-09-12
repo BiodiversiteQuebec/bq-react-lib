@@ -22,7 +22,7 @@ const locales: any = {
     signout: 'Logout',
     biodiveristy_stories: 'Biodiveristy Stories',
     biobalado: 'Bio-Balados',
-    documentation: 'Documentation',
+
     nouvelles: 'News',
     opportunites: 'Opportunities',
   },
@@ -40,7 +40,7 @@ const locales: any = {
     signout: 'Se déconnecter',
     biodiveristy_stories: 'Histoires de biodiversité',
     biobalado: 'Bio-Balados',
-    documentation: 'Documentation',
+
     nouvelles: 'Nouvelles',
     opportunites: 'Opportunités',
   },
@@ -145,7 +145,7 @@ export const BQHeader = (props: any) => {
     // },
     {
       href: `https://biodiversite-quebec.ca/${locale}/documentation/`,
-      text: locales[locale]['documentation'],
+      text: locales[locale]['Documentation'],
     },
     {
       href: `https://biodiversite-quebec.ca/${locale}/a_propos/`,
@@ -154,10 +154,6 @@ export const BQHeader = (props: any) => {
     {
       href: `https://biodiversite-quebec.ca/${locale}/equipe/`,
       text: locales[locale]['Équipe'],
-    },
-    {
-      href: `https://biodiversite-quebec.ca/${locale}/documentation/`,
-      text: locales[locale]['Documentation'],
     },
 
     {
