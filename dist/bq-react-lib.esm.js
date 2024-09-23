@@ -4137,15 +4137,13 @@ var BQHeader = function BQHeader(props) {
     href: "https://biodiversite-quebec.ca/" + locale + "/balados/",
     text: locales[locale]['biobalado'],
     canHide: true
-  }, // {
-  //   href: `https://biodiversite-quebec.ca/${locale}/nouvelles/`,
-  //   text: locales[locale]['nouvelles'],
-  // },
-  // {
-  //   href: `https://biodiversite-quebec.ca/${locale}/opportunites/`,
-  //   text: locales[locale]['opportunites'],
-  // },
-  {
+  }, {
+    href: "https://biodiversite-quebec.ca/" + locale + "/nouvelles/",
+    text: locales[locale]['nouvelles']
+  }, {
+    href: "https://biodiversite-quebec.ca/" + locale + "/opportunites/",
+    text: locales[locale]['opportunites']
+  }, {
     href: "https://biodiversite-quebec.ca/" + locale + "/documentation/",
     text: locales[locale]['Documentation']
   }, {
