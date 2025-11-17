@@ -22,9 +22,9 @@ const locales: any = {
     signout: 'Logout',
     biodiveristy_stories: 'Biodiveristy Stories',
     biobalado: 'Bio-Balados',
-
     nouvelles: 'News',
     opportunites: 'Opportunities',
+    reseau_de_suivi: 'Monitoring network',
   },
   fr: {
     Indicateurs: 'Indicateurs',
@@ -40,9 +40,9 @@ const locales: any = {
     signout: 'Se déconnecter',
     biodiveristy_stories: 'Histoires de biodiversité',
     biobalado: 'Bio-Balados',
-
     nouvelles: 'Nouvelles',
     opportunites: 'Opportunités',
+    reseau_de_suivi: 'Réseau de suivi',
   },
 };
 export const BQHeader = (props: any) => {
@@ -78,8 +78,8 @@ export const BQHeader = (props: any) => {
     },
     {
       href: `/inventaires/`,
-      text: locales[locale]['Inventaire terrain'],
-      key: 'inventaire_terrain',
+      text: locales[locale]['reseau_de_suivi'],
+      key: 'reseau_de_suivi',
       color: '#57776e',
     },
     {
@@ -111,7 +111,7 @@ export const BQHeader = (props: any) => {
     },
     {
       href: `https://biodiversite-quebec.ca/${locale}/inventaires/`,
-      text: locales[locale]['Inventaire terrain'],
+      text: locales[locale]['reseau_de_suivi'],
       canHide: true,
     },
     {
