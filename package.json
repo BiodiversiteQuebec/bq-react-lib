@@ -18,7 +18,7 @@
     "prepare": "tsdx build",
     "size": "size-limit",
     "analyze": "size-limit --why",
-    "storybook": "start-storybook -p 6006",
+    "storybook": "cross-env NODE_OPTIONS=--openssl-legacy-provider  start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "copies": "copyfiles -f src/PortalComponents/BQHeader/logos/*  dist/PortalComponents/BQHeader/logos"
   },
@@ -81,6 +81,7 @@
     "@typescript-eslint/parser": "^5.13.0",
     "autoprefixer": "^10.4.13",
     "babel-loader": "^8.2.5",
+    "cross-env": "^10.1.0",
     "cssnano": "^5.1.12",
     "eslint": "^8.10.0",
     "eslint-config-airbnb": "^19.0.4",
