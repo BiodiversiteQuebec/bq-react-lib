@@ -1,5 +1,5 @@
 import React__default, { useRef, useState, useEffect, createElement, useCallback, createContext } from 'react';
-import _, { isArray } from 'underscore';
+import _ from 'underscore';
 import styled, { ThemeProvider as ThemeProvider$1 } from 'styled-components';
 import Drawer from '@mui/material/Drawer';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
@@ -48,7 +48,7 @@ import BottomNavigation from '@mui/material/BottomNavigation';
 import BottomNavigationAction from '@mui/material/BottomNavigationAction';
 import Slider from '@mui/material/Slider';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronLeft, faChevronRight, faChevronDown, faChevronUp, faBars, faMagnifyingGlass, faUser } from '@fortawesome/free-solid-svg-icons';
+import { faChevronLeft, faChevronRight, faMagnifyingGlass, faBars, faChevronDown, faChevronUp, faUser } from '@fortawesome/free-solid-svg-icons';
 import { Container as Container$1 } from 'react-bootstrap';
 import 'react-bootstrap/Card';
 import InfoIcon from '@mui/icons-material/Info';
@@ -3192,435 +3192,19 @@ var BQFooter = function BQFooter(props) {
 };
 
 var _templateObject$f, _templateObject2$c, _templateObject3$9;
-var CollapseMenuItemContainer = /*#__PURE__*/styled(Container$1)(_templateObject$f || (_templateObject$f = /*#__PURE__*/_taggedTemplateLiteralLoose(["\n  display: flex;\n  gap: 0.5em;\n"])));
-var CollapseMenuItemFontAwesomeIcon = /*#__PURE__*/styled(FontAwesomeIcon)(_templateObject2$c || (_templateObject2$c = /*#__PURE__*/_taggedTemplateLiteralLoose(["\n  padding-top: 1.3px;\n  line-height: ", ";\n  letter-spacing: ", ";\n  font-family: ", ";\n  font-weight: ", ";\n  font-size: ", ";\n  font-style: ", ";\n  font-weight: 600;\n\n  &:hover {\n    cursor: pointer;\n  }\n"])), function (_ref) {
-  var theme = _ref.theme;
-  return theme.components.text.basic.lineHeight + "rem";
-}, function (_ref2) {
-  var theme = _ref2.theme;
-  return theme.components.text.basic.letterSpacing + "px";
-}, function (_ref3) {
-  var theme = _ref3.theme;
-  return theme.components.text.basic.font;
-}, function (_ref4) {
-  var theme = _ref4.theme;
-  return theme.components.text.basic.fontWeight;
-}, function (_ref5) {
-  var theme = _ref5.theme;
-  return theme.fontSize.small + "rem";
-}, function (_ref6) {
-  var theme = _ref6.theme;
-  return theme.components.text.basic.fontStyle;
-});
-var CollapseMenuText = /*#__PURE__*/styled(MenuText)(_templateObject3$9 || (_templateObject3$9 = /*#__PURE__*/_taggedTemplateLiteralLoose(["\n  font-weight: 600;\n\n  /*  border-bottom: 1px solid\n    ", "; */\n  color: ", ";\n  opacity: ", ";\n  border-bottom: ", ";\n  margin-top: ", ";\n  margin-bottom: ", ";\n  padding-bottom: ", ";\n  cursor: 'pointer';\n  :hover {\n    border-bottom: ", ";\n    margin-top: 6px;\n    margin-bottom: -12px;\n    padding-bottom: 10px;\n    opacity: 1;\n  }\n"])), function (_ref7) {
-  var theme = _ref7.theme,
-      opacity = _ref7.opacity;
-  return opacity === 1 ? theme.components.text.menu.color : 'transparent';
-}, function (_ref8) {
-  var theme = _ref8.theme;
-  return theme.components.text.menu.color;
-}, function (_ref9) {
-  var opacity = _ref9.opacity;
-  return opacity;
-}, function (_ref10) {
-  var theme = _ref10.theme,
-      active = _ref10.active,
-      color = _ref10.color;
-  return active ? '7px solid ' + color : '0px solid ' + theme.components.text.menu.color;
-}, function (_ref11) {
-  var active = _ref11.active;
-  return active ? '6px' : '0px';
-}, function (_ref12) {
-  var active = _ref12.active;
-  return active ? '-12px' : '0px';
-}, function (_ref13) {
-  var active = _ref13.active;
-  return active ? '10px' : '0px';
-}, function (_ref14) {
-  var color = _ref14.color;
-  return ' 7px solid ' + color;
-});
-
-var CollapseMenuItem = function CollapseMenuItem(props) {
-  var _props$text = props.text,
-      text = _props$text === void 0 ? '' : _props$text,
-      _props$collapse = props.collapse,
-      collapse = _props$collapse === void 0 ? true : _props$collapse,
-      _props$notifyEvent = props.notifyEvent,
-      notifyEvent = _props$notifyEvent === void 0 ? function (obj) {
-    return obj;
-  } : _props$notifyEvent,
-      _props$hidearrow = props.hidearrow,
-      hidearrow = _props$hidearrow === void 0 ? false : _props$hidearrow,
-      _props$opacity = props.opacity,
-      opacity = _props$opacity === void 0 ? 0.7 : _props$opacity,
-      active = props.active,
-      color = props.color; //const [active, setActive] = useState(false);
-
-  var toggle = function toggle(e) {
-    notifyEvent(text); //setActive(true);
-  };
-
-  return React__default.createElement(CollapseMenuItemContainer, {
-    onClick: toggle
-  }, React__default.createElement(CollapseMenuText, {
-    opacity: opacity,
-    active: active,
-    color: color
-  }, text), !hidearrow && (collapse ? React__default.createElement(CollapseMenuItemFontAwesomeIcon, {
-    icon: faChevronDown,
-    className: "fa-regular fa-1x"
-  }) : React__default.createElement(CollapseMenuItemFontAwesomeIcon, {
-    icon: faChevronUp,
-    className: "fa-regular fa-1x"
-  })));
-};
-
-var _templateObject$g, _templateObject2$d;
-var HeaderContainerV1 = /*#__PURE__*/styled.nav(_templateObject$g || (_templateObject$g = /*#__PURE__*/_taggedTemplateLiteralLoose(["\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  position: relative;\n  width: 100%;\n  //box-shadow: 0 2px 2px 2px rgba(9, 9, 9, 0.23);\n  background: ", ";\n  color: ", ";\n  padding: 0.25rem 1rem;\n  height: 45px;\n\n  & ul {\n    margin: 0;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    list-style: none;\n    gap: 3em;\n    z-index: 10;\n\n    @media ", " {\n      display: none;\n    }\n  }\n\n  & li.active {\n    border-bottom: 3px solid ", ";\n  }\n\n  & a {\n    text-decoration: none;\n    color: inherit;\n    height: 100%;\n    display: flex;\n    align-items: center;\n    padding: 0.25rem;\n  }\n\n  & .home-icon {\n    width: 150px;\n    height: 50px;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    z-index: 10;\n  }\n\n  & .tab_content {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    width: 100%;\n    position: absolute;\n    left: 0;\n    background-color: rgba(9, 9, 9, 0.23);\n  }\n\n  & .right-side {\n    display: flex;\n    flex: 1;\n    justify-content: flex-end;\n    height: 90%;\n  }\n"])), function (_ref) {
-  var theme = _ref.theme;
-  return theme.components.header.background;
-}, function (_ref2) {
-  var theme = _ref2.theme;
-  return theme.components.text.menu.color;
-}, function (_ref3) {
-  var theme = _ref3.theme;
-  return theme.devices.tabletM;
-}, function (_ref4) {
-  var theme = _ref4.theme;
-  return theme.components.text.menu.color;
-});
-var Logo = /*#__PURE__*/styled.img(_templateObject2$d || (_templateObject2$d = /*#__PURE__*/_taggedTemplateLiteralLoose(["\n  width: 185px;\n  object-fit: cover;\n  height: 50px;\n  padding-top: 0.3rem;\n"])));
-
-var _templateObject$h, _templateObject2$e, _templateObject3$a;
-var BarMenuContainer = /*#__PURE__*/styled.div(_templateObject$h || (_templateObject$h = /*#__PURE__*/_taggedTemplateLiteralLoose(["\n  position: relative;\n\n  & .bar-menu-hide {\n    @media ", " {\n      display: none;\n    }\n  }\n"])), function (_ref) {
-  var theme = _ref.theme;
-  return theme.devices.tabletgtM;
-});
-var BarMenuBody = /*#__PURE__*/styled.div(_templateObject2$e || (_templateObject2$e = /*#__PURE__*/_taggedTemplateLiteralLoose(["\n  position: absolute;\n  width: 248px;\n  top: 30px;\n  left: -200px;\n  background: ", ";\n  padding: 30px 20px;\n  z-index: 1000;\n  box-shadow: 0px 0.5px 5px rgba(0, 0, 0, 0.25);\n\n  a {\n    text-decoration: none;\n  }\n\n  div {\n    color: ", ";\n    line-height: ", ";\n    letter-spacing: ", ";\n    font-family: ", "; // \"Lato\", sans-serif;\n    font-weight: ", ";\n    font-size: ", ";\n    font-style: ", ";\n\n    opacity: 0.7;\n    margin: 20px 10px;\n  }\n"])), function (_ref2) {
-  var theme = _ref2.theme;
-  return theme.components.header.background;
-}, function (_ref3) {
-  var theme = _ref3.theme;
-  return theme.components.text.basic.menu.color;
-}, function (_ref4) {
-  var theme = _ref4.theme;
-  return theme.components.text.basic.lineHeight + "rem";
-}, function (_ref5) {
-  var theme = _ref5.theme;
-  return theme.components.text.basic.letterSpacing + "px";
-}, function (_ref6) {
-  var theme = _ref6.theme;
-  return theme.components.text.basic.font;
-}, function (_ref7) {
-  var theme = _ref7.theme;
-  return theme.components.text.basic.fontWeight;
-}, function (_ref8) {
-  var theme = _ref8.theme;
-  return theme.fontSize.small + "rem";
-}, function (_ref9) {
-  var theme = _ref9.theme;
-  return theme.components.text.basic.fontStyle;
-});
-var HamberguerFontAwesomeIcon = /*#__PURE__*/styled(FontAwesomeIcon)(_templateObject3$a || (_templateObject3$a = /*#__PURE__*/_taggedTemplateLiteralLoose(["\n  /*  */\n  @media ", " {\n    line-height: ", ";\n    font-size: ", ";\n  }\n"])), function (_ref10) {
-  var theme = _ref10.theme;
-  return theme.devices.gttv;
-}, function (_ref11) {
-  var theme = _ref11.theme;
-  return theme.lineHeight.ml + "rem";
-}, function (_ref12) {
-  var theme = _ref12.theme;
-  return theme.fontSize.ml + "rem";
-});
-
-var BarMenu = function BarMenu(props) {
-  var _useState = useState(true),
-      collapse = _useState[0],
-      setCollapse = _useState[1];
-
-  var onBlur = props.onBlur,
-      _props$switchLocale = props.switchLocale,
-      switchLocale = _props$switchLocale === void 0 ? function (text) {
-    return text;
-  } : _props$switchLocale,
-      items = props.items,
-      defaultLocale = props.defaultLocale;
-
-  var _useState2 = useState(defaultLocale),
-      locale = _useState2[0],
-      setLocale = _useState2[1];
-
-  var focusOut = function focusOut(e) {
-    if (onBlur) onBlur();
-  };
-
-  var toggleCollapse = function toggleCollapse() {
-    setCollapse(!collapse);
-  };
-
-  var changeLanguage = function changeLanguage(text) {
-    var oldValue = switchLocale(text);
-    setLocale(oldValue);
-    toggleCollapse();
-  };
-
-  return React__default.createElement(BarMenuContainer, {
-    tabIndex: 0,
-    onBlur: focusOut
-  }, React__default.createElement(HamberguerFontAwesomeIcon, {
-    icon: faBars,
-    className: "fa-regular fa-1x",
-    style: {
-      opacity: 0.7
-    },
-    onClick: toggleCollapse
-  }), !collapse && React__default.createElement(BarMenuBody, {
-    tabIndex: 0
-  }, items == null ? void 0 : items.map(function (item) {
-    var _item$href;
-
-    return item.type && item.type === 'lang' ? React__default.createElement("div", {
-      className: "language-item",
-      key: item.text,
-      onClick: function onClick() {
-        return changeLanguage(locale);
-      }
-    }, React__default.createElement("a", null, "" + locale.substring(0, 2).toUpperCase())) : React__default.createElement("div", {
-      key: item.href,
-      className: item.canHide ? 'bar-menu-hide' : '',
-      onClick: toggleCollapse
-    }, React__default.createElement(CustomPathLink, {
-      href: (_item$href = item.href) != null ? _item$href : '/#'
-    }, item.text));
-  })));
-};
-
-var HeaderNavItem = function HeaderNavItem(props) {
-  return props.children;
-};
-var Header = function Header(_ref) {
-  var children = _ref.children,
-      activeItem = _ref.activeItem,
-      _onBlur = _ref.onBlur,
-      logo = _ref.logo,
-      rightSideComponents = _ref.rightSideComponents;
-
-  var _useBbox = useBbox(),
-      bbox = _useBbox[0],
-      targetRef = _useBbox[1];
-
-  var height = bbox.height;
-  var items = [];
-  if (children && !isArray(children)) items = [children];else items = children;
-  var keys = items.map(function (item) {
-    return item.key;
-  });
-  return React__default.createElement(HeaderContainerV1, {
-    ref: targetRef,
-    tabIndex: -1,
-    className: "bq-nav",
-    onBlur: function onBlur() {
-      if (_onBlur) _onBlur();
-    }
-  }, React__default.createElement("div", null, logo ? logo : null), React__default.createElement("ul", {
-    className: "custom-nav"
-  }, items.map(function (item, index) {
-    var _item$props$title;
-
-    return React__default.createElement("li", {
-      key: _.uniqueId((_item$props$title = item.props.title) != null ? _item$props$title : '')
-    }, React__default.createElement("div", {
-      style: {
-        zIndex: 50
-      }
-    }, item.props ? item.props.title : ''), keys[index] === activeItem && height ? React__default.createElement("div", {
-      className: "tab_content",
-      style: {
-        top: height + "px",
-        zIndex: 1
-      }
-    }, item.props ? item.props.children : '') : '');
-  })), React__default.createElement("div", {
-    className: "right-side"
-  }, rightSideComponents ? rightSideComponents : null));
-};
-var CustomHeader = function CustomHeader(_ref2) {
-  var _ref2$items = _ref2.items,
-      items = _ref2$items === void 0 ? [] : _ref2$items,
-      logoUrl = _ref2.logoUrl,
-      rightSideComponents = _ref2.rightSideComponents,
-      activePage = _ref2.activePage;
-
-  var _useState = useState(''),
-      settedKey = _useState[0],
-      setSettedKey = _useState[1];
-
-  var _useState2 = useState('accueil'),
-      tabClicked = _useState2[0],
-      setTabClicked = _useState2[1];
-
-  var selectedTab = function selectedTab(tabKey) {
-    setSettedKey(tabKey === settedKey ? '' : tabKey);
-    setTabClicked(tabKey);
-  };
-
-  var logo = React__default.createElement(CustomPathLink, {
-    href: "/#"
-  }, React__default.createElement(Logo, {
-    src: logoUrl,
-    alt: "logo"
-  }));
-  return React__default.createElement(PaddingContainerwithBg, null, React__default.createElement(Header, {
-    activeItem: settedKey,
-    onBlur: function onBlur() {
-      setSettedKey('');
-    },
-    logo: logo,
-    rightSideComponents: rightSideComponents
-  }, items.map(function (item) {
-    var key = item.key,
-        text = item.text,
-        href = item.href;
-    return React__default.createElement(HeaderNavItem, {
-      key: key,
-      disbaleCollapse: true,
-      "class": "bq-nav-item",
-      title: React__default.createElement("a", {
-        href: href,
-        className: "no-decoration"
-      }, React__default.createElement(CollapseMenuItem, {
-        text: text,
-        collapse: settedKey === key ? false : true,
-        highlight: tabClicked === key || activePage === key,
-        notifyEvent: function notifyEvent(param) {
-          return selectedTab(key);
-        },
-        hidearrow: true,
-        className: activePage === key ? 'active' : ''
-      }))
-    });
-  })));
-};
-var BQHeaderWithoutProvider = function BQHeaderWithoutProvider(props) {
-  var _props$locale = props.locale,
-      locale = _props$locale === void 0 ? 'fr' : _props$locale,
-      _props$t = props.t,
-      t = _props$t === void 0 ? function (text) {
-    return text;
-  } : _props$t,
-      switchFn = props.switchFn,
-      activePage = props.activePage,
-      _props$logoMode = props.logoMode,
-      logoMode = _props$logoMode === void 0 ? 'dark' : _props$logoMode;
-  var logoUrl = "/images/logo-dark-mode-fr.svg";
-
-  if (logoMode == 'darkColor') {
-    logoUrl = "/images/logofooter-dark-mode-fr.png";
-  }
-
-  logoUrl = "/images/logofooter-dark-mode-" + logoMode + "-fr.png";
-
-  var _useState3 = useState(''),
-      settedKey = _useState3[0],
-      setSettedKey = _useState3[1];
-
-  var barMenuItems = [{
-    href: 'https://biodiversite-quebec.ca/inventaires/',
-    text: t('inventaire terrain'),
-    canHide: true
-  }, {
-    href: 'https://biodiversite-quebec.ca/indicateurs/',
-    text: t('indicateur'),
-    canHide: true
-  }, {
-    href: 'https://biodiversite-quebec.ca/atlas/',
-    text: t('atlas'),
-    canHide: true
-  }, {
-    href: 'https://biodiversite-quebec.ca/decouverte',
-    text: t('decouverte'),
-    canHide: true
-  },, {
-    href: 'https://biodiversite-quebec.ca/equipe/',
-    text: t('Équipe')
-  }, {
-    href: 'https://biodiversite-quebec.ca/a_propos/',
-    text: t('À propos')
-  }, {
-    href: 'https://biodiversite-quebec.ca/contactez_nous/',
-    text: t('Contactez-nous')
-  }
-  /* ,
-  {
-  text: locale === 'fr' ? 'en' : 'fr',
-  type: 'lang',
-  }, */
-  ];
-  var rightSideComponents = React__default.createElement("div", {
-    style: {
-      display: 'flex',
-      alignItems: 'center',
-      gap: '20px',
-      cursor: 'pointer'
-    }
-  }, React__default.createElement(BarMenu, {
-    items: barMenuItems,
-    onBlur: function onBlur() {
-      return setSettedKey('');
-    },
-    switchLocale: switchFn,
-    defaultLocale: locale === 'fr' ? 'en' : 'fr'
-  }));
-  var items = [{
-    href: 'https://biodiversite-quebec.ca/',
-    text: 'Accueil',
-    key: 'accueil',
-    "default": true
-  }, {
-    href: 'https://biodiversite-quebec.ca/inventaires/',
-    text: 'Inventaires terrain',
-    key: 'inventaire_terrain',
-    "default": false
-  }, {
-    href: 'https://biodiversite-quebec.ca/indicateurs/',
-    text: 'Indicateurs',
-    key: 'indicateurs',
-    "default": false
-  }, {
-    href: 'https://biodiversite-quebec.ca/atlas/',
-    text: 'Atlas',
-    key: 'atlas',
-    "default": false
-  }, {
-    href: 'https://biodiversite-quebec.ca/decouverte',
-    text: 'Découverte',
-    key: 'decouverte',
-    "default": false
-  }];
-  return React__default.createElement(CustomHeader, {
-    logoUrl: logoUrl,
-    items: items,
-    t: t,
-    settedKey: settedKey,
-    rightSideComponents: rightSideComponents,
-    activePage: activePage
-  });
-};
-
-var _templateObject$i, _templateObject2$f, _templateObject3$b;
-var SearchBarWrapper = /*#__PURE__*/styled.div(_templateObject$i || (_templateObject$i = /*#__PURE__*/_taggedTemplateLiteralLoose(["\n  position: relative;\n"])));
-var SearchBarIcon = /*#__PURE__*/styled.div(_templateObject2$f || (_templateObject2$f = /*#__PURE__*/_taggedTemplateLiteralLoose(["\n  display: flex;\n  height: 1.5rem;\n  width: 1.5rem;\n  padding: 4px;\n  position: absolute;\n  box-sizing: border-box;\n  top: 50%;\n  left: 20px;\n  transform: translateY(-50%);\n"])));
-var SearchBarInput = /*#__PURE__*/styled.input(_templateObject3$b || (_templateObject3$b = /*#__PURE__*/_taggedTemplateLiteralLoose(["\n  width: 400px;\n  height: 2rem;\n  box-sizing: border-box;\n  padding-left: 3em;\n  background: ", ";\n  border-radius: 3px;\n  border: none;\n  &:focus {\n    border: none;\n    outline: none !important;\n    border-color: #719ece;\n    box-shadow: 0 0 10px #719ece;\n  }\n"])), function (_ref) {
+var SearchBarWrapper = /*#__PURE__*/styled.div(_templateObject$f || (_templateObject$f = /*#__PURE__*/_taggedTemplateLiteralLoose(["\n  position: relative;\n"])));
+var SearchBarIcon = /*#__PURE__*/styled.div(_templateObject2$c || (_templateObject2$c = /*#__PURE__*/_taggedTemplateLiteralLoose(["\n  display: flex;\n  height: 1.5rem;\n  width: 1.5rem;\n  padding: 4px;\n  position: absolute;\n  box-sizing: border-box;\n  top: 50%;\n  left: 20px;\n  transform: translateY(-50%);\n"])));
+var SearchBarInput = /*#__PURE__*/styled.input(_templateObject3$9 || (_templateObject3$9 = /*#__PURE__*/_taggedTemplateLiteralLoose(["\n  width: 400px;\n  height: 2rem;\n  box-sizing: border-box;\n  padding-left: 3em;\n  background: ", ";\n  border-radius: 3px;\n  border: none;\n  &:focus {\n    border: none;\n    outline: none !important;\n    border-color: #719ece;\n    box-shadow: 0 0 10px #719ece;\n  }\n"])), function (_ref) {
   var theme = _ref.theme;
   return theme.colors.white;
 });
 
-var _templateObject$j, _templateObject2$g;
-var ResultMenuContainer = /*#__PURE__*/styled.div(_templateObject$j || (_templateObject$j = /*#__PURE__*/_taggedTemplateLiteralLoose(["\n  position: absolute;\n  width: 400px;\n  background: ", ";\n  padding: 1em;\n  margin-top: 10px;\n  z-index: 1000;\n"])), function (_ref) {
+var _templateObject$g, _templateObject2$d;
+var ResultMenuContainer = /*#__PURE__*/styled.div(_templateObject$g || (_templateObject$g = /*#__PURE__*/_taggedTemplateLiteralLoose(["\n  position: absolute;\n  width: 400px;\n  background: ", ";\n  padding: 1em;\n  margin-top: 10px;\n  z-index: 1000;\n"])), function (_ref) {
   var theme = _ref.theme;
   return theme.components.header.background;
 });
-var ResultMenuSplitter = /*#__PURE__*/styled.div(_templateObject2$g || (_templateObject2$g = /*#__PURE__*/_taggedTemplateLiteralLoose(["\n  width: 100%;\n  height: 1px;\n  background: ", ";\n  opacity: 0.7;\n"])), function (_ref2) {
+var ResultMenuSplitter = /*#__PURE__*/styled.div(_templateObject2$d || (_templateObject2$d = /*#__PURE__*/_taggedTemplateLiteralLoose(["\n  width: 100%;\n  height: 1px;\n  background: ", ";\n  opacity: 0.7;\n"])), function (_ref2) {
   var theme = _ref2.theme;
   return theme.colors.white;
 });
@@ -3668,12 +3252,12 @@ var SearchBar = function SearchBar(props) {
   }))), !collapse && React__default.createElement(ResultMenu, null));
 };
 
-var _templateObject$k, _templateObject2$h, _templateObject3$c;
-var BarMenuContainer$1 = /*#__PURE__*/styled.div(_templateObject$k || (_templateObject$k = /*#__PURE__*/_taggedTemplateLiteralLoose(["\n  position: relative;\n  & .hamberguer-button {\n    &:hover {\n      cursor: pointer;\n    }\n  }\n\n  & .bar-menu-hide {\n    @media ", " {\n      display: none;\n    }\n  }\n"])), function (_ref) {
+var _templateObject$h, _templateObject2$e, _templateObject3$a;
+var BarMenuContainer = /*#__PURE__*/styled.div(_templateObject$h || (_templateObject$h = /*#__PURE__*/_taggedTemplateLiteralLoose(["\n  position: relative;\n  & .hamberguer-button {\n    &:hover {\n      cursor: pointer;\n    }\n  }\n\n  & .bar-menu-hide {\n    @media ", " {\n      display: none;\n    }\n  }\n"])), function (_ref) {
   var theme = _ref.theme;
   return theme.devices.tabletgtM;
 });
-var BarMenuBody$1 = /*#__PURE__*/styled.div(_templateObject2$h || (_templateObject2$h = /*#__PURE__*/_taggedTemplateLiteralLoose(["\n  position: absolute;\n  width: 248px;\n  top: 30px;\n  left: -200px;\n  background: ", ";\n  padding: 30px 20px;\n  z-index: 1000;\n\n  a {\n    text-decoration: none;\n  }\n\n  .language-item {\n    cursor: pointer;\n  }\n\n  div {\n    color: ", ";\n    line-height: ", ";\n    letter-spacing: ", ";\n    font-family: ", "; // \"Lato\", sans-serif;\n    font-weight: ", ";\n    font-size: ", ";\n    font-style: ", ";\n    opacity: 0.7;\n    margin: 20px 10px;\n\n    @media ", " {\n      padding-top: 4.5px;\n      line-height: ", ";\n      font-size: ", ";\n    }\n  }\n\n  /*  */\n  @media ", " {\n    top: 70px;\n    width: 300px;\n    left: -250px;\n    line-height: ", ";\n    font-size: ", ";\n  }\n"])), function (_ref2) {
+var BarMenuBody = /*#__PURE__*/styled.div(_templateObject2$e || (_templateObject2$e = /*#__PURE__*/_taggedTemplateLiteralLoose(["\n  position: absolute;\n  width: 248px;\n  top: 30px;\n  left: -200px;\n  background: ", ";\n  padding: 30px 20px;\n  z-index: 1000;\n\n  a {\n    text-decoration: none;\n  }\n\n  .language-item {\n    cursor: pointer;\n  }\n\n  div {\n    color: ", ";\n    line-height: ", ";\n    letter-spacing: ", ";\n    font-family: ", "; // \"Lato\", sans-serif;\n    font-weight: ", ";\n    font-size: ", ";\n    font-style: ", ";\n    opacity: 0.7;\n    margin: 20px 10px;\n\n    @media ", " {\n      padding-top: 4.5px;\n      line-height: ", ";\n      font-size: ", ";\n    }\n  }\n\n  /*  */\n  @media ", " {\n    top: 70px;\n    width: 300px;\n    left: -250px;\n    line-height: ", ";\n    font-size: ", ";\n  }\n"])), function (_ref2) {
   var theme = _ref2.theme;
   return theme.components.header.background;
 }, function (_ref3) {
@@ -3716,7 +3300,7 @@ var BarMenuBody$1 = /*#__PURE__*/styled.div(_templateObject2$h || (_templateObje
   var theme = _ref15.theme;
   return theme.fontSize.medium + "rem";
 });
-var HamberguerFontAwesomeIcon$1 = /*#__PURE__*/styled(FontAwesomeIcon)(_templateObject3$c || (_templateObject3$c = /*#__PURE__*/_taggedTemplateLiteralLoose(["\n  /*  */\n  @media ", " {\n    line-height: ", ";\n    font-size: ", ";\n  }\n"])), function (_ref16) {
+var HamberguerFontAwesomeIcon = /*#__PURE__*/styled(FontAwesomeIcon)(_templateObject3$a || (_templateObject3$a = /*#__PURE__*/_taggedTemplateLiteralLoose(["\n  /*  */\n  @media ", " {\n    line-height: ", ";\n    font-size: ", ";\n  }\n"])), function (_ref16) {
   var theme = _ref16.theme;
   return theme.devices.gttv;
 }, function (_ref17) {
@@ -3793,17 +3377,17 @@ var BQBarMenu = function BQBarMenu(props) {
     setLocale(defaultLocale);
   }, [defaultLocale]);
   var localeLabel = locale === 'fr' ? 'English' : 'Français';
-  return React__default.createElement(BarMenuContainer$1, {
+  return React__default.createElement(BarMenuContainer, {
     className: "bar-menu-container",
     tabIndex: 0
-  }, React__default.createElement(HamberguerFontAwesomeIcon$1, {
+  }, React__default.createElement(HamberguerFontAwesomeIcon, {
     icon: faBars,
     className: "fa-regular fa-1x hamberguer-button",
     style: {
       opacity: 0.7
     },
     onClick: toggleCollapse
-  }), !forceCollapse && React__default.createElement(BarMenuBody$1, {
+  }), !forceCollapse && React__default.createElement(BarMenuBody, {
     className: "bar-menu-body",
     tabIndex: 0
   }, items == null ? void 0 : items.map(function (item) {
@@ -3825,12 +3409,97 @@ var BQBarMenu = function BQBarMenu(props) {
   })));
 };
 
-var _templateObject$l, _templateObject2$i;
-var BQHeaderUl = /*#__PURE__*/styled.ul(_templateObject$l || (_templateObject$l = /*#__PURE__*/_taggedTemplateLiteralLoose(["\n  margin: 0;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  list-style: none;\n  gap: 3.5em;\n  z-index: 10;\n  padding: 0;\n  height: 100%;\n\n  @media ", " {\n    display: none;\n  }\n\n  & li.active {\n    //console border-bottom: 3px solid\n    border-bottom: 4px solid #efb850;\n    :hover {\n    }\n  }\n"])), function (_ref) {
+var _templateObject$i, _templateObject2$f, _templateObject3$b;
+var CollapseMenuItemContainer = /*#__PURE__*/styled(Container$1)(_templateObject$i || (_templateObject$i = /*#__PURE__*/_taggedTemplateLiteralLoose(["\n  display: flex;\n  gap: 0.5em;\n"])));
+var CollapseMenuItemFontAwesomeIcon = /*#__PURE__*/styled(FontAwesomeIcon)(_templateObject2$f || (_templateObject2$f = /*#__PURE__*/_taggedTemplateLiteralLoose(["\n  padding-top: 1.3px;\n  line-height: ", ";\n  letter-spacing: ", ";\n  font-family: ", ";\n  font-weight: ", ";\n  font-size: ", ";\n  font-style: ", ";\n  font-weight: 600;\n\n  &:hover {\n    cursor: pointer;\n  }\n"])), function (_ref) {
+  var theme = _ref.theme;
+  return theme.components.text.basic.lineHeight + "rem";
+}, function (_ref2) {
+  var theme = _ref2.theme;
+  return theme.components.text.basic.letterSpacing + "px";
+}, function (_ref3) {
+  var theme = _ref3.theme;
+  return theme.components.text.basic.font;
+}, function (_ref4) {
+  var theme = _ref4.theme;
+  return theme.components.text.basic.fontWeight;
+}, function (_ref5) {
+  var theme = _ref5.theme;
+  return theme.fontSize.small + "rem";
+}, function (_ref6) {
+  var theme = _ref6.theme;
+  return theme.components.text.basic.fontStyle;
+});
+var CollapseMenuText = /*#__PURE__*/styled(MenuText)(_templateObject3$b || (_templateObject3$b = /*#__PURE__*/_taggedTemplateLiteralLoose(["\n  font-weight: 600;\n\n  /*  border-bottom: 1px solid\n    ", "; */\n  color: ", ";\n  opacity: ", ";\n  border-bottom: ", ";\n  margin-top: ", ";\n  margin-bottom: ", ";\n  padding-bottom: ", ";\n  cursor: 'pointer';\n  :hover {\n    border-bottom: ", ";\n    margin-top: 6px;\n    margin-bottom: -12px;\n    padding-bottom: 10px;\n    opacity: 1;\n  }\n"])), function (_ref7) {
+  var theme = _ref7.theme,
+      opacity = _ref7.opacity;
+  return opacity === 1 ? theme.components.text.menu.color : 'transparent';
+}, function (_ref8) {
+  var theme = _ref8.theme;
+  return theme.components.text.menu.color;
+}, function (_ref9) {
+  var opacity = _ref9.opacity;
+  return opacity;
+}, function (_ref10) {
+  var theme = _ref10.theme,
+      active = _ref10.active,
+      color = _ref10.color;
+  return active ? '7px solid ' + color : '0px solid ' + theme.components.text.menu.color;
+}, function (_ref11) {
+  var active = _ref11.active;
+  return active ? '6px' : '0px';
+}, function (_ref12) {
+  var active = _ref12.active;
+  return active ? '-12px' : '0px';
+}, function (_ref13) {
+  var active = _ref13.active;
+  return active ? '10px' : '0px';
+}, function (_ref14) {
+  var color = _ref14.color;
+  return ' 7px solid ' + color;
+});
+
+var CollapseMenuItem = function CollapseMenuItem(props) {
+  var _props$text = props.text,
+      text = _props$text === void 0 ? '' : _props$text,
+      _props$collapse = props.collapse,
+      collapse = _props$collapse === void 0 ? true : _props$collapse,
+      _props$notifyEvent = props.notifyEvent,
+      notifyEvent = _props$notifyEvent === void 0 ? function (obj) {
+    return obj;
+  } : _props$notifyEvent,
+      _props$hidearrow = props.hidearrow,
+      hidearrow = _props$hidearrow === void 0 ? false : _props$hidearrow,
+      _props$opacity = props.opacity,
+      opacity = _props$opacity === void 0 ? 0.7 : _props$opacity,
+      active = props.active,
+      color = props.color; //const [active, setActive] = useState(false);
+
+  var toggle = function toggle(e) {
+    notifyEvent(text); //setActive(true);
+  };
+
+  return React__default.createElement(CollapseMenuItemContainer, {
+    onClick: toggle
+  }, React__default.createElement(CollapseMenuText, {
+    opacity: opacity,
+    active: active,
+    color: color
+  }, text), !hidearrow && (collapse ? React__default.createElement(CollapseMenuItemFontAwesomeIcon, {
+    icon: faChevronDown,
+    className: "fa-regular fa-1x"
+  }) : React__default.createElement(CollapseMenuItemFontAwesomeIcon, {
+    icon: faChevronUp,
+    className: "fa-regular fa-1x"
+  })));
+};
+
+var _templateObject$j, _templateObject2$g;
+var BQHeaderUl = /*#__PURE__*/styled.ul(_templateObject$j || (_templateObject$j = /*#__PURE__*/_taggedTemplateLiteralLoose(["\n  margin: 0;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  list-style: none;\n  gap: 3.5em;\n  z-index: 10;\n  padding: 0;\n  height: 100%;\n\n  @media ", " {\n    display: none;\n  }\n\n  & li.active {\n    //console border-bottom: 3px solid\n    border-bottom: 4px solid #efb850;\n    :hover {\n    }\n  }\n"])), function (_ref) {
   var theme = _ref.theme;
   return theme.devices.tabletM;
 });
-var BQHeaderUlDiv = /*#__PURE__*/styled.div(_templateObject2$i || (_templateObject2$i = /*#__PURE__*/_taggedTemplateLiteralLoose(["\n  display: flex;\n  justify-content: center;\n  width: 100%;\n"])));
+var BQHeaderUlDiv = /*#__PURE__*/styled.div(_templateObject2$g || (_templateObject2$g = /*#__PURE__*/_taggedTemplateLiteralLoose(["\n  display: flex;\n  justify-content: center;\n  width: 100%;\n"])));
 
 var BQHeaderItems = function BQHeaderItems(props) {
   var _props$items = props.items,
@@ -3890,12 +3559,12 @@ var BQHeaderItems = function BQHeaderItems(props) {
   })));
 };
 
-var _templateObject$m, _templateObject2$j;
-var LogoImage = /*#__PURE__*/styled.img(_templateObject$m || (_templateObject$m = /*#__PURE__*/_taggedTemplateLiteralLoose(["\n  width: 185px;\n  object-fit: cover;\n  margin-top: 5px;\n\n  @media ", " {\n    width: 300px;\n    object-fit: cover;\n    max-height: 95px;\n  }\n"])), function (_ref) {
+var _templateObject$k, _templateObject2$h;
+var LogoImage = /*#__PURE__*/styled.img(_templateObject$k || (_templateObject$k = /*#__PURE__*/_taggedTemplateLiteralLoose(["\n  width: 185px;\n  object-fit: cover;\n  margin-top: 5px;\n\n  @media ", " {\n    width: 300px;\n    object-fit: cover;\n    max-height: 95px;\n  }\n"])), function (_ref) {
   var theme = _ref.theme;
   return theme.devices.gttv;
 });
-var LogoDiv = /*#__PURE__*/styled.div(_templateObject2$j || (_templateObject2$j = /*#__PURE__*/_taggedTemplateLiteralLoose(["\n  width: 200px;\n  height: 50px;\n  display: flex;\n  justify-content: center;\n"])));
+var LogoDiv = /*#__PURE__*/styled.div(_templateObject2$h || (_templateObject2$h = /*#__PURE__*/_taggedTemplateLiteralLoose(["\n  width: 200px;\n  height: 50px;\n  display: flex;\n  justify-content: center;\n"])));
 
 var img = "data:image/png;base64,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AAAgI8IgAAAAgIwIgwAAAAAyIgwCAAAAyIgwCAAAACAjwiAAAACAjAiDAAAAADIiDAIAAADIiDAIAAAAICPCIAAAAICMCIMAAAAAMiIMAgAAAMiIMAgAAAAgI8IgAAAAgIwIgwAAAAAyIgwCAAAAyIgwCAAAACAjwiAAAACAjAiDAAAAADIiDAIAAADIiDAIAAAAICPCIAAAAICMCIMAAAAAMiIMAgAAAMiIMAgAAAAgI8IgAAAAgIwIgwAAAAAyIgwCAAAAyIgwCAAAACAjwiAAAACAjAiDAAAAADIiDAIAAADIiDAIAAAAICPCIAAAAICMCIMAAAAAMiIMAgAAAMiIMAgAAAAgI8IgAAAAgIwIgwAAAAAyIgwCAAAAyIgwCAAAACAjwiAAAACAjAiDAAAAADIiDAIAAADIiDAIAAAAICPCIAAAAICMCIMAAAAAMiIMAgAAAMiIMAgAAAAgI8IgAAAAgIwIgwAAAAAyIgwCAAAAyIgwCAAAACAjwiAAAACAjAiDAAAAADIiDAIAAADIiDAIAAAAICPCIAAAAICMCIMAAAAAMiIMAgAAAMiIMAgAAAAgI8IgAAAAgIwIgwAAAAAyIgwCAAAAyIgwCAAAACAjwiAAAACAjAiDAAAAADIiDAIAAADIiDAIAAAAICPCIAAA4P9vxw4EAAAAGAbdn/ogK4wACJFBAAAAACEyCAAAACBEBgEAAACEyCAAAACAEBkEAAAAECKDAAAAAEJkEAAAAECIDAIAAAAIkUEAAAAAITIIAAAAIEQGAQAAAITIIAAAAIAQGQQAAAAQIoMAAAAAQmQQAAAAQIgMAgAAAAiRQQAAAAAhMggAAAAgRAYBAAAAhMggAAAAgBAZBAAAABAigwAAAABCZBAAAABAiAwCAAAACJFBAAAAACEyCAAAACBEBgEAAACEyCAAAACAEBkEAAAAECKDAAAAAEJkEAAAAECIDAIAAAAIkUEAAAAAITIIAAAAIEQGAQAAAITIIAAAAIAQGQQAAAAQIoMAAAAAQmQQAAAAQIgMAgAAAAiRQQAAAAAhMggAAAAgRAYBAAAAhMggAAAAgBAZBAAAABAigwAAAABCZBAAAABAiAwCAAAACJFBAAAAACEyCAAAACBEBgEAAACEyCAAAACAEBkEAAAAECKDAAAAAEJkEAAAAECIDAIAAAAIkUEAAAAAITIIAAAAIEQGAQAAAITIIAAAAIAQGQQAAAAQIoMAAAAAQmQQAAAAQIgMAgAAAAiRQQAAAAAhMggAAAAgRAYBAAAAhMggAAAAgBAZBAAAABAigwAAAABCZBAAAABAiAwCAAAACJFBAAAAACEyCAAAACBEBgEAAACEyCAAAACAEBkEAAAAECKDAAAAAEJkEAAAAECIDAIAAAAIkUEAAAAAITIIAAAAIEQGAQAAAITIIAAAAIAQGQQAAAAQIoMAAAAAQmQQAAAAQIgMAgAAAAiRQQAAAAAhMggAAAAgRAYBAAAAhMggAAAAgBAZBAAAABAigwAAAABCZBAAAABAiAwCAAAACJFBAAAAACEyCAAAACBEBgEAAACEyCAAAACAEBkEAAAAECKDAAAAAEJkEAAAAECIDAIAAAAIkUEAAAAAITIIAAAAIEQGAQAAAITIIAAAAIAQGQQAAAAQIoMAAAAAQmQQAAAAQIgMAgAAAAiRQQAAAAAhMggAAAAgRAYBAAAAhMggAAAAgBAZBAAAABAigwAAAABCZBAAAABAiAwCAAAACJFBAAAAACEyCAAAACBEBgEAAACEyCAAAACAEBkEAAAAECKDAAAAAEJkEAAAAECIDAIAAAAIkUEAAAAAITIIAAAAIEQGAQAAAITIIAAAAIAQGQQAAAAQIoMAAAAAQmQQAAAAQIgMAgAAAAiRQQAAAAAhMggAAAAgRAYBAAAAhMggAAAAgBAZBAAAABAigwAAAABCZBAAAABAxbYDionpEah29KoAAAAASUVORK5CYII=";
 
@@ -4015,8 +3684,8 @@ var BQUser = function BQUser(props) {
   }, role)));
 };
 
-var _templateObject$n;
-var BQHeaderContainer = /*#__PURE__*/styled.nav(_templateObject$n || (_templateObject$n = /*#__PURE__*/_taggedTemplateLiteralLoose(["\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  position: relative;\n  width: 100%;\n  background: ", ";\n  color: ", ";\n  height: 50px;\n  @media (max-width: 1500px) {\n    margin-left: 10px;\n  }\n\n  & a {\n    text-decoration: none;\n    color: inherit;\n    height: 100%;\n    display: flex;\n    align-items: center;\n\n    padding: 0 0.25rem;\n    @media ", " {\n      padding: 1rem 0.25rem;\n    }\n  }\n"])), function (_ref) {
+var _templateObject$l;
+var BQHeaderContainer = /*#__PURE__*/styled.nav(_templateObject$l || (_templateObject$l = /*#__PURE__*/_taggedTemplateLiteralLoose(["\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  position: relative;\n  width: 100%;\n  background: ", ";\n  color: ", ";\n  height: 50px;\n  @media (max-width: 1500px) {\n    margin-left: 10px;\n  }\n\n  & a {\n    text-decoration: none;\n    color: inherit;\n    height: 100%;\n    display: flex;\n    align-items: center;\n\n    padding: 0 0.25rem;\n    @media ", " {\n      padding: 1rem 0.25rem;\n    }\n  }\n"])), function (_ref) {
   var theme = _ref.theme;
   return theme.components.header.background;
 }, function (_ref2) {
@@ -4193,7 +3862,7 @@ var BQHeader = function BQHeader(props) {
       }
     };
   }, []);
-  return React__default.createElement(Header$1, {
+  return React__default.createElement(Header, {
     onFocus: function onFocus() {
       setCollapse(function (oldValue) {
         return true;
@@ -4232,7 +3901,7 @@ var BQHeader = function BQHeader(props) {
   })));
 };
 
-var Header$1 = function Header(props) {
+var Header = function Header(props) {
   var children = props.children,
       headerWidth = props.headerWidth;
   return React__default.createElement(AppModeProvider, null, React__default.createElement(PaddingContainerwithBg, null, React__default.createElement(BQHeaderContainer, {
@@ -4756,5 +4425,5 @@ var BQButtonMenu = function BQButtonMenu(_ref) {
   })));
 };
 
-export { AppContainer, AppModeProvider, Asynchronous, BDSvg, BQBreadcrumbs, BQButtonMenu, BQDrawer, BQDrawerMenu, BQFooter, BQHeader, BQHeaderWithoutProvider, BQModal, BQNumberCard, BQPhotoCard, BarSvg, BottomNavBar, BottomNavBarContainer, CalendarSvg, Carousel, ColeoAnalysisAll, CompassSvg, Container, Control, CustomAccordion, CustomHeader, FilterSvg, Footer, GroupedSelect, Header, HeaderNavItem, HexagonsSvg, Histogram, ImageBox, ImageFetcher, ImageFetcherSlider, ImageSlideCard, ImgTester, LapinSvg, LayerSvg, LeftContent, Legend, LentillesSvg, MapSvg, MenuText, NoImageBox, PinSvg, RightContent, SearchBar, Selector, SlideScreen, SocialNetworkBoxContainer, SpecieSvg, SpeedDialBtn, SubTitleText, SubTitleTextWhiteTheme, Summary, TaxaMenuItem, Text, TextGray, TextItalic, TextWhiteTheme, ThermometerSvg, Thing, TitleExtraLarge, TitleExtraLargeWhiteTheme, TitleText, TitleTextWhiteTheme, Titletalic, TrafficLightSvg, colors, useBbox };
+export { AppContainer, AppModeProvider, Asynchronous, BDSvg, BQBreadcrumbs, BQButtonMenu, BQDrawer, BQDrawerMenu, BQFooter, BQHeader, BQModal, BQNumberCard, BQPhotoCard, BarSvg, BottomNavBar, BottomNavBarContainer, CalendarSvg, Carousel, ColeoAnalysisAll, CompassSvg, Container, Control, CustomAccordion, FilterSvg, Footer, GroupedSelect, HexagonsSvg, Histogram, ImageBox, ImageFetcher, ImageFetcherSlider, ImageSlideCard, ImgTester, LapinSvg, LayerSvg, LeftContent, Legend, LentillesSvg, MapSvg, MenuText, NoImageBox, PinSvg, RightContent, SearchBar, Selector, SlideScreen, SocialNetworkBoxContainer, SpecieSvg, SpeedDialBtn, SubTitleText, SubTitleTextWhiteTheme, Summary, TaxaMenuItem, Text, TextGray, TextItalic, TextWhiteTheme, ThermometerSvg, Thing, TitleExtraLarge, TitleExtraLargeWhiteTheme, TitleText, TitleTextWhiteTheme, Titletalic, TrafficLightSvg, colors, useBbox };
 //# sourceMappingURL=bq-react-lib.esm.js.map

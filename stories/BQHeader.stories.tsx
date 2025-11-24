@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Meta, Story } from '@storybook/react';
-import { CustomHeader } from '../src/PortalComponents/Header';
 import { BQHeader } from '../src/PortalComponents/BQHeader';
 
 const MyComponent = (props: any) => {
