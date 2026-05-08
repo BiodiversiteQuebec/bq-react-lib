@@ -77,7 +77,7 @@ export const BQHeader = (props: any) => {
       color: '#d88219',
     },
     {
-      href: `/inventaires/`,
+      href: `/reseau_suivi/`,
       text: locales[locale]['reseau_de_suivi'],
       key: 'reseau_de_suivi',
       color: '#57776e',
@@ -110,7 +110,7 @@ export const BQHeader = (props: any) => {
       canHide: true,
     },
     {
-      href: `https://biodiversite-quebec.ca/${locale}/inventaires/`,
+      href: `https://biodiversite-quebec.ca/${locale}/reseau_suivi/`,
       text: locales[locale]['reseau_de_suivi'],
       canHide: true,
     },
